@@ -3,7 +3,6 @@
     "guild_id": "75FD83CF-0C45-4834-BC4C-097F93A487AF",
     "guild_name": "Veterans Of Lions Arch",
     "tag": "LA",
-    "home_world": 1007,
     "member_count": 24,
     "influence": 1036381,
     "merits": 30,
