@@ -3,7 +3,6 @@
     "guild_id": "75FD83CF-0C45-4834-BC4C-097F93A487AF",
     "guild_name": "Veterans Of Lions Arch",
     "tag": "LA",
-    "motd": "This is an example MOTD. Check out our website at gw2.com", // Unsure about this one... many guild put private, TS information in the motd, so this shouldn't be publicly available
     "home_world": 1007,
     "member_count": 24,
     "influence": 1036381,
