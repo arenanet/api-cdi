@@ -16,12 +16,17 @@
 	"bank"      : [
 		{
 			"id"       : 19699,
-			"slot"     : 1,
+			"slot"     : 0,
 			"count"    : 250
 		},
 		{
+			"id"       : 19699,
+			"slot"     : 1,
+			"count"    : 12 
+		},
+		{
 			"id"       : 30692,
-			"slot"     : 2,
+			"slot"     : 4,
 			"count"    : 1,
 			"upgrades" : [ 24607 ]
 		}
@@ -29,9 +34,12 @@
 	"materials" : [
 		{
 			"id"       : 19699,
-			"slot"     : 1,
 			"count"    : 250
 		}
 	]
 }
 
+// Note that the "bank" array is sparse -- any empty
+// slots are simply omitted from the result set. Slots
+// are 0-indexed. The "materials" objects do not include
+// slots as they cannot be re-ordered.
