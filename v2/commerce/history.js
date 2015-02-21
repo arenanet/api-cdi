@@ -11,7 +11,7 @@
   "buy_price" : { "min" : 40, "max" : 45, "mean" : 41 },
   "sell_price" : { "min" : 48, "max" : 58, "mean ": 55 },
   "demand" : { "min" : 632389, "max": 682697, "mean": 669853 },
-  "supply" : { "min" : 463243, "max": 478633, "mean: 464963 },
+  "supply" : { "min" : 463243, "max": 478633, "mean": 464963 },
   "bought" : 263749,
   "sold" : 361424
 }
