@@ -22,6 +22,6 @@
 // GET /v2/commerce/history?ids=19723&start_time="2014-12-20 14:15:02 UTC"&end_time="2015-2-16 9:23:28 UTC"
 
 // Update jobs
-// Hourly: Iterate transactions for the previous hour's calculating statistics.
+// Hourly: Iterate transactions for the previous hour, calculating statistics.
 // Daily: Merge hourly summaries for the 32nd previous day into a daily summary.
 // Weekly: Merge daily summaries for the 53rd previous week into a weekly summary.
