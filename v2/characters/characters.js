@@ -39,86 +39,71 @@
 	profession: "Thief",
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
-	equipment: [
-		{
-			id: 69091,
-			slot: "HelmAquatic"
+	equipment: {
+		aquatic_helm: {
+			id: 69091
 		},
-		{
+		backpack: {
 			id: 49371,
-			slot: "Backpack",
 			infusions: [
 				49453
 			]
 		},
-		{
+		coat: {
 			id: 48085,
-			slot: "Coat",
 			infusions: [
 				37131
 			]
 		},
-		{
-			id: 48084,
-			slot: "Boots"
+		boots: {
+			id: 48084
 		},
-		{
-			id: 48086,
-			slot: "Gloves"
+		gloves: {
+			id: 48086
 		},
-		{
-			id: 48088,
-			slot: "Leggings"
+		leggings: {
+			id: 48088
 		},
-		{
-			id: 48089,
-			slot: "Shoulders"
+		shoulders: {
+			id: 48089
 		},
-		{
-			id: 39233,
-			slot: "Accessory"
+		accessory1: {
+			id: 39233
 		},
-		{
-			id: 39232,
-			slot: "Accessory"
+		accessory2: {
+			id: 39232
 		},
-		{
-			id: 37075,
-			slot: "Ring"
+		ring1: {
+			id: 37075
 		},
-		{
-			id: 37086,
-			slot: "Ring"
+		ring2: {
+			id: 37086
 		},
-		{
-			id: 39308,
-			slot: "Amulet"
+		amulet: {
+			id: 39308
 		},
-		{
-			id: 46771,
-			slot: "Weapon"
+		weapon_mainhand_primary: {
+			id: 46771
 		},
-		{
-			id: 46760,
-			slot: "Weapon"
+		weapon_offhand_primary: null,
+		weapon_mainhand_secondary: {
+			id: 46760
 		},
-		{
-			id: 46767,
-			slot: "Weapon"
+		weapon_offhand_secondary: {
+			id: 46767
 		},
-		{
-			id: 23029,
-			slot: "Sickle"
+		aquatic_weapon_primary: null,
+		aquatic_weapon_secondary: null,
+		sickle: {
+			id: 23029
 		},
-		{
-			id: 23030,
-			slot: "Axe"
+		axe: {
+			id: 23030
 		},
-		{
-			id: 23031,
-			slot: "Pick"
+		pick: {
+			id: 23031
 		}
-	],
+	},
 	inventory: [
 		null,
 		null,
