@@ -7,7 +7,16 @@
         "recipient" : "Lawton.1234",
         "subject" : "Short example",
         "content" : "Hey there! Have a nice day!",
-        "items" : [1234, 1942],
+        "items" : [
+            {
+                "id" : 12345,
+                "count" : 2
+            },
+            {
+                "id" : 19235,
+                "count" : 1
+            },
+        ],
         "money" : 1000
     }
 ]
