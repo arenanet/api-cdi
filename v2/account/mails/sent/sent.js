@@ -1,4 +1,4 @@
-// GET /v2/account/mail/sent
+// GET /v2/account/mails/sent
 // Authorization: Bearer api-key
 // Requires "conversation" scope.
 [
