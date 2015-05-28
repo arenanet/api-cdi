@@ -1,6 +1,7 @@
 // GET /v2/continents/1/floors/1/regions/1/maps/26
 {
     "name" : "Dredgehaunt Cliffs",
+    "type" : "pve",
     "min_level" : 40,
     "max_level" : 50,
     "default_floor" : 1,
@@ -59,3 +60,52 @@
     },
     "id" : 26
 }
+
+// GET /v2/continents/2/floors/7/regions/6/maps/795
+{
+    "name" : "Legacy of the Foefire",
+    "type" : "pvp",
+    ...
+    "id" : 795
+}
+
+// GET /v2/continents/2/floors/3/regions/7/maps/94
+{
+    "name" : " Borderlands",
+    "type" : "wvw",
+    ...
+    "id" : 94
+}
+
+// GET /v2/continents/1/floors/1/regions/8/maps/733
+{
+    "name" : "Forging the Pact",
+    "type": "personal_story",
+    ...
+    "id" : 733
+}
+
+// GET /v2/continents/1/floors/1/regions/8/maps/1006
+{
+    "name" : "Foefire Cleansing",
+    "type": "living_story",
+    ...
+    "id" : 1006
+}
+
+// GET /v2/continents/1/floors/-10/regions/2/maps/66
+{
+    "name": "Citadel of Flame",
+    "type" : "dungeon_story",
+    ...
+    "id" : 66
+}
+
+// GET /v2/continents/1/floors/-10/regions/2/maps/69
+{
+    "name": "Citadel of Flame",
+    "type" : "dungeon_explorable",
+    ...
+    "id" : 69
+}
+
