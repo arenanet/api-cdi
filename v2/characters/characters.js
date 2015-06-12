@@ -12,7 +12,10 @@
 	gender: "Female",
 	profession: "Thief",
 	level: 80,
-	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
+	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
+	created: "2015-06-05T19:45:00Z",
+	age: 91,
+	deaths: 0
 }
 
 // GET /v2/characters?page=0
@@ -26,6 +29,9 @@
 		profession: "Thief",
 		level: 80,
 		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
+		created: "2015-06-05T19:45:00Z",
+		age: 91,
+		deaths: 0
 	}
 ]
 
@@ -39,6 +45,9 @@
 	profession: "Thief",
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
+	created: "2015-06-05T19:45:00Z",
+	age: 91,
+	deaths: 0
 	equipment: {
 		aquatic_helm: {
 			id: 69091
