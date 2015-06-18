@@ -11,6 +11,23 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
+	crafting:[
+		"Leatherworker",
+		"Weaponsmith",
+		"Tailor",
+		null,
+		],
+	order:"Order of Whispers",
+	storymode:[
+		"Ascalonian Catacombs",
+		"Caudecus's Manor",
+		"Twilight Arbor",
+		null,
+		null,
+		null,
+		null,
+		"The Ruined City of Arah",
+		],
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 }
@@ -24,6 +41,23 @@
 		race: "Human",
 		gender: "Female",
 		profession: "Thief",
+			crafting:[
+			"Leatherworker",
+			"Weaponsmith",
+			"Tailor",
+			null,
+			],
+		order:"Order of Whispers",
+		storymode:[
+			"Ascalonian Catacombs",
+			"Caudecus's Manor",
+			"Twilight Arbor",
+			null,
+			null,
+			null,
+			null,
+			"The Ruined City of Arah",
+			],
 		level: 80,
 		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 	}
@@ -37,6 +71,23 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
+	crafting:[
+		"Leatherworker",
+		"Weaponsmith",
+		"Tailor",
+		null,
+		],
+	order:"Order of Whispers",
+	storymode:[
+		"Ascalonian Catacombs",
+		"Caudecus's Manor",
+		"Twilight Arbor",
+		null,
+		null,
+		null,
+		null,
+		"The Ruined City of Arah",
+		],
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	equipment: {
