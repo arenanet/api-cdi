@@ -24,7 +24,7 @@
 		},
 		red:
 		{
-			<Charactername>,
+			"Field Strategist",
 			<Charactername>,
 			<Charactername>,
 			<Charactername>,
@@ -43,7 +43,7 @@
 		{
 			<Charactername>,
 			<Charactername>,
-			<Charactername>,
+			"Field Strategist",
 			<Charactername>,
 			<Charactername>
 		},
