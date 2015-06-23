@@ -3,6 +3,7 @@
 
 [
 	{
+		pvp_rank  : 2,
 		aggregate : {
 			wins       : 1,
 			losses     : 2,
