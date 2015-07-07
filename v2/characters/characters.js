@@ -71,10 +71,14 @@
 		},
 		{
 			id: 49812,
-			slot: "WeaponB1"
+			slot: "WeaponB1",
 			upgrades: [
-				24607,
-				24548
+				{
+					id: 24607
+				},
+				{
+					id: 24548
+				}
 			]
 		}
 	],

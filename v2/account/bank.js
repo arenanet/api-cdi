@@ -8,7 +8,9 @@
 		slot: 1,
 		count: 1,
 		upgrades: [
-			24675
+			{
+				id: 24675
+			}
 		]
 	},
 	{
@@ -24,7 +26,9 @@
 		count: 1,
 		skin: 3706,
 		upgrades: [
-			24661
+			{
+				id: 24661
+			}
 		]
 	},
 	null,
@@ -37,8 +41,13 @@
 		slot: 10,
 		count: 1
 		infusions: [
-			1234,
-			5678
+			{
+				id: 1234
+			},
+			{
+				id: 5678
+			}
+
 		]
 	},
 	{
