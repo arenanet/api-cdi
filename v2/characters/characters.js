@@ -11,12 +11,6 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
-	crafting:[
-		"Leatherworker",
-		"Weaponsmith",
-		"Tailor",
-		null,
-		],
 	order:"Order of Whispers",
 	storymode:[
 		"Ascalonian Catacombs",
@@ -76,12 +70,6 @@
 		race: "Human",
 		gender: "Female",
 		profession: "Thief",
-			crafting:[
-			"Leatherworker",
-			"Weaponsmith",
-			"Tailor",
-			null,
-			],
 		order:"Order of Whispers",
 		storymode:[
 			"Ascalonian Catacombs",
@@ -141,12 +129,6 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
-	crafting:[
-		"Leatherworker",
-		"Weaponsmith",
-		"Tailor",
-		null,
-		],
 	order:"Order of Whispers",
 	storymode:[
 		"Ascalonian Catacombs",
