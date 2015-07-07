@@ -28,6 +28,41 @@
 		null,
 		"The Ruined City of Arah",
 		],
+// or
+	storymodes: [
+		 {
+		  dungeon: "Ascalonian Catacombs",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Caudecus's Manor",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Twilight Arbor",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Sorrow's Embrace",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Citadel of Flame",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Honor of the Waves",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Crucible of Eternity",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "The Ruined City of Arah",
+		  done : true
+		 }
+	]
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 }
@@ -57,7 +92,42 @@
 			null,
 			null,
 			"The Ruined City of Arah",
-			],
+		],
+// or
+	storymodes: [
+		 {
+		  dungeon: "Ascalonian Catacombs",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Caudecus's Manor",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Twilight Arbor",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Sorrow's Embrace",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Citadel of Flame",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Honor of the Waves",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Crucible of Eternity",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "The Ruined City of Arah",
+		  done : true
+		 }
+	]
 		level: 80,
 		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 	}
@@ -88,6 +158,41 @@
 		null,
 		"The Ruined City of Arah",
 		],
+// or
+	storymodes: [
+		 {
+		  dungeon: "Ascalonian Catacombs",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Caudecus's Manor",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Twilight Arbor",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Sorrow's Embrace",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Citadel of Flame",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Honor of the Waves",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Crucible of Eternity",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "The Ruined City of Arah",
+		  done : true
+		 }
+	]
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	equipment: {
