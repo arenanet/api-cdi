@@ -15,7 +15,20 @@
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
 	age: 91, // in seconds.
-	deaths: 0
+	deaths: 0,
+
+	// most recent log-in time
+	"connected": "2015-07-07T05:16:00Z",
+
+	// status: online, away, busy(?), offline - bitmask maybe?
+	"status": 1,
+
+	// current position (map)
+	"map_id": 38,
+
+	// amount of supply
+	"supply": 15
+
 }
 
 // GET /v2/characters?page=0
@@ -31,7 +44,11 @@
 		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 		created: "2015-06-05T19:45:00Z",
 		age: 91,
-		deaths: 0
+		deaths: 0,
+		connected: "2015-07-07T05:16:00Z",
+		status: 1,
+		map_id: 38,
+		supply: 15
 	}
 ]
 
@@ -47,7 +64,11 @@
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
 	age: 91,
-	deaths: 0
+	deaths: 0,
+	connected: "2015-07-07T05:16:00Z",
+	status: 1,
+	map_id: 38,
+	supply: 15,
 	equipment: [
 		{
 			id: 6472,
