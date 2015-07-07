@@ -5,7 +5,7 @@
 	"id"     : "account-guid",
 	"name"   : "Lawton.1234",
 	"world"  : 1007,
-	"commander": "yes or no",
+	"commander": "true",
 	"fractallevel": 11,
 	"guilds" : [
 		"DA9137CD-3A86-E411-B57A-00224D566B58",
