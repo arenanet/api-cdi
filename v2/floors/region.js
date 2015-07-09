@@ -2,6 +2,14 @@
 {
     "name" : "Shiverpeak Mountains",
     "label_coord" : [ 19840, 13568 ],
+    "map_rect" : [
+        [-27648, -36864 ],
+        [ 27648, 39936 ]
+    ],
+    "continent_rect" : [
+        [ 19456, 14976 ],
+        [ 21760, 18176 ]
+    ],
     "maps" : {
         "26" : {
             "name" : "Dredgehaunt Cliffs",
