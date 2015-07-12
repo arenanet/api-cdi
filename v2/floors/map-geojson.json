@@ -1,0 +1,155 @@
+{
+	"type": "FeatureCollection",
+	// [continent_rect[0][0], continent_rect[0][1], continent_rect[1][0], continent_rect[1][1]]
+	"bbox": [9856, 11648, 13440, 14080],
+	"features": [
+		// a map label, may only occur once
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [11612, 12888]
+			},
+			"properties": {
+				"id": 15,
+				"type": "label",
+				"name": "Queensdale",
+				"default_floor": 1,
+				"min_level": 1,
+				"max_level": 15
+			}
+		},
+		// landmark
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10062.7, 12022.7]
+			},
+			"properties": {
+				"id": 127,
+				"type": "landmark",
+				"name": "Eda's Orchard"
+			}
+		},
+		// waypoint
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10960.4, 12205.9]
+			},
+			"properties": {
+				"id": 239,
+				"type": "waypoint",
+				"name": "Shaemoor Waypoint"
+			}
+		},
+		// vista
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10322, 11743.8]
+			},
+			"properties": {
+				"id": 1361,
+				"type": "vista",
+				"name": ""
+			}
+		},
+		// unlock!? Dungeon, Home, what else?
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [13278, 11941]
+			},
+			"properties": {
+				"id": 1737,
+				"type": "unlock",
+				"name": "Caudecus's Manor"
+			}
+		},
+		// task
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [11295.9, 13502.6]
+			},
+			"properties": {
+				"id": 211,
+				"type": "task",
+				"name": "Help the Seraph protect Claypool from centaurs.",
+				"level": 9
+			}
+		},
+		// skill challenges
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [13317.9, 11967.8]
+			},
+			"properties": {
+				// any chance on an id or a linked event id?
+				"type": "skill_challenge"
+			}
+		},
+		// sector labels
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10252.2, 12789.9]
+			},
+			"properties": {
+				"id": 47,
+				"type": "sector",
+				"name": "Bandithaunt Caverns",
+				"level": 5
+			}
+		},
+		// sector boundaries additional Polygon feature
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[11358, 13107],
+						[11270, 13233],
+						[11288, 13367],
+						[11424, 13407],
+						[11588, 13477],
+						[11688, 13401],
+						[11690, 13289],
+						[11614, 13205],
+						[11490, 13209],
+						[11440, 13097],
+						[11358, 13107]
+					]
+				]
+			},
+			"properties": {
+				"sector_id": 47,
+				"type": "bounds"
+			}
+		},
+		// events, may also need an additional Polygon/Polyline feature
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [2058, 13661]
+			},
+			"properties": {
+				"id": "31CEBA08-E44D-472F-81B0-7143D73797F5",
+				"type": "event",
+				"name": "Defeat the shadow behemoth.",
+				"level": 15
+			}
+		}
+	]
+}
