@@ -32,6 +32,32 @@
 			rating: 423,
 			active : true
 		}
+	],
+	specializations: [
+		{
+			id: 35,
+			traits: [
+				1267,
+				1299,
+				1702
+			]
+		},
+		{
+			id: 44,
+			traits: [
+				1159,
+				1286,
+				1706
+			]
+		},
+		{
+			id: 54,
+			traits: [
+				1112,
+				1241,
+				1703
+			]
+		}
 	]
 }
 
@@ -54,6 +80,16 @@
 				discipline : "Cook",
 				rating : 400,
 				active : true
+			}
+		],
+		specializations: [
+			{
+				id: 35,
+				traits: [
+					1267,
+					1299,
+					1702
+				]
 			}
 		]
 	}
