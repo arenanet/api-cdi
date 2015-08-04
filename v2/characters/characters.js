@@ -32,7 +32,46 @@
 			rating: 423,
 			active : true
 		}
-	],
+	]
+}
+
+// GET /v2/characters?page=0
+// Authorization: Bearer token123
+// Scopes: account, characters
+[
+	{
+		name: "Hello",
+		race: "Human",
+		gender: "Female",
+		profession: "Thief",
+		level: 80,
+		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
+		created: "2015-06-05T19:45:00Z",
+		age: 91,
+		deaths: 0,
+		crafting: [
+			{
+				discipline : "Cook",
+				rating : 400,
+				active : true
+			}
+		]
+	}
+]
+
+// GET /v2/characters/Hello
+// Authorization: Bearer token123
+// Scopes: account, characters, builds
+{
+	name: "Hello",
+	race: "Human",
+	gender: "Female",
+	profession: "Thief",
+	level: 80,
+	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
+	created: "2015-06-05T19:45:00Z",
+	age: 91,
+	deaths: 0,
 	specializations: [
 		{
 			id: 35,
@@ -60,40 +99,6 @@
 		}
 	]
 }
-
-// GET /v2/characters?page=0
-// Authorization: Bearer token123
-// Scopes: account, characters
-[
-	{
-		name: "Hello",
-		race: "Human",
-		gender: "Female",
-		profession: "Thief",
-		level: 80,
-		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
-		created: "2015-06-05T19:45:00Z",
-		age: 91,
-		deaths: 0,
-		crafting: [
-			{
-				discipline : "Cook",
-				rating : 400,
-				active : true
-			}
-		],
-		specializations: [
-			{
-				id: 35,
-				traits: [
-					1267,
-					1299,
-					1702
-				]
-			}
-		]
-	}
-]
 
 // GET /v2/characters/Hello
 // Authorization: Bearer token123
