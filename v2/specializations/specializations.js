@@ -27,7 +27,8 @@
         1709,
         2024
     ],
-    icon: "http://render.local.ncplatform.net/spawned/RenderSrv/file/BD349FDE30ECDCD6D3113A2FCEC414D3E5553F9E/1954407.png"
+    icon: "https://render.guildwars2.com/...",
+    background: "https://render.guildwars2.com/..."
 }
 
 // Or in bulk, either by ID or paginated.
@@ -56,7 +57,8 @@
             1709,
             2024
         ],
-        icon: "http://render.local.ncplatform.net/spawned/RenderSrv/file/BD349FDE30ECDCD6D3113A2FCEC414D3E5553F9E/1954407.png"
+        icon: "https://render.guildwars2.com/...",
+        background: "https://render.guildwars2.com/..."
     },
     {
         id: 5,
@@ -79,6 +81,7 @@
             1975,
             1974
         ],
-        icon: "http://render.local.ncplatform.net/spawned/RenderSrv/file/C7F6BCDF79FEBE7ACF2747F1796BE83044099D0C/1954403.png"
+        icon: "https://render.guildwars2.com/...",
+        background: "https://render.guildwars2.com/..."
     }
 ]
