@@ -49,8 +49,19 @@
 			193,
 			192
 		]
-	}
+	},
+	"item": 20359,
+	"categories": [
+		"Gray",
+		"Metal",
+		"Rare"
+	]
 }
+
+// Possible categories:
+// Hue: ["Gray", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple"]
+// Material: ["Vibrant", "Leather", "Metal"]
+// Rarity: ["Starter", "Common", "Uncommon", "Rare"]
 
 // GET /v2/colors?ids=6,7
 
