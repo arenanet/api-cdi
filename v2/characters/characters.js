@@ -134,6 +134,130 @@
 	]
 }
 
+// GET /v2/characters/Hello
+// Authorization: Bearer token123
+// Scopes: account, characters, builds
+//
+// NOTE: builds gives access to equipment -- but not the rest of the
+// inventory stuff which also gives access to equipment. Kinda weird
+// but makes sense, in a way.
+{
+	name: "Hello",
+	race: "Human",
+	gender: "Female",
+	profession: "Thief",
+	level: 80,
+	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
+	created: "2015-06-05T19:45:00Z",
+	age: 91,
+	deaths: 0
+	equipment: [
+		{
+			id: 6472,
+			slot: "Coat"
+		},
+		{
+			id: 6470,
+			slot: "Boots"
+		},
+		{
+			id: 6549,
+			slot: "Helm"
+		},
+		{
+			id: 6473,
+			slot: "Leggings"
+		},
+		{
+			id: 33345,
+			slot: "WeaponA1"
+		},
+		{
+			id: 49812,
+			slot: "WeaponB1"
+			upgrades: [
+				24607,
+				24548
+			]
+		}
+	],
+	specializations : {
+		pve : [
+			{
+				id: 36,
+				traits: [
+					1276,
+					1292,
+					null
+				]
+			},
+			{
+				id: 34,
+				traits: [
+					1163,
+					1277,
+					1158
+				]
+			},
+			null
+			
+		],
+		pvp : [
+			{
+				id: 36,
+				traits: [
+					1276,
+					1292,
+					1269
+				]
+			},
+			{
+				id: 35,
+				traits: [
+					1284,
+					1130,
+					1135
+				]
+			},
+			{
+				id: 34,
+				traits: [
+					1163,
+					1277,
+					1158
+				]
+			}
+		],
+		wvw : [
+			{
+				id: 36,
+				traits: [
+					1276,
+					1292,
+					null
+				]
+			},
+			{
+				id: 34,
+				traits: [
+					1163,
+					1277,
+					1158
+				]
+			},
+			{
+				id: 50,
+				traits: [
+					null,
+					null,
+					null
+				]
+			}
+		]
+	},
+	crafting : []
+}
+
 // Possible equipment slots:
 //  * HelmAquatic
 //  * Backpack
