@@ -8,7 +8,7 @@
 {
 	id       : "95-43",
 	type     : "Camp",
-	map_type : "GreenBorderlands",
+	map_type : "GreenHome",
 	map_id   : 95,
 	name     : "Hero's Lodge",
 	coord    : [
@@ -34,7 +34,7 @@
 	{
 		id       : "94-32",
 		type     : "Keep",
-		map_type : "RedBorderlands",
+		map_type : "RedHome",
 		map_id   : 94,
 		name     : "Etheron Hills",
 		coord    : [
@@ -45,7 +45,7 @@
 	{
 		id       : "38-11",
 		type     : "Tower",
-		map_type : "EternalBattlegrounds",
+		map_type : "Center",
 		map_id   : 38,
 		name     : "Aldon's Ledge",
 		coord    : [
@@ -69,10 +69,10 @@
 //   * Spawn
 //
 // map_type is one of the following:
-//   * EternalBattlegrounds
-//   * BlueBorderlands
-//   * RedBorderlands
-//   * GreenBorderlands
+//   * Center (EB)
+//   * BlueHome (Blue BL)
+//   * RedHome (Red BL) 
+//   * GreenHome (Green BL)
 //   * ObsidianSanctum
 //   * EdgeOfTheMists
 //
