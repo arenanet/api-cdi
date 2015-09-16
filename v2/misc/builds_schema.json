@@ -2,17 +2,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://api.guildwars2.com/v2/build",
   "type": "object",
-  "title": "Build Schema",
+  "title": "v2/build schema",
   "description": "This schema describes the json that is returned by the v2/build endpoint",
-  "name": "v2/build",
   "properties": {
-    "id": {
-      "id": "id",
-      "type": "integer",
-      "title": "Id schema.",
-      "description": "An explanation about the puropose of this instance described by this schema.",
-      "name": "id"
-    }
+    "id": { "type": "integer" }
   },
   "additionalProperties": false
 }
