@@ -1,0 +1,27 @@
+{
+    "definitions": {
+        "material_properties": {
+            "type": "object",
+            "properties": {
+                "brightness": { "type": "number"},
+                "contrast": { "type": "number" },
+                "hue": { "type": "number" },
+                "saturation": { "type": "number" },
+                "lightness": { "type": "number" },
+                "rgb": { "$ref": "#/definitions/rgb_values" }
+            },
+            "additionalProperties": false
+        },
+        "rgb_values": {
+            "type": "array",
+            "items": [{
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+                }
+            ],
+            "minItems": 3,
+            "maxItems": 3
+        }
+    }
+}
