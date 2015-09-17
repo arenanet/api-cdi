@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/currencies_detail",
+    "title": "v2/currencies/{id}",
+    "description": "This schema describes the json that is returned by the v2/currencies/{id} endpoint.",
+    "type": "object",
+    "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "icon": { "type": "string" },
+        "order": { "type": "number" }
+    },
+    "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "icon",
+        "order"
+    ]
+}
