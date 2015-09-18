@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/worlds",
+    "title": "Worlds Schema (v2)",
+    "description": "This schema validates the results returned by the v2/worlds node and all sub nodes.
+        Thus it's going to validate calls to v2/worlds?ids=all, v2/worlds?ids={id(s)} and v2/worlds/{id}, too.",
+    "definitions": {
+        "world": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer" },
+                "name": { "type": "string" },
+                "population": { "type": "string" }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "name",
+                "population"
+            ]
+        }
+    },
+    "anyOf": [
+        {
+            "type": "array",
+            "items": { "type": "integer" }
+        },
+        {
+            "type": "array",
+            "items": {"$ref": "#/definitions/world" }
+        },
+        {
+            "$ref": "#/definitions/world"
+        }
+    ]
+}
