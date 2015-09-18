@@ -1,11 +1,11 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://api.guildwars2.com/v2/build",
-  "type": "object",
-  "title": "v2/build schema",
-  "description": "This schema validates the results returned by the v2/build node.",
-  "properties": {
-    "id": { "type": "integer" }
-  },
-  "additionalProperties": false
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/build",
+    "type": "object",
+    "title": "Build (V2) Schema",
+    "description": "This schema validates the results returned by the v2/build node.",
+    "properties": {
+        "id": { "type": "integer" }
+    },
+    "additionalProperties": false
 }
