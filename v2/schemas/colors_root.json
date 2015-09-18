@@ -1,8 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://api.guildwars2.com/v2/colors_root",
-    "title": "v2/colors",
-    "description": "This schema describes the json that is returned by the v2/colors endpoint.",
-    "type": "array",
-    "items": { "type": "integer" }
-}
