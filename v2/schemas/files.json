@@ -2,7 +2,8 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "https://api.guildwars2.com/v2/files",
     "title": "Files Schema (v2)",
-    "description": "This schema describes the json that is returned by the v2/colors endpoint.",
+    "description": "This schema validates the results retunred by the v2/files node and all sub nodes.
+        Thus it's going to validate calls to v2/files?ids=all, v2/files?ids={id(s)} and v2/files/{id}, too.",
     "definitions": {
         "fileSchema": {
             "type": "object",
