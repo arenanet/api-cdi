@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/currencies",
+    "title": "Currencies Schema (v2)",
+    "description": "This schema validates the results returned by the v2/currencies node and all sub nodes.
+        Thus it's going to validate calls to v2/currencies?ids=all, v2/currencies?ids={id(s)} and v2/currencies/{id}, too.",
+    "definitions": {
+        "currenciesSchema": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer" },
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "icon": { "type": "string" },
+                "order": { "type": "number" }
+            },
+            "additionalProperties": false,
+              "required": [
+                "id",
+                "name",
+                "description",
+                "icon",
+                "order"
+            ]
+        },
+    },
+    "anyOf": [{
+            "type": "array",
+            "items": { "type": "integer" }
+        },
+        {
+            "type": "array",
+            "items": {"$ref": "#/definitions/currenciesSchema" }
+        },
+        {
+            "$ref": "#/definitions/currenciesSchema"
+        }
+    ]
+}

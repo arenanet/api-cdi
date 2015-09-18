@@ -1,8 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://api.guildwars2.com/v2/currencies_root",
-    "title": "v2/currencies",
-    "description": "This schema describes the json that is returned by the v2/currencies endpoint.",
-    "type": "array",
-    "items": { "type": "integer" }
-}
