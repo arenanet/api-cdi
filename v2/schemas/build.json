@@ -3,7 +3,7 @@
   "id": "https://api.guildwars2.com/v2/build",
   "type": "object",
   "title": "v2/build schema",
-  "description": "This schema describes the json that is returned by the v2/build endpoint",
+  "description": "This schema validates the results returned by the v2/build node.",
   "properties": {
     "id": { "type": "integer" }
   },
