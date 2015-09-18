@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "https://api.guildwars2.com/v2/colors",
     "title": "Colors Schema (v2)",
-    "description": "This schema validates the results retunred by the v2/colors node and all sub nodes.
+    "description": "This schema validates the results returned by the v2/colors node and all sub nodes.
         Thus it's going to validate calls to v2/colors?ids=all, v2/colors?ids={id(s)} and v2/colors/{id}, too.",
     "definitions": {
         "color": {
