@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/files",
+    "title": "Files Schema (v2)",
+    "description": "This schema describes the json that is returned by the v2/colors endpoint.",
+    "definitions": {
+        "fileSchema": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "string" },
+                "icon": { "type": "string" }
+            },
+            "additionalProperties": false,
+            "required":[
+                "id",
+                "icon"
+            ]
+        },
+    },
+    "anyOf": [{
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        {
+            "type": "array",
+            "items": {"$ref": "#/definitions/fileSchema" }
+        },
+        {
+            "$ref": "#/definitions/fileSchema"
+        }
+    ]
+}
