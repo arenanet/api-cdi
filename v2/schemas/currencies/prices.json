@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/",
+    "title": "Commerce/Prices Schema (v2)",
+    "description": "This schema validates the results returned by the v2/commerce/prices node and all sub nodes.
+        Thus it's going to validate calls to v2/commerce/prices?ids=all, v2/commerce/prices?ids={id(s)} and v2/commerce/prices/{id}, too.",
+    "definitions": {
+        "tradingpostItem": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer" },
+                "buys": { "$ref": "#/definitions/listingCollection"},
+                "sells": { "$ref": "#/definitions/listingCollection"}
+            },
+            "additionalProperties": false,
+            "required":[
+                "id",
+                "buys",
+                "sells"
+            ]
+        },
+        "listing":{
+            "type": "object",
+                "properties": {
+                    "prices": { "type": "string" },
+                    "unit_price": { "type": "integer" },
+                    "quantity": { "type": "integer" }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "prices",
+                    "unit_price",
+                    "quantity"
+                ]
+        },
+        "listingCollection": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/listing" }
+        },
+    },
+    "anyOf": [{
+            "type": "array",
+            "items": { "type": "integer" }
+        },
+        {
+            "type": "array",
+            "items": { "$ref": "#/definitions/tradingpostItem" }
+        },
+        {
+            "$ref": "#/definitions/tradingpostItem"
+        }
+    ]
+}
