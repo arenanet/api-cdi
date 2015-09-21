@@ -1,6 +1,7 @@
 # `/v2/currencies`
 
  * Bulk-expanded
+ * Allows `?ids=all`
  * Unauthenticated
  * Localized
 

@@ -1,6 +1,7 @@
 # `/v2/worlds`
 
  * Bulk-expanded
+ * Allows `?ids=all`
  * Unauthenticated
  * Localized
 

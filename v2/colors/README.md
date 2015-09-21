@@ -1,6 +1,7 @@
 # `/v2/colors`
 
  * Bulk-expanded
+ * Allows `?ids=all`
  * Unauthenticated
  * Localized
 

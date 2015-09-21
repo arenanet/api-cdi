@@ -117,6 +117,26 @@ There is a maximum of 200 objects/request.
 
 If one or more IDs requested is invalid, the endpoint will return `206 Partial Content` instead of `200 OK`; the body will contain the objects that the endpoint was able to resolve. If all requested IDs are invalid, the endpoint will return `404 Not Found`.
 
+### Retrieving All Objects
+
+Some endpoints allow all objects to be fetched with `?ids=all`. These endpoints typically have very few objects, so this is added as a convenience.
+
+```http
+GET /v2/currencies?ids=all HTTP/1.1
+Host: api.guildwars2.com
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Result-Count: 21
+X-Result-Total: 21
+
+[
+	{ "id" : 1, "name" : "Coin", ... },
+	{ "id" : 2, "name" : "Karma", ... },
+	...
+]
+```
+
 ## Authenticated Endpoints
 
 A subset of endpoints are authenticated -- they require an API key for usage and return data specific to the account associated with that API key. API keys can be created by end-users via [the account management site](https://account.guildwars2.com/applications).
