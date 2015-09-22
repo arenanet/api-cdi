@@ -17,7 +17,7 @@ The `routes` field of the `/v2.json` response contains a list of `route` objects
 
 The list of languages that can be passed as a `lang` parameter are included in the response of `/v2.json` in the `langs` field.
 
-# General `/v2/ Notes
+# General `/v2` Notes
 
 ## Bulk-Expansion
 
