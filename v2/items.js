@@ -23,6 +23,7 @@
     "flags": [ ],
     "restrictions": [ ],
     "id": 12138,
+    "chat_link": "[&AgFqLwAA]",
     "icon": "https://render.guildwars2.com/file/CA45CEE2BA3BA040E7C294965CA3756FC3F33FD1/63248.png"
 
 }
