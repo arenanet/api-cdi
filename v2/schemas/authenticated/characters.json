@@ -1,0 +1,219 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/account",
+    "title": "Character (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/characters node. This endpoint is authenticated.",
+    "type": "object",
+
+    "definitions": {
+        "bag": {
+            "anyOf": [{
+                    "type": "object",
+                    "properties": {
+                        "id": { "type": "integer" },
+                        "size": { "type": "integer" },
+                        "inventory": {
+                            "type": "array",
+                            "items": {
+                                "anyOf": [{
+                                        "type": "object",
+                                        "properties": {
+                                            "id": { "type": "integer" },
+                                            "count": { "type": "integer" }
+                                        },
+                                        "additionalProperties": false,
+                                        "required": [
+                                            "id",
+                                            "count"
+                                        ]
+                                    },
+                                    { "type": "null" }
+                                ]
+                            }
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "id",
+                        "size"
+                    ]
+                },
+                { "type": "null" }
+            ]
+        },
+        "equipment": {
+            "type": "object",
+            "properties":{
+                "id": { "type": "integer" },
+                "slot": {
+                    "type": "string",
+                    "enum": [
+                        "HelmAquatic",
+                        "Backpack",
+                        "Coat",
+                        "Boots",
+                        "Gloves",
+                        "Helm",
+                        "Leggings",
+                        "Shoulders",
+                        "Accessory1",
+                        "Accessory2",
+                        "Ring1",
+                        "Ring2",
+                        "Amulet",
+                        "WeaponAquaticA",
+                        "WeaponAquaticB",
+                        "WeaponA1",
+                        "WeaponA2",
+                        "WeaponB1",
+                        "WeaponB2",
+                        "Sickle",
+                        "Axe",
+                        "Pick"
+                    ]
+                },
+                "upgrades": {
+                    "type": "array",
+                    "items": { "type": "integer" }
+                },
+                "infusions": {
+                    "type": "array",
+                    "items": { "type": "integer" }
+                },
+                "skin": { "type": "array" }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "slot"
+            ]
+        },
+        "specialization": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer" },
+                "traits": {
+                    "type": "array",
+                    "items": { "type": "integer" }
+                }
+            }
+        },
+        "crafting": {
+            "type": "object",
+            "properties": {
+                "discipline": {
+                    "type": "string",
+                    "enum":[
+                        "Artificer",
+                        "Armorsmith",
+                        "Chef",
+                        "Huntsman",
+                        "Jeweler",
+                        "Leatherworker",
+                        "Tailor",
+                        "Weaponsmith",
+                    ]
+                },
+                "rating": { "type": "integer" },
+                "active": { "type": "boolean" }
+            },
+            "additionalProperties": false,
+            "required": [
+                "discipline",
+                "rating",
+                "active"
+            ]
+        }
+    },
+    "properties": {
+        "name": { "type": "string" },
+        "race": {
+            "type": "string",
+            "enum": [
+                "Asura",
+                "Charr",
+                "Human",
+                "Norn",
+                "Sylvari"
+            ]
+        },
+        "gender": {
+            "type": "string",
+            "enum": [
+                "Female",
+                "Male"
+            ]
+        },
+        "profession": {
+            "type": "string",
+            "enum": [
+                "Elementalist",
+                "Engineer",
+                "Guardian",
+                "Mesmer",
+                "Necromancer",
+                "Ranger",
+                "Revenant",
+                "Thief",
+                "Warrior"
+            ]
+        },
+        "level": { "type": "integer" },
+        "guild": { "type": "string" },
+        "created": { "type": "string" },
+        "age": { "type": "integer" },
+        "deaths": { "type": "integer" },
+        "crafting": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/crafting" }
+        },
+        "specializations": {
+            "type": "object",
+            "properties": {
+                "pve": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/specialization" }
+                },
+                "pvp": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/specialization" }
+                },
+                "wvw": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/specialization" }
+                },
+            },
+            "additionalProperties": false,
+            "required": [
+                "pve",
+                "pvp",
+                "wvw"
+            ]
+        },
+        "equipment": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/equipment" }
+        },
+        "bags": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    { "$ref": "#/definitions/bag" },
+                    { "type": "null" }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "race",
+        "gender",
+        "profession",
+        "level",
+        "created",
+        "age",
+        "deaths",
+        "crafting"
+    ]
+}
