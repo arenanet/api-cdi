@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "array",
+    "title": "Wallet (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/account/wallet node. This endpoint is authenticated.",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": { "type": "integer" },
+            "value": { "type": "integer" }
+        },
+        "additionalProperties": false,
+        "required": [
+            "id",
+            "value"
+        ]
+    },
+    "additionalItems": false
+}
