@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "object",
+    "title": "Token Info (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/tokeninfo node. This endpoint is authenticated.",
+    "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "permissions": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "account",
+                    "characters",
+                    "inventories",
+                    "tradingpost",
+                    "wallet",
+                    "unlocks",
+                    "pvp",
+                    "build"
+                ]
+            },
+            "additionalItems": false
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "id",
+        "name",
+        "permissions"
+    ]
+}
