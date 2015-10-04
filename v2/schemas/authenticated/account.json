@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/account",
+    "type": "object",
+    "title": "Account (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/account node. This endpoint is authenticated.",
+    "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "world": { "type": "integer" },
+        "created": { "type": "string" },
+        "guilds": {
+            "type": "array",
+            "items": { "type": "string" },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false,
+    "required":[
+        "id",
+        "name",
+        "world",
+        "created",
+        "guilds"
+    ]
+}
