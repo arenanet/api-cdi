@@ -15,6 +15,10 @@
 	coord     : [
 		6931.58,
 		14502.1
+	],
+	label_coord : [
+		6938.8,
+		14504.2
 	]
 }
 
@@ -31,6 +35,10 @@
 			7852.89,
 			9855.56
 		],
+		label_coord : [
+			7850.38,
+			9853.39
+		]
 		marker   : "https://render.guildwars2.com/..."
 	},
 	{
@@ -38,7 +46,6 @@
 		type      : "Keep",
 		map_type  : "RedHome",
 		map_id    : 94,
-		sector_id : 956,
 		name      : "Etheron Hills",
 		coord     : [
 			11212.6,
@@ -50,12 +57,7 @@
 		type      : "Tower",
 		map_type  : "Center",
 		map_id    : 38,
-		sector_id : 485,
-		name      : "Aldon's Ledge",
-		coord     : [
-			9417.39,
-			14790.7
-		]
+		name      : "Aldon's Ledge"
 	}
 ]
 
@@ -80,8 +82,12 @@
 //   * ObsidianSanctum
 //   * EdgeOfTheMists
 //
-// coord and sector_id may not be present on all objects. When one is
-// missing the other will be too -- the coord is the sector centroid.
+// label_coord and sector_id may not be present on all objects. When one is
+// missing the other will be too -- the label_coord is the sector centroid
+// and is where the sector name label is displayed.
+//
+// coord may also be missing on some objects. coord contains the location
+// of the capture ring, which is where the marker is displayed in-game.
 //
 // marker may not be present on all objects.
 //
