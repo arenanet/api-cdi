@@ -2,23 +2,14 @@
 // Mumble Link Identity
 // JSON-encoded string with the following fields --
 {
-	"name": "Stabby Mcstabberson",
-	"profession": 5,
-	"map_id": 50,
-	"world_id": 1001,
-	"team_color_id": 0,
-	"commander": false
+    "character_id": "11111111-2222-3333-4444-555555555555",
+    "map_id": 50,
+    "team_color_id": 0,
+    "commander": false,
+    "health": 27586, // questionable, requires realtime updates
+    "supply": 15,
+    ...
 }
-// Where profession values have the following mapping:
-//
-// 1 = Guardian
-// 2 = Warrior
-// 3 = Engineer
-// 4 = Ranger
-// 5 = Thief
-// 6 = Elementalist
-// 7 = Mesmer
-// 8 = Necromancer
 ```
 
 ```c++
