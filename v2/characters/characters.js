@@ -75,11 +75,14 @@
 	equipment: [
 		{
 			id: 6472,
-			slot: "Coat"
+			slot: "Coat",
+			binding: "Account"
 		},
 		{
 			id: 6470,
 			slot: "Boots"
+			binding: "Character",
+			bound_to: "Hello"
 		},
 		{
 			id: 6549,
@@ -154,11 +157,14 @@
 	equipment: [
 		{
 			id: 6472,
-			slot: "Coat"
+			slot: "Coat",
+			binding: "Account"
 		},
 		{
 			id: 6470,
-			slot: "Boots"
+			slot: "Boots",
+			binding: "Character",
+			bound_to: "Hello"
 		},
 		{
 			id: 6549,
