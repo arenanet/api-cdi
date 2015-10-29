@@ -19,6 +19,7 @@
 // 6 = Elementalist
 // 7 = Mesmer
 // 8 = Necromancer
+// 9 = Revenant
 ```
 
 ```c++
