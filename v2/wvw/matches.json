@@ -7,7 +7,7 @@
 // GET /v2/wvw/matches/1-1
 // GET /v2/wvw/matches?id=1-1
 // GET /v2/wvw/matches?page=0&page_size=1
-// GET /v2/wvw/matches?world_id=1001
+// GET /v2/wvw/matches?world=1001
 
 {
 	"id"         : "1-1",
