@@ -4,27 +4,31 @@
 [
 	null,
 	{
-		id: 46774,
+		item_id: 46774,
 		slot: 1,
 		count: 1,
 		upgrades: [
-			24675
+			{
+				item_id: 24675
+			}
 		]
 	},
 	{
-		id: 48087,
+		item_id: 48087,
 		slot: 2,
 		count: 1,
-		skin: 89
+		skin_id: 89
 	},
 	null,
 	{
-		id: 46760,
+		item_id: 46760,
 		slot: 4,
 		count: 1,
-		skin: 3706,
+		skin_id: 3706,
 		upgrades: [
-			24661
+			{
+				item_id: 24661
+			}
 		]
 	},
 	null,
@@ -33,16 +37,21 @@
 	null,
 	null,
 	{
-		id: 19996,
+		item_id: 19996,
 		slot: 10,
 		count: 1
 		infusions: [
-			1234,
-			5678
+			{
+				item_id: 1234
+			},
+			{
+				item_id: 5678
+			}
+
 		]
 	},
 	{
-		id: 19976,
+		item_id: 19976,
 		slot: 11,
 		count: 4
 	},

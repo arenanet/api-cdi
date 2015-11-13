@@ -74,42 +74,47 @@
 	deaths: 0
 	equipment: [
 		{
-			id: 6472,
+			item_id: 6472,
 			slot: "Coat"
 		},
 		{
-			id: 6470,
+			item_id: 6470,
 			slot: "Boots"
 		},
 		{
-			id: 6549,
+			item_id: 6549,
 			slot: "Helm"
 		},
 		{
-			id: 6473,
+			item_id: 6473,
 			slot: "Leggings"
 		},
 		{
-			id: 33345,
+			item_id: 33345,
 			slot: "WeaponA1"
 		},
 		{
-			id: 49812,
-			slot: "WeaponB1"
+			item_id: 49812,
+			skin_id: 3706,
+			slot: "WeaponB1",
 			upgrades: [
-				24607,
-				24548
+				{
+					item_id: 24607
+				},
+				{
+					item_id: 24548
+				}
 			]
 		}
 	],
 	bags: [
 		{
-			id: 8941,
+			item_id: 8941,
 			size: 4
 			inventory: [
 				null,
 				{
-					id: 32134,
+					item_id: 32134,
 					count: 1
 				},
 				null,
@@ -118,7 +123,7 @@
 		},
 		null,
 		{
-			id: 8932,
+			item_id: 8932,
 			size: 20
 			inventory: [
 				null,
@@ -127,7 +132,7 @@
 			]
 		},
 		{
-			id: 48715,
+			item_id: 48715,
 			size: 20
 		},
 		null
