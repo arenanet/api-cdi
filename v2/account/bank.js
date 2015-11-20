@@ -9,7 +9,8 @@
 		count: 1,
 		upgrades: [
 			24675
-		]
+		],
+		binding: "Account"
 	},
 	{
 		id: 48087,
@@ -25,7 +26,9 @@
 		skin: 3706,
 		upgrades: [
 			24661
-		]
+		],
+		binding: "Character",
+		bound_to: "Quagga Backpaker"
 	},
 	null,
 	null,
