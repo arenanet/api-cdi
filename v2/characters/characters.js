@@ -11,7 +11,11 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
-	elite: true,
+	elite : {
+		pve : "Elementalist",
+		pvp : "Elementalist",
+		wvw : "Tempest"
+	},
 	level: 80,
 	mastery: 100,
 	completion: 100,
@@ -47,7 +51,11 @@
 		race: "Human",
 		gender: "Female",
 		profession: "Thief",
-		elite: true,
+		elite : {
+			pve : "Elementalist",
+			pvp : "Elementalist",
+			wvw : "Tempest"
+		},
 		level: 80,
 		mastery: 100,
 		completion: 100,
@@ -73,7 +81,11 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
-	elite: true,
+	elite : {
+		pve : "Elementalist",
+		pvp : "Elementalist",
+		wvw : "Tempest"
+	},
 	level: 80,
 	mastery: 100,
 	completion: 100,
@@ -155,7 +167,11 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
-	elite: true,
+	elite : {
+		pve : "Elementalist",
+		pvp : "Elementalist",
+		wvw : "Tempest"
+	},
 	level: 80,
 	mastery: 100,
 	completion: 100,
