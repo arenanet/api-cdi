@@ -2,10 +2,6 @@
 
 // GET /v2/achievements/daily
 
-[ "na", "eu" ]
-
-// GET /v2/achievements/daily/{na,eu}
-
 {
 	pve : [
 		{
