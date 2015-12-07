@@ -69,6 +69,13 @@ window.onload = function() {
         getJSON("/v2/colors?ids=" + colorIds.join(","), function(colors) {
             data.colors = colors.reduce(
                 function(a, x) {
+    	            // XXX: THESE ARE NOT THE RIGHT COLOR VALUES.
+    	            // For how to obtain the color objects to the RGB
+    	            // values used for colorization, refer to:
+    	            //  * https://gist.github.com/codemasher/1cf2a5b0c323b0e67aef
+    	            //  * https://forum-en.guildwars2.com/forum/community/api/How-To-Colors-API
+    	            //  * https://forum-en.guildwars2.com/forum/community/api/API-Suggestion-Guilds
+
                     a[x.id] = {
                         r : x.cloth.rgb[0],
                         g : x.cloth.rgb[1],
@@ -204,8 +211,9 @@ window.onload = function() {
                 ctxEmblem.translate(0, -128);
             }
         
-            // foreground.layer[0] is ignored, I think.
+            // XXX: Not sure if this one is correct.
             drawColored(foreground.layers[0], {r:0, g:0, b:0});
+
             drawColored(foreground.layers[1], emblem.foreground_primary_color_id);
             drawColored(foreground.layers[2], emblem.foreground_secondary_color_id);
         ctxEmblem.restore();
