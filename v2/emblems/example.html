@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-color: #eee;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    #emblem {
+        width: 128px;
+        height: 128px;
+        border: 1px solid black;
+    }
+    
+    #scratch {
+        width: 128px;
+        height: 128px;
+        border: 1px solid red;
+        visibility: hidden;
+    }
+</style>
+<canvas id="emblem"></canvas>
+<canvas id="scratch"></canvas>
+<script>
+window.onload = function() {
+    var baseUrl  = "https://api.guildwars2.com",
+        guildId = "4BBB52AA-D768-4FC6-8EDE-C299F2822F0F",
+        steps;
+    
+    function getJSON(url, cb) {
+        var xhr = new XMLHttpRequest();
+        
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState !== 4) {
+                return;
+            }
+            
+            return cb(JSON.parse(xhr.responseText));
+        };
+        
+        xhr.open("GET", baseUrl + url, true);
+        xhr.send();
+    }
+    
+    return getJSON("/v1/guild_details.json?guild_id=" + guildId, function(guild) {
+        var data = {
+                guild      : guild,
+                colors     : null,
+                background : null,
+                foreground : null
+            },
+            colorIds = [
+                guild.emblem.background_color_id,
+                guild.emblem.foreground_primary_color_id,
+                guild.emblem.foreground_secondary_color_id
+            ];
+        
+        function checkPromise() {
+            var missing = Object.keys(data).some(function(x) {
+                    return !data[x];
+                });
+            
+            if(!missing) {
+                loadImages(data);
+            }
+        }
+        
+        // XXX: You really want to use promises here, but w/e this is super-vanilla.js.
+        getJSON("/v2/colors?ids=" + colorIds.join(","), function(colors) {
+            data.colors = colors.reduce(
+                function(a, x) {
+                    a[x.id] = {
+                        r : x.cloth.rgb[0],
+                        g : x.cloth.rgb[1],
+                        b : x.cloth.rgb[2]
+                    };
+                    return a;
+                },
+                {}
+            );
+            checkPromise();
+        });
+        
+        getJSON("/v2/emblem/backgrounds/" + guild.emblem.background_id, function(bg) {
+            data.background = bg;
+            checkPromise();
+        });
+        
+        getJSON("/v2/emblem/foregrounds/" + guild.emblem.foreground_id, function(fg) {
+            data.foreground = fg;
+            checkPromise();
+        });
+    });
+    
+    function loadImages(data) {
+        var allLayers = data.background.layers.concat(data.foreground.layers),
+            loaded    = 0;
+        
+        data.images = {};
+        
+        // XXX: Promises would be nice here too.
+        return allLayers.forEach(function(x) {
+            var img = new Image();
+            
+            img.addEventListener("load", function() {
+                data.images[x] = img;
+                
+                if(Object.keys(data.images).length === allLayers.length) {
+                    renderEmblem(data);
+                }
+            });
+            
+            img.crossOrigin = "anonymous";
+            img.src = x;
+        });
+    }
+    
+    function colorshift(ctx, img, rgb) {
+        console.log(arguments);
+        var data, bits, len;
+
+        ctx.clearRect(0, 0, 128, 128);
+        
+        ctx.drawImage(
+            img,
+            0, 0, 128, 128,
+            0, 0, 128, 128
+        );
+        
+        data = ctx.getImageData(0, 0, 128, 128);
+        bits = data.data;
+        len = bits.length;
+        
+        for(var p = 0; p < len; p += 4) {
+            bits[p + 0] = rgb.r;
+            bits[p + 1] = rgb.b;
+            bits[p + 2] = rgb.g;
+            // Don't mess with the alpha.
+        }
+        
+        ctx.putImageData(data, 0, 0);
+    }
+    
+    function setalpha(dstCtx, ctx, alpha) {
+        var srcData, dstData, srcBits, dstBits;
+        
+        ctx.clearRect(0, 0, 128, 128);
+        ctx.drawImage(
+            alpha,
+            0, 0, 128, 128,
+            0, 0, 128, 128
+        );
+        
+        srcData = ctx.getImageData(0, 0, 128, 128);
+        dstData = dstCtx.getImageData(0, 0, 128, 128);
+        srcBits = srcData.data;
+        dstBits = dstData.data;
+        len = Math.min(srcBits.length, dstBits.length);
+        
+        for(var p = 0; p < len; p += 4) {
+            dstBits[p + 3] = srcBits[p + 3];
+        }
+        
+        dstCtx.putImageData(dstData, 0, 0);
+    }
+    
+    function renderEmblem(data) {
+        console.log(data);
+        
+        var $emblem    = document.querySelector("#emblem"),
+            $scratch   = document.querySelector("#scratch"),
+            ctxEmblem  = $emblem.getContext("2d"),
+            ctxScratch = $scratch.getContext("2d"),
+            background = data.background,
+            foreground = data.foreground,
+            emblem     = data.guild.emblem;
+        
+        $emblem.height = 128;
+        $emblem.width = 128;
+        $scratch.height = 128;
+        $scratch.width = 128;
+        
+        function drawImage(image) {
+            ctxEmblem.drawImage(
+                typeof image === "string"
+                    ? data.images[image]
+                    : image,
+                0, 0, 128, 128,
+                0, 0, 128, 128
+            );
+        }
+        
+        function drawColored(image, color) {
+            colorshift(
+                ctxScratch,
+                data.images[image],
+                data.colors[color]
+            );
+            
+            drawImage($scratch);
+        }
+        
+        ctxEmblem.save();
+            if(emblem.flags.indexOf("FlipBackgroundHorizontal") !== -1) {
+                ctxEmblem.scale(-1, 1);
+                ctxEmblem.translate(-128, 0);
+            }
+        
+            if(emblem.flags.indexOf("FlipBackgroundVertical") !== -1) {
+                ctxEmblem.scale(1, -1);
+                ctxEmblem.translate(0, -128);
+            }
+        
+            drawColored(background.layers[0], emblem.background_color_id);
+        ctxEmblem.restore();
+        
+        ctxEmblem.save();
+            if(emblem.flags.indexOf("FlipForegroundHorizontal") !== -1) {
+                ctxEmblem.scale(-1, 1);
+                ctxEmblem.translate(-128, 0);
+            }
+        
+            if(emblem.flags.indexOf("FlipForegroundVertical") !== -1) {
+                ctxEmblem.scale(1, -1);
+                ctxEmblem.translate(0, -128);
+            }
+        
+            // foreground.layer[0] is ignored, I think.
+            drawColored(foreground.layers[1], emblem.foreground_primary_color_id);
+            drawColored(foreground.layers[2], emblem.foreground_secondary_color_id);
+
+            if(foreground.layers[3]) {
+                // This looks to be wrong -- foreground.layers[3] appears to be
+                // pure alpha ... which doesn't make sense as an alpha override.
+                //setalpha(ctxEmblem, ctxScratch, data.images[foreground.layers[3]]);
+            }
+        ctxEmblem.restore();
+    }
+};
+</script>
