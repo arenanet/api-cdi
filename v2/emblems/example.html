@@ -16,7 +16,7 @@
         width: 128px;
         height: 128px;
         border: 1px solid red;
-        visibility: hidden;
+        display: none;
     }
 </style>
 <canvas id="emblem"></canvas>
@@ -133,35 +133,12 @@ window.onload = function() {
         
         for(var p = 0; p < len; p += 4) {
             bits[p + 0] = rgb.r;
-            bits[p + 1] = rgb.b;
-            bits[p + 2] = rgb.g;
+            bits[p + 1] = rgb.g;
+            bits[p + 2] = rgb.b;
             // Don't mess with the alpha.
         }
         
         ctx.putImageData(data, 0, 0);
-    }
-    
-    function setalpha(dstCtx, ctx, alpha) {
-        var srcData, dstData, srcBits, dstBits;
-        
-        ctx.clearRect(0, 0, 128, 128);
-        ctx.drawImage(
-            alpha,
-            0, 0, 128, 128,
-            0, 0, 128, 128
-        );
-        
-        srcData = ctx.getImageData(0, 0, 128, 128);
-        dstData = dstCtx.getImageData(0, 0, 128, 128);
-        srcBits = srcData.data;
-        dstBits = dstData.data;
-        len = Math.min(srcBits.length, dstBits.length);
-        
-        for(var p = 0; p < len; p += 4) {
-            dstBits[p + 3] = srcBits[p + 3];
-        }
-        
-        dstCtx.putImageData(dstData, 0, 0);
     }
     
     function renderEmblem(data) {
@@ -194,7 +171,9 @@ window.onload = function() {
             colorshift(
                 ctxScratch,
                 data.images[image],
-                data.colors[color]
+                typeof color === "object"
+                    ? color
+                    : data.colors[color]
             );
             
             drawImage($scratch);
@@ -226,14 +205,9 @@ window.onload = function() {
             }
         
             // foreground.layer[0] is ignored, I think.
+            drawColored(foreground.layers[0], {r:0, g:0, b:0});
             drawColored(foreground.layers[1], emblem.foreground_primary_color_id);
             drawColored(foreground.layers[2], emblem.foreground_secondary_color_id);
-
-            if(foreground.layers[3]) {
-                // This looks to be wrong -- foreground.layers[3] appears to be
-                // pure alpha ... which doesn't make sense as an alpha override.
-                //setalpha(ctxEmblem, ctxScratch, data.images[foreground.layers[3]]);
-            }
         ctxEmblem.restore();
     }
 };
