@@ -15,6 +15,16 @@
 	"type"        : "Default",
 	"flags"       : [
 		"Pvp"
+	],
+	"tiers"       : [
+		{
+			"count"  : 10,
+			"points" : 1
+		},
+		{
+			"count"  : 100,
+			"points" : 5
+		}
 	]
 }
 
@@ -38,6 +48,10 @@
 ]
 
 // "type" is either "Default" or "ItemSet".
+
+// "tiers.n.count" is the number of <things> needed to reach this
+// tier. "tiers.n.points" is the non-cumulative AP awarded for reaching
+// the tier.
 
 // "flags" can contain:
 //  * "Pvp" -- can only get progress in PvP or WvW
