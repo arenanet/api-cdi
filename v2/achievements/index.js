@@ -28,8 +28,9 @@
 	],
 	"rewards"     : [
 		{
-			"type" : "Item",
-			"id"   : 30001
+			"type"  : "Item",
+			"id"    : 30001,
+			"count" : 1
 		},
 		{
 			"type"   : "Mastery",
