@@ -25,6 +25,17 @@
 			"count"  : 100,
 			"points" : 5
 		}
+	],
+	"rewards"     : [
+		{
+			"type"  : "Item",
+			"id"    : 30001,
+			"count" : 1
+		},
+		{
+			"type"   : "Mastery",
+			"region" : "Tyria"
+		}
 	]
 }
 
