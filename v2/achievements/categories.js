@@ -1,19 +1,44 @@
-// GET /v2/achievements/categories
+// Bulk-expanded endpoint for obtaining achivement categories.
+// "Categories" are sub-groups; that is, they are contained within
+// broad groups. The groups can be fetched from /v2/achievement/groups.
+
+// GET /v2/achievement/categories
+
+[ 1, 2, 3 ]
+
+// GET /v2/achievement/categories/1
+// GET /v2/achievement/categories?id=1
+
+{
+	"id": 1,
+	"name": "Slayer",
+	"description": "",
+	"order": 30,
+	"icon": "https://render.guildwars2.com/...",
+	"achievements": [1, 5, 4, 6, ...] 
+}
+
+// GET /v2/achievements/categories?ids=1,2
+// GET /v2/achievements/categories?page=0&page_size=2
+
 [
-    {
-        "id" : 1,
-        "title" : "General",
-        "subcategories" :
-            [
-                {
-                    "id" : 2,
-                    "title" : "Fractals of the Mists",
-                },
-                {
-                    "id" : 3,
-                    "title" : "Dungeons",
-                    "main_achievement" : 2 // used as description of the category and colored in the same color as the category (you may notice it ingame)
-                }
-            ]
-    }
+	{
+		"id": 1,
+		"name": "Slayer",
+		"description": "",
+		"order": 30,
+		"icon": "https://render.guildwars2.com/...",
+		"achievements": [1, 5, 4, 6, ...] 
+	},
+	{
+		"id": 2,
+		"name": "Hero",
+		"description": "",
+		"order": 40,
+		"icon": "https://render.guildwars2.com/...",
+		"achievements": [134, 9, 137, ...]
+	}
 ]
+
+// "achievements" references /v2/achievements.
+// "order" is used for sorting in the UI.
