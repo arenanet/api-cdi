@@ -70,7 +70,8 @@
 	],
 	"prerequisites" : [
 		1
-	]
+	],
+	"point_cap": 250
 }
 
 // GET /v2/achievements?ids=1
@@ -97,6 +98,9 @@
 // "tiers.n.count" is the number of <things> needed to reach this
 // tier. "tiers.n.points" is the non-cumulative AP awarded for reaching
 // the tier.
+
+// "point_cap" is the maximum number of AP that may be awarded by
+// a repeatable achievement.
 
 // "flags" can contain:
 //  * "Pvp" -- can only get progress in PvP or WvW
