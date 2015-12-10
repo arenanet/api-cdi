@@ -49,6 +49,30 @@
 	]
 }
 
+// GET /v2/achievements?id=2
+
+{
+	"id" : 2,
+	"icon" : "https://render.guildwars2.com/...",
+	"name" : "Some Repeatable Achievement",
+	"description" : "Asdf.",
+	"requirement" : "You must asdf.",
+	"type"        : "Default",
+	"flags"       : [
+		"Pvp",
+		"Repeatable"
+	],
+	"tiers"       : [
+		{
+			"count"  : 200,
+			"points" : 5
+		}
+	],
+	"prerequisites" : [
+		1
+	]
+}
+
 // GET /v2/achievements?ids=1
 // GET /v2/achievements?page=0&page_size=1
 
@@ -79,6 +103,7 @@
 //  * "CategoryDisplay" -- is a meta achievement
 //  * "MoveToTop" -- affects in-game UI collation
 //  * "IgnoreNearlyComplete" -- doesn't appear in the "nearly complete" UI
+//  * "Repeatable" -- can be repeated multiple times.
 
 // "bits.n.type" can be:
 //  * "Text" -- Gives a short description of the bit in "text"
