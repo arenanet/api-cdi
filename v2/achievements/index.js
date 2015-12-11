@@ -36,6 +36,16 @@
 			"type"   : "Mastery",
 			"region" : "Tyria"
 		}
+	],
+	"bits"        : [
+		{
+			"type" : "Text",
+			"text" : "Mission Complete"
+		},
+		{
+			"type" : "Item",
+			"id"   : 47496
+		}
 	]
 }
 
@@ -70,3 +80,8 @@
 //  * "MoveToTop" -- affects in-game UI collation
 //  * "IgnoreNearlyComplete" -- doesn't appear in the "nearly complete" UI
 
+// "bits.n.type" can be:
+//  * "Text" -- Gives a short description of the bit in "text"
+//  * "Item" -- Requires an item to be consumed or acquired
+//  * "Skin" -- Requires a skin to be unlocked
+//  * "MiniPet" -- Requires a minipet to be unlocked
