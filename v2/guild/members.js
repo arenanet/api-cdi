@@ -11,7 +11,7 @@
 	{
 		name: "Lawton Campbell.1450",
 		rank: "Member",
-		joined: "2015-06-17T02:38:27.000Z"
+		joined: null
 	}
 ]
 
@@ -19,3 +19,6 @@
 
 // "rank" is the rank id (note: user-editable) and references 
 // /v2/guild/:id/ranks.
+
+// "joined" may be null -- we're missing some data around
+// launch.
