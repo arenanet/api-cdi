@@ -20,5 +20,6 @@
 // "rank" is the rank id (note: user-editable) and references 
 // /v2/guild/:id/ranks.
 
-// "joined" may be null -- we're missing some data around
-// launch.
+// "joined" may be null -- the join date was not tracked before
+// about March 19th, 2013, so null indicates around or before
+// that date
