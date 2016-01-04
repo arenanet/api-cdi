@@ -16,6 +16,7 @@
 	"flags" : [
 		"ShowInWardrobe"
 	],
+	"rarity" : "Basic",
 	"restrictions" : [],
 	"details"      : {
 		"type"         : "Leggings",
@@ -35,6 +36,7 @@
 		"flags" : [
 			"ShowInWardrobe"
 		],
+		"rarity" : "Basic",
 		"restrictions" : [],
 		"details"      : {
 			"type"         : "Leggings",
@@ -50,6 +52,7 @@
 		"flags" : [
 			"ShowInWardrobe"
 		],
+		"rarity" : "Basic",
 		"restrictions" : []
 	},
 	{
@@ -60,6 +63,7 @@
 		"flags" : [
 			"ShowInWardrobe"
 		],
+		"rarity" : "Basic",
 		"restrictions" : [],
 		"details"      : {
 			"type"         : "Rifle",
@@ -80,6 +84,7 @@
 //   * "ShowInWardrobe"
 //   * "HideIfLocked" -- doesn't show up in the wardrobe if not unlocked
 //   * "NoCost" -- doesn't cost transmutation charges to apply
+//   * "OverrideRarity" -- skin overrides item rarity when applied
 //
 // "restrictions" indicates race restrictions and may contain any of:
 //   * "Human"
@@ -87,3 +92,13 @@
 //   * "Charr"
 //   * "Norn"
 //   * "Sylvari"
+//
+// "rarity" can have one of the following values:
+//   * "Junk"
+//   * "Basic"
+//   * "Fine"
+//   * "Masterwork"
+//   * "Rare"
+//   * "Exotic"
+//   * "Ascended"
+//   * "Legendary"
