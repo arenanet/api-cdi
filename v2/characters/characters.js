@@ -6,6 +6,9 @@
 // GET /v2/characters/Hello
 // Authorization: Bearer token123
 // Scopes: account, characters
+//
+// Without additional permissions, only a minimum amount of data is exposed.
+//
 {
 	name: "Hello",
 	race: "Human",
@@ -62,6 +65,16 @@
 // GET /v2/characters/Hello
 // Authorization: Bearer token123
 // Scopes: account, characters, inventories
+//
+// The "inventories" permission grants access to the following additional fields:
+//  * equipment: what the character currently has equipped. Refer to the notes
+//    on the bottom of this document for possible slot enumeration values. Note
+//    that the "builds" permission will also expose equipment.
+//  * bags: which inventory bags the character has equipped, and their contents.
+//  * recipes: the recipe ids for recipes unlocked by this character. Will be
+//    [] if the character has unlocked no recipes. Does not include recipes
+//    marked with the AutoLearned flag.
+//
 {
 	name: "Hello",
 	race: "Human",
@@ -144,9 +157,10 @@
 // Authorization: Bearer token123
 // Scopes: account, characters, builds
 //
-// NOTE: builds gives access to equipment -- but not the rest of the
-// inventory stuff which also gives access to equipment. Kinda weird
-// but makes sense, in a way.
+// With the builds permission, the following fields are added:
+//  * equipment - will be included with either "inventories" or "builds".
+//  * specializations - the character's equipped specializations and traits.
+//
 {
 	name: "Hello",
 	race: "Human",
