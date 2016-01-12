@@ -19,6 +19,12 @@
 	"current": 11,
 	"max": 12,
 	"done": false
+}, {
+	"id": 129,
+	"current": 11,
+	"max": 200,
+	"done": false,
+	"repeated": 35
 }]
 
 // "id" references /v2/achievements.
@@ -28,6 +34,9 @@
 // are treated as if they had "max=1".
 
 // "done" is basically "current" >= "max".
+
+// "repeated" is set for achievements marked as "Repeatable" and 
+// indicates how many times the achievement has been completed.
 
 // "bits", if set, references which achievement.bits from /v2/achievements
 // that the account has completed (e.g., which paths of which dungeon).
