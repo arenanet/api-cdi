@@ -11,7 +11,11 @@
 		"8B211747-3B86-E411-B57A-00224D566B58"
 	],
 	"access"  : "HeartOfThorns",
-	"created" : "2015-06-05T19:45:00Z"
+	"created" : "2015-06-05T19:45:00Z",
+
+	// Included only if "progression" scope is set.
+	"daily_ap"   : 40,
+	"monthly_ap" : 60
 }
 
 // "access" is one of:
