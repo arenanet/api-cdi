@@ -14,8 +14,9 @@
 	"created" : "2015-06-05T19:45:00Z",
 
 	// Included only if "progression" scope is set.
-	"daily_ap"   : 40,
-	"monthly_ap" : 60
+	"fractal_level" : 6,
+	"daily_ap"      : 40,
+	"monthly_ap"    : 60
 }
 
 // "access" is one of:
