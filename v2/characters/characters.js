@@ -204,6 +204,35 @@
 			]
 		}
 	],
+	slot_skills: {
+		pve: {
+			heal: 123,
+			utility: [ 
+				234,
+				345,
+				456
+				],
+			elite: 567
+		},
+		pvp: {
+			heal: 123,
+			utility: [ 
+				234,
+				345,
+				456
+				],
+			elite: 567
+		},
+		wvw: {
+			heal: 123,
+			utility: [ 
+				234,
+				345,
+				456
+				],
+			elite: 567	
+		}
+	},
 	specializations : {
 		pve : [
 			{
