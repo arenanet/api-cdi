@@ -93,11 +93,43 @@
 	}
 ]
 
+// GET /v2/achievements?ids=98,121,129,1681
+
+[
+	{
+		"id"        : 98,
+		"name"      : "To Know the Unknown",
+		"tiers"     : [{"count":1,"points":10}],
+		"tier_text" : "Story Achievement"
+	},
+	{
+		"id"        : 121,
+		"name"      : "Dungeons Discovered",
+		"tiers"     : [{"count":1,"points":5},...,{"count":8,"points":5}],
+		"tier_text" : "%str1% Dungeon Story[pl:\"Stories\"] Complete"
+	},
+	{
+		"id"        : 129,
+		"name"      : "Agent of Entropy",
+		"tiers"     : [{"count":200,"points":2}],
+		"tier_text" : "%str1%/%str2% Items Salvaged"
+	},
+	{
+		"id"        : 1681,
+		"name"      : "Birthday—Year 1",
+		"tiers"     : [{"count":1,"points":1}],
+		"tier_text" : ""
+	}
+]
+
 // "type" is either "Default" or "ItemSet".
 
 // "tiers.n.count" is the number of <things> needed to reach this
 // tier. "tiers.n.points" is the non-cumulative AP awarded for reaching
 // the tier.
+
+// "tier_text" is the format text for each tier. 
+// "%str1%" is current count and "%str2%" is final count.
 
 // "point_cap" is the maximum number of AP that may be awarded by
 // a repeatable achievement.
