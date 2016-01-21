@@ -1,4 +1,21 @@
-// GET /v2/guild_upgrades
+// Two endpoints for fetching guild upgrades:
+//
+//  * /v2/guild/upgrades provides bulk-expanded unauthenticated
+//    access to all possible guild "upgrades" (which includes
+//    decorations and stuff).
+//
+//  * /v2/guild/:id/upgrades provides authenticated access to
+//    a guild's current non-stacking upgrades (e.g., the normal
+//    upgrade tree, not decorations/consumables).
+
+// GET /v2/guild/:id/upgrades
+// * Requires API key from a guild leader with "guild" permission.
+// * Returns a list of completed upgrade ids (resolve against
+//   /v2/guild/upgrades).
+
+[ 12, 34, 56 ]
+
+// GET /v2/guild/upgrades
 // No parameters returns a list of IDs that can be bulk-expanded.
 [
     1234,
