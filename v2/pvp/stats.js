@@ -3,7 +3,8 @@
 
 [
 	{
-		pvp_rank  : 2,
+		pvp_rank : 80,
+		pvp_rank_points : 1106510,
 		aggregate : {
 			wins       : 1,
 			losses     : 2,
