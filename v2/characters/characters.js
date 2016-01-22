@@ -14,6 +14,52 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
+	order:"Order of Whispers",
+	storymode:[
+		"Ascalonian Catacombs",
+		"Caudecus's Manor",
+		"Twilight Arbor",
+		null,
+		null,
+		null,
+		null,
+		"The Ruined City of Arah",
+		],
+// or
+	storymodes: [
+		 {
+		  dungeon: "Ascalonian Catacombs",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Caudecus's Manor",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Twilight Arbor",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Sorrow's Embrace",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Citadel of Flame",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Honor of the Waves",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Crucible of Eternity",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "The Ruined City of Arah",
+		  done : true
+		 }
+	]
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
@@ -47,6 +93,52 @@
 		race: "Human",
 		gender: "Female",
 		profession: "Thief",
+		order:"Order of Whispers",
+		storymode:[
+			"Ascalonian Catacombs",
+			"Caudecus's Manor",
+			"Twilight Arbor",
+			null,
+			null,
+			null,
+			null,
+			"The Ruined City of Arah",
+		],
+// or
+	storymodes: [
+		 {
+		  dungeon: "Ascalonian Catacombs",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Caudecus's Manor",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Twilight Arbor",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Sorrow's Embrace",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Citadel of Flame",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Honor of the Waves",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Crucible of Eternity",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "The Ruined City of Arah",
+		  done : true
+		 }
+	]
 		level: 80,
 		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 		created: "2015-06-05T19:45:00Z",
@@ -80,6 +172,52 @@
 	race: "Human",
 	gender: "Female",
 	profession: "Thief",
+	order:"Order of Whispers",
+	storymode:[
+		"Ascalonian Catacombs",
+		"Caudecus's Manor",
+		"Twilight Arbor",
+		null,
+		null,
+		null,
+		null,
+		"The Ruined City of Arah",
+		],
+// or
+	storymodes: [
+		 {
+		  dungeon: "Ascalonian Catacombs",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Caudecus's Manor",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Twilight Arbor",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Sorrow's Embrace",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Citadel of Flame",
+		  done : false
+		 }
+		 	 {
+		  dungeon: "Honor of the Waves",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "Crucible of Eternity",
+		  done : true
+		 }
+		 	 {
+		  dungeon: "The Ruined City of Arah",
+		  done : true
+		 }
+	]
 	level: 80,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
