@@ -24,6 +24,8 @@
 	],
 	wvw : [
 		...
+	],
+	special : [
 	]
 }
 
@@ -32,3 +34,6 @@
 
 // "level" is the min/max character level that this achievement
 // will be attainable for. The range is includive on both ends.
+
+// "special" is for temporary content, mostly festival dailies
+// and the like. If there's no temporary content, [] is returned.
