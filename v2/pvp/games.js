@@ -29,7 +29,9 @@
 	"scores": {
 		"red": 344,
 		"blue": 500
-	}
+	},
+	"rating_type" : "Ranked",
+	"season" : "49CCE661-9DCC-473B-B106-666FE9942721"
 }
 
 // GET /v2/pvp/games?ids=all&access_token=foo
@@ -46,7 +48,24 @@
 		"scores": {
 			"red": 344,
 			"blue": 500
-		}
+		},
+		"rating_type" : "Ranked"
 	},
 	...
 ]
+
+// NOTES:
+//  "rating_type" is one of the following values:
+//
+//   * "None" -- custom arenas and such
+//   * "Unranked"
+//   * "Ranked"
+//   * "SoloArenaRated" -- deprecated
+//   * "TeamArenaRated" -- deprecated
+//
+//  you shouldn't be able to get the deprecated enumeration values unless
+//  you've got an API key for an account that hasn't PvP'd since those
+//  queues were available.
+//
+//  "season" may be omitted -- believe it's only present for games with
+//  rating_type="Ranked". Can be cross-referenced against /v2/pvp/seasons.
