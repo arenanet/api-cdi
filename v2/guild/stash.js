@@ -7,6 +7,7 @@
 		"upgrade_id" : 58,
 		"size" : 100,
 		"coins" : 100039,
+		"note" : "put extra siege/seaweed here please",
 		"inventory" : [
 			null,
 			null,
