@@ -160,6 +160,7 @@
 // With the builds permission, the following fields are added:
 //  * equipment - will be included with either "inventories" or "builds".
 //  * specializations - the character's equipped specializations and traits.
+//  * slot_skills - the character's equipped slot skills(heal, utility, elite), pets (for rangers), stances(for revenants).
 //
 {
 	name: "Hello",
@@ -206,6 +207,8 @@
 	],
 	slot_skills: {
 		pve: {
+			pets: [123,234],
+			stances: [456,678],
 			heal: 123,
 			utility: [ 
 				234,
@@ -215,6 +218,8 @@
 			elite: 567
 		},
 		pvp: {
+			pets: [123,234],
+			stances: [456,678],
 			heal: 123,
 			utility: [ 
 				234,
@@ -224,6 +229,8 @@
 			elite: 567
 		},
 		wvw: {
+			pets: [123,234],
+			stances: [456,678],
 			heal: 123,
 			utility: [ 
 				234,
