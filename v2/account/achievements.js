@@ -1,6 +1,13 @@
 // Provides the account's current achievement status.
 // Requires "account" and "progression" scopes.
 
+// Only lists achievements that have *some* progress started
+// (e.g., current > 0) or have been repaired back to 0 after
+// a bug was fixed (e.g. after the HOM reward issue). The
+// rest of the achievements visible in the UI can be pulled
+// from /v2/achievements -- the ones without the "Hidden"
+// flag are visible without progress.
+
 // GET /v2/account/achievements?access_token=:token
 
 [{
