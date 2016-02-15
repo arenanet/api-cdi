@@ -17,6 +17,12 @@
 
 // GET /v2/commerce/transactions/current/buys
 // GET /v2/commerce/transactions/current/sells
+//
+// NOTE: These endpoints are paginated and accept both the
+// ?page_size and ?page query parameters. In an odd twist of
+// fate, the usual X-Page-Total and X-Result-Total headers
+// are omitted, though, so you'll need to continue incrementing
+// ?page until no more results are returned.
 
 [
 	{
@@ -38,6 +44,9 @@
 
 // GET /v2/commerce/transactions/history/buys
 // GET /v2/commerce/transactions/history/sells
+//
+// NOTE: These endpoints are also paginated. See the above note
+// on usage/cavaets.
 
 [
 	{
@@ -126,4 +135,12 @@
 		created: "2014-12-15T14:59:36+00:00"
 		purchased: "2014-12-15T15:59:36+00:00"
 	}
+]
+
+// Don't forget you may need to use the pagination parameters
+// to see the entire result set.
+
+// GET /v2/commerce/transactions/history/buys?page_size=200&page=0
+[
+	// First 200 results.
 ]
