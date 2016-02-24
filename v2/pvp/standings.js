@@ -31,6 +31,9 @@
 //  * "division" and "tier" are both 0-indexed and refer to the 
 //    data returned by /v2/pvp/seasons, e.g., division index 1 of
 //    season 1 is "Division 2: Sapphire".
+//  * "repeats" refers to the number of times the account has maxed out
+//    the "Repeat" division (typically the last one in a season, e.g.
+//    Legendary in season 1).
 //
 // In the event that the data looks wrong, "total_points" is the
 // authoriative field; the others are provided for convenience.
