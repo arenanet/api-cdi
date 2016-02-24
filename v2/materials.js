@@ -8,6 +8,7 @@
 {
 	id: 5,
 	name: "Cooking Materials",
+	order: 16,
 	items: [
 		12134,
 		12238,
@@ -22,6 +23,7 @@
 [
 	{
 		id: 5,
+		order: 16
 		name: "Zutaten zum Kochen",
 		items: [
 			12134,
@@ -32,3 +34,7 @@
 	},
 	...
 ]
+
+// NOTES:
+//  * "order" is used for sorting in the UI; it's not necessarily
+//    monotonically incrementing.
