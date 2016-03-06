@@ -17,7 +17,8 @@
 	// Included only if "progression" scope is set.
 	"fractal_level" : 6,
 	"daily_ap"      : 40,
-	"monthly_ap"    : 60
+	"monthly_ap"    : 60,
+	"flags"         : [ "SpecialEvent" ]
 }
 
 // "access" is one of:
@@ -28,3 +29,11 @@
 //
 // Access levels are hierarchical -- e.g. "HeartOfThorns" implies
 // all access levels beneath it.
+//
+// "flags" is an array of strings indicating flags set on the
+// account. Almost no accounts will have any flags set. Zero or more
+// values may be present:
+//
+//  * SpecialEvent -- account was created for an event (e.g., PvP
+//    tournament) and isn't a "normal" account (e.g., may have
+//    all skins/dyes/etc unlocked, etc).
