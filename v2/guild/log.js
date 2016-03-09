@@ -41,6 +41,27 @@
 	"motd": "FSFOSDFJS"
 },
 
+// Example stash events.
+{
+	"id": 1533,
+	"time": "2016-03-04T18:54:02.785Z",
+	"type": "stash",
+	"user": "Lawton Campbell.9413",
+	"operation": "deposit",
+	"item_id": 0,
+	"count": 0,
+	"coins": 20000
+}, {
+	"id": 1530,
+	"time": "2016-03-04T18:52:35.779Z",
+	"type": "stash",
+	"user": "Lawton Campbell.9413",
+	"operation": "withdraw",
+	"item_id": 26051,
+	"count": 1,
+	"coins": 0
+},
+
 // Example treasury events.
 {
 	"id": 1283,
