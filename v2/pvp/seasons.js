@@ -11,6 +11,9 @@
 {
     "id": "44B85826-B5ED-4890-8C77-82DDF9F2CF2B",
     "name": "PvP League Season One",
+    "start": "2016-02-23T00:00:00.000Z",
+    "end": "2016-04-18T07:00:00.000Z",
+    "active": false,
     "divisions": [
     {
         "name": "Division 1: Amber",
