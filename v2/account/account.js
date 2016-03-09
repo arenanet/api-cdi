@@ -17,7 +17,8 @@
 	// Included only if "progression" scope is set.
 	"fractal_level" : 6,
 	"daily_ap"      : 40,
-	"monthly_ap"    : 60
+	"monthly_ap"    : 60,
+	"wvw_rank"      : 1111
 }
 
 // "access" is one of:
