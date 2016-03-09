@@ -24,6 +24,7 @@ Returned traits will have the following structure --
 {
     id: 238,
     tier: 3,
+    order: 2,
     name: "Evasive Arcana",
     description: "Create an attunement-based spell after dodging.",
     slot: "Major",
@@ -39,6 +40,7 @@ Where:
 
  * `id` is the numerical id of the trait.
  * `tier` is a value from `1-3` and indicates which set of three traits within the specialization the trait can be selected from.
+ * `order` is the top-bottom ordering within the tier, from `0-2`. Minor traits will always have an order of `0`.
  * `name` is the localized name of the trait.
  * `description` is the localized description of the trait.
  * `slot` is either `"Major"` or `"Minor"`; `"Minor"` traits are the ones that are unselectable.
