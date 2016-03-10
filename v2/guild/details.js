@@ -22,7 +22,6 @@
      "background": 27,
      "foreground": 114,
      "flags": [],
-     "recruting_text": "Lorem Ipsum"
      "member_count": 20,
      "member_capacity": 50,
      "background_color": 11,
