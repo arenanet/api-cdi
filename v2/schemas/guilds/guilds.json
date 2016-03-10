@@ -16,6 +16,8 @@
                 "tag": {
                     "type": "string"
                 },
+                "member_count": "integer",
+                "member_capacity": "integer",
                 "emblem": {
                     "$ref": "#/definitions/guildEmblem"
                 }

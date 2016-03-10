@@ -22,6 +22,8 @@
      "background": 27,
      "foreground": 114,
      "flags": [],
+     "member_count": 20,
+     "member_capacity": 50,
      "background_color": 11,
      "foreground_primary_color": 584,
      "foreground_secondary_color": 64
