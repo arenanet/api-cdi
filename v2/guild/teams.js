@@ -31,7 +31,22 @@
 				"byes"       : 0,
 				"forfeits"   : 0
 			}
-		}
+		},
+		"games" : [
+			{
+				"id": "98EBE4DC-E36B-4A6C-A38C-A5B898AF53A4",
+				"map_id": 549,
+				"started": "2015-08-29T13:42:45.000Z",
+				"ended": "2015-08-29T13:53:49.000Z",
+				"result": "Victory",
+				"team": "Blue",
+				"scores": {
+					"red": 344,
+					"blue": 500
+				},
+				"rating_type" : "Ranked"
+			}
+		]
 	}
 ]
 
@@ -41,3 +56,4 @@
 //  * "members.name" should match up with entries in /v2/guild/:id/members.
 //  * "members.role" is only ever one of "Captain" or "Member".
 //  * "aggregate" and "ladders" match the format of /v2/pvp/stats.
+//  * "games" matches the format of /v2/pvp/games with profession omitted.
