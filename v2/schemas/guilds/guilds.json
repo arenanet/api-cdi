@@ -13,6 +13,10 @@
                 "name": {
                     "type": "string"
                 },
+                "recruting_text": {
+                    "type": "string",
+                    "maxLength": 500
+                },
                 "tag": {
                     "type": "string"
                 },
