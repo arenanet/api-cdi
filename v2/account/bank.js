@@ -27,6 +27,16 @@
 		upgrades: [
 			24661
 		],
+		// stats only present for choosy-stat items.
+		stats: {
+			// id refers to /v2/itemstacks.
+			id: 161,
+			attributes: {
+				Power: 251,
+				Precision: 179,
+				CritDamage: 179
+			}
+		},
 		binding: "Character",
 		bound_to: "Quagga Backpaker"
 	},
