@@ -278,6 +278,16 @@
 			}
 		]
 	},
+	pvpbuild : {
+		amulet : 8,     // references /v2/pvp/amulets
+		rune   : 10293, // references /v2/items
+		sigils : [      // references /v2/items
+			10293,  // order matches UI, left -> right
+			23948,
+			10293,
+			23948
+		]
+	},
 	crafting : []
 }
 
