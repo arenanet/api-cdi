@@ -17,7 +17,6 @@
 		wvw : "Tempest"
 	},
 	level: 80,
-	mastery: 100,
 	completion: 100,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
@@ -57,7 +56,6 @@
 			wvw : "Tempest"
 		},
 		level: 80,
-		mastery: 100,
 		completion: 100,
 		guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58"
 		created: "2015-06-05T19:45:00Z",
@@ -87,7 +85,6 @@
 		wvw : "Tempest"
 	},
 	level: 80,
-	mastery: 100,
 	completion: 100,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
@@ -173,7 +170,6 @@
 		wvw : "Tempest"
 	},
 	level: 80,
-	mastery: 100,
 	completion: 100,
 	guild: "1F5F70AA-1DB6-E411-A2C4-00224D566B58",
 	created: "2015-06-05T19:45:00Z",
