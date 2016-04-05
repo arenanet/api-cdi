@@ -69,6 +69,32 @@
 	}
 ]
 
+// We also have some basic search functionality -- note that
+// the search endpoints only currently support item inputs/outputs.
+// Guild stuff will come with a future release.
+
+// GET /v2/recipes/search?input=19726
+// GET /v2/recipes/search?output=19713
+
+[
+	{
+		"type": "Refinement",
+		"output_item_id": 19713,
+		"output_item_count": 1,
+		"min_rating": 75,
+		"time_to_craft_ms": 2000,
+		"disciplines": ["Artificer", "Weaponsmith", "Scribe", "Huntsman"],
+		"flags": ["AutoLearned"],
+		"ingredients": [{
+			"item_id": 19726,
+			"count": 2
+		}],
+		"id": 1,
+		"chat_link": "[&CQEAAAA=]"
+	},
+	// ...
+]
+
 // NOTES:
 // Possible recipe.type values:
 //  * "Amulet"
