@@ -46,6 +46,14 @@
 				},
 				"rating_type" : "Ranked"
 			}
+		],
+		"seasons" : [
+			{
+				"id" : "44B85826-B5ED-4890-8C77-82DDF9F2CF2B",
+				"wins" : 1,
+				"losses" : 0,
+				"rating" : 1437
+			}
 		]
 	}
 ]
@@ -57,3 +65,5 @@
 //  * "members.role" is only ever one of "Captain" or "Member".
 //  * "aggregate" and "ladders" match the format of /v2/pvp/stats.
 //  * "games" matches the format of /v2/pvp/games with profession omitted.
+//  * "seasons.rating" is the number displayed in the guild panel in-game;
+//    it's basically the team's MMR.
