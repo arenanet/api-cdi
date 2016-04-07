@@ -35,6 +35,10 @@
 		{
 			"type"   : "Mastery",
 			"region" : "Tyria"
+		},
+		{
+			"type"   : "Title",
+			"name"   : "FancyTitle"
 		}
 	],
 	"bits"        : [
