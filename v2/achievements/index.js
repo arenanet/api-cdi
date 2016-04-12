@@ -38,7 +38,7 @@
 		},
 		{
 			"type"   : "Title",
-			"name"   : "FancyTitle"
+			"id"     : 6 // references /v2/titles.
 		}
 	],
 	"bits"        : [
