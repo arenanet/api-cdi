@@ -19,7 +19,7 @@
 	created: "2015-06-05T19:45:00Z",
 	age: 91, // in seconds.
 	deaths: 0,
-	title: 17, // references /v2/titles; null if no title set
+	title: 17, // references /v2/titles
 	crafting: [
 		{
 			discipline : "Leatherworker",
@@ -53,7 +53,6 @@
 		created: "2015-06-05T19:45:00Z",
 		age: 91,
 		deaths: 0,
-		title: null,
 		crafting: [
 			{
 				discipline : "Cook",
@@ -87,7 +86,6 @@
 	created: "2015-06-05T19:45:00Z",
 	age: 91,
 	deaths: 0,
-	title: null,
 	equipment: [
 		{
 			id: 6472,
@@ -174,7 +172,6 @@
 	created: "2015-06-05T19:45:00Z",
 	age: 91,
 	deaths: 0,
-	title: null,
 	equipment: [
 		{
 			id: 6472,
