@@ -8,7 +8,8 @@
 
 {
 	"id": 6,
-	"name": "Closer to the Stars"
+	"name": "Closer to the Stars",
+	"achievement": 42 // references /v2/achievements
 }
 
 // GET /v2/titles?ids=6,7
@@ -17,10 +18,12 @@
 [
 	{
 		"id": 6,
-		"name": "Closer to the Stars"
+		"name": "Closer to the Stars",
+		"achievement" : 42
 	},
 	{
 		"id": 7,
-		"name": "Ghostly Hero"
+		"name": "Ghostly Hero",
+		"achievement": 43
 	}
 ]
