@@ -16,11 +16,11 @@
 	{
 		"id": 1,
 		"name": "Personal Story",
-		"parts": [1011, 1111, 1112, 1211]
+		"chapters": [1111, 1112, 1121]
 	},
 	{
 		"id" 3,
 		"name": "Living World season 2"
-		"parts": [3100, 3200]
+		"chapters": [3100, 3200]
 	}
 ]
