@@ -61,27 +61,14 @@
         background: "https://render.guildwars2.com/..."
     },
     {
-        id: 5,
-        name: "Alchemy",
-        profession: "Engineer",
-        elite: false,
-        minor_traits: [
-            468,
-            487,
-            413
-        ],
-        major_traits: [
-            396,
-            509,
-            521,
-            520,
-            469,
-            470,
-            473,
-            1975,
-            1974
-        ],
-        icon: "https://render.guildwars2.com/...",
-        background: "https://render.guildwars2.com/..."
+	id: 34,
+	name: "Reaper",
+	profession: "Necromancer",
+	elite: true,
+	weapon_trait: 1985, // omitted if none.
+	minor_traits: [1905, 1879, 2018],
+	major_traits: [1974, 2020, 2026, 1969, 2008, 2031, 1932, 1919, 2021],
+	icon: "https://render.guildwars2.com/...",
+	background: "https://render.guildwars2.com/..."
     }
 ]
