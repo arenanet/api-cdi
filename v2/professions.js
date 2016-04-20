@@ -75,7 +75,40 @@
 				// ...
 			]
 		}
-	]
+	],
+	"weapons" : {
+		"Dagger" : {
+			"skills" : [
+				// Most skills look like this.
+				{
+					"id"   : 13004,
+					"slot" : "Weapon_1"
+				},
+
+				// Each thief dual-wield indicates which
+				// offhand it requires.
+				{
+					"id"      : 14003,
+					"slot"    : "Weapon_3",
+					"offhand" : "Dagger"
+				},
+
+				// Elementalist skills indicate their
+				// attunement.
+				{
+					"id"         : 1200,
+					"slot"       : "Weapon_1",
+					"attunement" : "Fire"
+				}
+			]
+		},
+		"Staff" : {
+			// Weapons that require a specialization to
+			// use have an extra "specialization" field.
+			"specialization" : 12,
+			"skills" : [ /* ... */ ]
+		}
+	}
 }
 
 // Can also fetch multiple professions via bulk-expanded options, e.g.
