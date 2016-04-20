@@ -88,7 +88,7 @@
 				// Each thief dual-wield indicates which
 				// offhand it requires.
 				{
-					"id"      : 14003",
+					"id"      : 14003,
 					"slot"    : "Weapon_3",
 					"offhand" : "Dagger"
 				},
