@@ -88,6 +88,5 @@
 //    with /v1/guild_details.json.
 //  * Upgrades can be determined by checking last_flipped and claimed_at
 //    (since they'll be time-based at some point in the future).
-//  * match.all_worlds is omitted if there are no active merges.
 //  * ?world=X will always return the correct match, but the requested
 //    world may not be in match.worlds due to merges.
