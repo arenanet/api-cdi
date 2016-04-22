@@ -205,7 +205,12 @@
 			]
 		}
 	],
-	slot_skills: {
+	pets: {
+		pve: [123, 456],
+		pvp: [234, 567],
+		wvw: [345, 678]
+	},
+	skills: {
 		pve: {
 			stances: [456,678],
 			heal: 123,
