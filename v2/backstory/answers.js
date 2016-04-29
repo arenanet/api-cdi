@@ -1,13 +1,13 @@
-// Normal bulk-expanded endpoint that dumps the possible madlib
+// Normal bulk-expanded endpoint that dumps the possible backstory
 // answers (e.g., answers to the questions you're asked during
 // character creation).
 
-// GET /v2/madlib/answers
+// GET /v2/backstory/answers
 
 [ 1, 2, 3, /* ... */ ]
 
-// GET /v2/madlib/answers?id=181
-// GET /v2/madlib/answers/181
+// GET /v2/backstory/answers?id=181
+// GET /v2/backstory/answers/181
 
 {
 	"id": 181,
@@ -19,8 +19,8 @@
 	"races": ["Norn"]
 }
 
-// GET /v2/madlib/answers?ids=157,159
-// GET /v2/madlib/answers?page_size=2&page=0
+// GET /v2/backstory/answers?ids=157,159
+// GET /v2/backstory/answers?page_size=2&page=0
 
 [{
 	"id": 157,
@@ -39,7 +39,7 @@
 }]
 
 // NOTES:
-//  * "question" references /v2/madlib/questions.
+//  * "question" references /v2/backstory/questions.
 //  * "races" is omitted if applicable to all races.
 //  * "professions" is omitted if applicable to all professions.
 //  * "journal" is the string displayed in your story journal.

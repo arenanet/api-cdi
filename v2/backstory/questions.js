@@ -1,13 +1,13 @@
-// Normal bulk-expanded endpoint that dumps madlib questions (the
+// Normal bulk-expanded endpoint that dumps backstory questions (the
 // questions you're asked during character creation).
 
-// GET /v2/madlib/questions
+// GET /v2/backstory/questions
 
 [ 1, 2, 3, /* ... */ ]
 
 
-// GET /v2/madlib/questions?id=10
-// GET /v2/madlib/questions/10
+// GET /v2/backstory/questions?id=10
+// GET /v2/backstory/questions/10
 
 {
 	"id": 10,
@@ -18,8 +18,8 @@
 	"races": ["Asura"]
 }
 
-// GET /v2/madlib/questions?page_size=1&page=0
-// GET /v2/madlib/questions?ids=181
+// GET /v2/backstory/questions?page_size=1&page=0
+// GET /v2/backstory/questions?ids=181
 
 [{
 	"id": 181,
@@ -31,6 +31,6 @@
 }]
 
 // NOTES:
-//  * "answers" refers to /v2/madlib/answers ids.
+//  * "answers" refers to /v2/backstory/answers ids.
 //  * "professions" is omitted if applicable to all professions.
 //  * "races" is omitted if applicable to all races.
