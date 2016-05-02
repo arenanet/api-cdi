@@ -12,7 +12,8 @@
 {
 	"id": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
 	"name": "Living World Season 2",
-	"order": 2000
+	"order": 2000,
+	"stories": [1, 2, 3]
 }
 
 // GET /v2/seasons?ids=A515A1D3-4BD7-4594-AE30-2C5D05FF5960
@@ -21,5 +22,6 @@
 [{
 	"id": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
 	"name": "Living World Season 2",
-	"order": 2000
+	"order": 2000,
+	"stories": [4, 5, 6]
 }]
