@@ -61,14 +61,35 @@
         background: "https://render.guildwars2.com/..."
     },
     {
-	id: 34,
-	name: "Reaper",
-	profession: "Necromancer",
-	elite: true,
-	weapon_trait: 1985, // omitted if none.
-	minor_traits: [1905, 1879, 2018],
-	major_traits: [1974, 2020, 2026, 1969, 2008, 2031, 1932, 1919, 2021],
-	icon: "https://render.guildwars2.com/...",
-	background: "https://render.guildwars2.com/..."
+    {
+        "id": 43,
+        "name": "Scrapper",
+        "profession": "Engineer",
+        "elite": true,
+	"weapon_trait": 1985, // omitted if none.
+        "minor_traits": [
+            1959,
+            2014,
+            1877
+        ],
+        "major_traits": [
+            1917,
+            1971,
+            1867,
+            1954,
+            1999,
+            1860,
+            1981,
+            2052,
+            1849
+        ],
+        icon: "https://render.guildwars2.com/...",
+        background: "https://render.guildwars2.com/...",
+	profession_icon: "https://render.guildwars2.com/...",
+	profession_icon_big: "https://render.guildwars2.com/..."
     }
 ]
+
+// NOTE: profession_icon and profession_icon_big override the
+//       icons listed in /v2/professions when you have the elite
+//       spec slotted..
