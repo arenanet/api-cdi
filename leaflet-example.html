@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        <style>
+            .leaflet-container {
+                background: #000;
+            }
+
+            #map {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
+            }
+            
+            #controls {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 1;
+            }
+            
+            .sector-label {
+                width: auto !important;
+                height: auto !important;
+                color: white;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="controls">
+            <select id="continent"></select>
+            <select id="floor"></select>
+        </div>
+        
+        <script>
+            "use strict";
+            
+            var apiBase = "https://api.guildwars2.com/v2",
+                map = L.map("map", {
+                    minZoom : 1,
+                    maxZoom : 7,
+                    crs     : L.CRS.Simple
+                });
+
+            function unproject(coord) {
+                return map.unproject(coord, map.getMaxZoom());
+            }
+            
+            function unprojectRect(rect) {
+                return [
+                    unproject(rect[0]),
+                    unproject(rect[1])
+                ];
+            }
+            
+            function clearChildren($node) {
+                while($node.firstChild) {
+                    $node.removeChild($node.firstChild);
+                }
+            }
+            
+            function fieldSort(field, a, b) {
+                if(a[field] < b[field]) {
+                    return -1;
+                } else if(a[field] > b[field]) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+
+            window.addEventListener("load", () => {
+                var $continent  = document.querySelector("#continent"),
+                    $floor      = document.querySelector("#floor"),
+                    allContinents,
+                    allObjectives,
+                    allFloors,
+                    fileIcons;
+                
+                fetch(`${apiBase}/wvw/objectives?ids=all`)
+                    .then((res) => res.json())
+                    .then((res) => {
+                        allObjectives = res;
+                    });
+                
+                fetch(`${apiBase}/files?ids=all`)
+                    .then((res) => res.json())
+                    .then((res) => {
+                        var fileMapping = {
+                                map_poi        : "landmark",
+                                map_vista      : "vista",
+                                map_waypoint   : "waypoint",
+                                map_dungeon    : "unlock",
+                                map_heropoint  : "heropoint",
+                                map_heart_full : "heart",
+                                wvw_camp       : "Camp",
+                                wvw_tower      : "Tower",
+                                wvw_keep       : "Keep",
+                                wvw_castle     : "Castle"
+                            };
+                    
+                        fileIcons = res.reduce(
+                            (a, x) => {
+                                if(x.id in fileMapping) {
+                                    a[fileMapping[x.id]] = L.icon({
+                                        iconUrl    : x.icon,
+                                        iconSize   : [ 32, 32 ],
+                                        iconAnchor : [ 16, 16 ]
+                                    });
+                                }
+                                
+                                return a;
+                            },
+                            {}
+                        );
+                    });
+                
+                fetch(`${apiBase}/continents?page=0`)
+                    .then((res) => res.json())
+                    .then((res) => {
+                        clearChildren($continent);
+                    
+                        res = res.sort(fieldSort.bind(null, "id"));
+                    
+                        res.forEach((cont) => {
+                            var $elem = document.createElement("option");
+                            $elem.value = cont.id;
+                            $elem.innerHTML = cont.name;
+                            $continent.appendChild($elem);
+                        });
+                    
+                        allContinents = res.reduce(
+                            (a, x) => {
+                                a[x.id] = x;
+                                return a;
+                            },
+                            {}
+                        );
+                    
+                        $continent.dispatchEvent(new Event("change"));
+                    });
+                
+                $continent.addEventListener("change", () => {
+                    var id = parseInt($continent.value, 10);
+                    
+                    fetch(`${apiBase}/continents/${id}/floors?ids=all`)
+                        .then((res) => res.json())
+                        .then((res) => {
+                            clearChildren($floor);
+                    
+                            res = res.sort(fieldSort.bind(null, "id"));
+                        
+                            res.forEach((floor) => {
+                                var $elem = document.createElement("option");
+                                $elem.value = floor.id;
+                                $elem.innerHTML = floor.id;
+                                if(floor.id == 1) {
+                                    $elem.selected = "selected";
+                                }
+                                $floor.appendChild($elem);
+                            });
+                        
+                            allFloors = res.reduce(
+                                (a, x) => {
+                                    a[x.id] = x;
+                                    return a;
+                                },
+                                {}
+                            );
+                        
+                            $floor.dispatchEvent(new Event("change"));
+                        });
+                });
+                
+                $floor.addEventListener("change", () => {
+                    var continentId = parseInt($continent.value, 10),
+                        floorId     = parseInt($floor.value, 10),
+                        floor       = allFloors[floorId],
+                        northEast, southWest;
+                    
+                    if(!floor) {
+                        return console.error(`Invalid floor ${floorId}`);
+                    }
+                    
+                    map.eachLayer((layer) => map.removeLayer(layer));
+                    map.setView([0, 0], 0);
+                    
+                    northEast = unproject(floor.clamped_view ? floor.clamped_view[0] : [ 0, 0 ]);
+                    southWest = unproject(floor.clamped_view ? floor.clamped_view[1] : floor.texture_dims);
+                    
+                    map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
+                    
+                    L.tileLayer(`https://tiles.guildwars2.com/${continentId}/${floorId}/{z}/{x}/{y}.jpg`, {
+                        minZoom                : 0,
+                        maxZoom                : 7,
+                        continuousWorld        : true,
+                        errorTileUrl           : "transparent.png",
+                        zoomAnimationThreshold : 8
+                    }).addTo(map);
+                    
+                    
+                    if(continentId == 2 && floorId > 0 && floorId < 4) {
+                        allObjectives.forEach((obj) => {
+                            var icon;
+                            
+                            if(!obj.coord) {
+                                return;
+                            }
+
+                            if(obj.marker) {
+                                icon = L.icon({
+                                    iconUrl  : obj.marker,
+                                    iconSize : [ 32, 32 ]
+                                });
+                            } else {
+                                icon = fileIcons[obj.type];
+                            }
+                            if(!icon) {
+                                return;
+                            }
+
+                            L.marker(unproject(obj.coord.slice(0, 2)), {
+                                icon : icon
+                            }).addTo(map);
+                        });
+                    }
+                    
+                    Object.keys(floor.regions).forEach((regionId) => {
+                        var region = floor.regions[regionId];
+                        
+                        
+                        Object.keys(region.maps).forEach((mapId) => {
+                            var map2 = region.maps[mapId];
+                            
+                            L.rectangle(unprojectRect(region.continent_rect), {
+                                title  : region.name,
+                                color  : "rgba(255, 255, 255, 0)",
+                                weight : 0.2
+                            }).addTo(map);
+                            
+                            Object.keys(map2.points_of_interest).forEach((poiId) => {
+                                var poi = map2.points_of_interest[poiId];
+                                
+                                L.marker(unproject(poi.coord), {
+                                    icon  : fileIcons[poi.type],
+                                    title : poi.name,
+                                    alt   : poi.name
+                                }).addTo(map);
+                            });
+                            
+                            map2.skill_challenges.forEach((chal) => {
+                                L.marker(unproject(chal.coord), {
+                                    icon : fileIcons["heropoint"]
+                                }).addTo(map);
+                            });
+                            
+                            Object.keys(map2.tasks).forEach((taskId) => {
+                                var task = map2.tasks[taskId];
+                                L.marker(unproject(task.coord), {
+                                    icon  : fileIcons["heart"],
+                                    title : task.objective,
+                                    alt   : task.objective
+                                }).addTo(map);
+                            });
+                            
+                            Object.keys(map2.sectors).forEach((sectorId) => {
+                                var sector = map2.sectors[sectorId];
+                                
+                                if(!sector.bounds) {
+                                    return;   
+                                }
+                                
+                                L.polyline(sector.bounds.map((x) => unproject(x)), {
+                                    color : "yellow"
+                                }).addTo(map);
+                                
+                                if(sector.name) {
+                                    L.marker(unproject(sector.coord), {
+                                        icon : L.divIcon({
+                                            className : "sector-label",
+                                            html      : sector.name
+                                        })
+                                    }).addTo(map);
+                                }
+                            });
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
