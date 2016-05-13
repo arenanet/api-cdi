@@ -29,6 +29,7 @@
 		"order": 30,
 		"icon": "https://render.guildwars2.com/...",
 		"achievements": [1, 5, 4, 6, ...] 
+		"required_access": ["GuildWars2", "HeartOfThorns"]
 	},
 	{
 		"id": 2,
@@ -37,8 +38,12 @@
 		"order": 40,
 		"icon": "https://render.guildwars2.com/...",
 		"achievements": [134, 9, 137, ...]
+		"required_access": ["GuildWars2", "HeartOfThorns"]
 	}
 ]
 
-// "achievements" references /v2/achievements.
-// "order" is used for sorting in the UI.
+// * "achievements" references /v2/achievements.
+// * "order" is used for sorting in the UI.
+// * "required_access" references the "access" field of /v2/account. You'll
+//   only see achievements in-game which have an entry in required_access
+//   which matches your access.
