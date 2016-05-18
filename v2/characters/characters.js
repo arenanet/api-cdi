@@ -98,7 +98,7 @@
 			bound_to: "Hello",
 			// stats only present for choosy-stat items.
 			stats: {
-				// id refers to /v2/itemstacks.
+				// id refers to /v2/itemstats.
 				id: 161,
 				attributes: {
 					Power: 251,
