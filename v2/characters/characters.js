@@ -95,7 +95,17 @@
 			id: 6470,
 			slot: "Boots"
 			binding: "Character",
-			bound_to: "Hello"
+			bound_to: "Hello",
+			// stats only present for choosy-stat items.
+			stats: {
+				// id refers to /v2/itemstacks.
+				id: 161,
+				attributes: {
+					Power: 251,
+					Precision: 179,
+					CritDamage: 179
+				}
+			}
 		},
 		{
 			id: 6549,
