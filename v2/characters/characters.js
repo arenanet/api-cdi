@@ -35,6 +35,13 @@
 			rating: 423,
 			active : true
 		}
+	],
+	backstory: [
+		54,
+		86,
+		91,
+		93,
+		188
 	]
 }
 
@@ -58,6 +65,13 @@
 				rating : 400,
 				active : true
 			}
+		],
+		backstory: [
+			54,
+			86,
+			91,
+			93,
+			188
 		]
 	}
 ]
@@ -324,7 +338,14 @@
 			23948
 		]
 	},
-	crafting : []
+	crafting : [],
+	backstory: [
+		54,
+		86,
+		91,
+		93,
+		188
+	]
 }
 
 // Possible equipment slots:
