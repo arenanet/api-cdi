@@ -25,7 +25,8 @@
 	"id": 740,
 	"current": 11,
 	"max": 12,
-	"done": false
+	"done": false,
+	"unlocked": true
 }, {
 	"id": 129,
 	"current": 11,
@@ -44,6 +45,11 @@
 
 // "repeated" is set for achievements marked as "Repeatable" and 
 // indicates how many times the achievement has been completed.
+
+// "unlocked" is only set for achievements that require an explicit
+// unlock before they can be progressed. It should almost always
+// return "true" since usually you can only progress unlocked achievements,
+// but "false" indicates that the progress is bogus.
 
 // "bits", if set, references which achievement.bits from /v2/achievements
 // that the account has completed (e.g., which paths of which dungeon).
