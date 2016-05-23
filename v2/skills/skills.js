@@ -23,6 +23,7 @@
 	],
 	slot: "Weapon_4",
 	icon: "...",
+	flags: [],
 	id: 5497
 }
 
@@ -48,6 +49,7 @@
 		],
 		slot: "Downed_4",
 		icon: "...",
+		flags: [],
 		id: 1175
 	}
 ]
@@ -76,6 +78,7 @@
 		10586
 	],
 	icon: "...",
+	flags: [],
 	id: 5534
 }
 
@@ -105,6 +108,7 @@
 			5531
 		],
 		icon: "..",
+		flags: [ "GroundTargeted", "NoUnderwater" ],
 		id: 5516
 	},
 	{
@@ -124,6 +128,7 @@
 		],
 		slot: "Weapon_4",
 		icon: "...",
+		flags: [],
 		id: 5517
 	}
 ]
@@ -156,6 +161,7 @@
 			5939
 		],
 		icon: "...",
+		flags: [],
 		id: 5812
 	},
 	{
@@ -169,6 +175,7 @@
 		slot: "Utility",
 		toolbelt_skill: 5813,
 		icon: "...",
+		flags: [],
 		id: 6111
 	}
 ]
@@ -192,6 +199,7 @@
 		"Burst"
 	],
 	icon: "...",
+	flags: [],
 	id: 14375
 }
 
@@ -211,6 +219,7 @@
 		"StealthAttack"
 	],
 	icon: "...",
+	flags: [],
 	id: 13005
 }
 
@@ -234,5 +243,6 @@
 	],
 	initiative: 4,
 	icon: "...",
+	flags: [],
 	id: 13006
 }
