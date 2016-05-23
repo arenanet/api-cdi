@@ -35,6 +35,10 @@
 		{
 			"type"   : "Mastery",
 			"region" : "Tyria"
+		},
+		{
+			"type"   : "Title",
+			"id"     : 6 // references /v2/titles.
 		}
 	],
 	"bits"        : [
