@@ -108,7 +108,7 @@
 			5531
 		],
 		icon: "..",
-		flags: [ "GroundTargeted" ],
+		flags: [ "GroundTargeted", "NoUnderwater" ],
 		id: 5516
 	},
 	{
