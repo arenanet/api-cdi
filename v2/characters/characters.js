@@ -203,6 +203,7 @@
 //  * equipment - will be included with either "inventories" or "builds".
 //  * specializations - the character's equipped specializations and traits.
 //  * skills - the character's equipped slot skills(heal, utility, elite), pets (for rangers), legends(for revenants).
+//  * training - current progress towards training
 //
 {
 	name: "Hello",
@@ -373,29 +374,44 @@
 		91,
 		93,
 		188
-	]
+	],
+	training : [
+		{
+			id: 60,
+			spent: 20,
+			done: true
+		},
+		{
+			id: 58,
+			spent: 26,
+			done: false
+		}
+	],
+	crafting : []
 }
 
-// Possible equipment slots:
-//  * HelmAquatic
-//  * Backpack
-//  * Coat
-//  * Boots
-//  * Gloves
-//  * Helm
-//  * Leggings
-//  * Shoulders
-//  * Accessory1
-//  * Accessory2
-//  * Ring1
-//  * Ring2
-//  * Amulet
-//  * WeaponAquaticA
-//  * WeaponAquaticB
-//  * WeaponA1 (primary mainhand)
-//  * WeaponA2 (primary offhand)
-//  * WeaponB1 (secondary mainhand)
-//  * WeaponB2 (secondary offhand)
-//  * Sickle
-//  * Axe
-//  * Pick
+// NOTES: 
+//  - training.id references the id values from /v2/professions.training.
+//  - Possible equipment slots:
+//    * HelmAquatic
+//    * Backpack
+//    * Coat
+//    * Boots
+//    * Gloves
+//    * Helm
+//    * Leggings
+//    * Shoulders
+//    * Accessory1
+//    * Accessory2
+//    * Ring1
+//    * Ring2
+//    * Amulet
+//    * WeaponAquaticA
+//    * WeaponAquaticB
+//    * WeaponA1 (primary mainhand)
+//    * WeaponA2 (primary offhand)
+//    * WeaponB1 (secondary mainhand)
+//    * WeaponB2 (secondary offhand)
+//    * Sickle
+//    * Axe
+//    * Pick
