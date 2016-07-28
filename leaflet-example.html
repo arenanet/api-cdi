@@ -192,6 +192,8 @@
                     
                     map.eachLayer((layer) => map.removeLayer(layer));
                     map.setView([0, 0], 0);
+                    map.options.minZoom = continent.min_zoom;
+                    map.options.maxZoom = continent.max_zoom;
                     
                     northEast = unproject(floor.clamped_view ? floor.clamped_view[0] : [ 0, 0 ]);
                     southWest = unproject(floor.clamped_view ? floor.clamped_view[1] : floor.texture_dims);
@@ -199,8 +201,8 @@
                     map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
                     
                     L.tileLayer(`https://tiles.guildwars2.com/${continentId}/${floorId}/{z}/{x}/{y}.jpg`, {
-                        minZoom                : 0,
-                        maxZoom                : 7,
+                        minZoom                : continent.min_zoom,
+                        maxZoom                : continent.max_zoom,
                         continuousWorld        : true,
                         errorTileUrl           : "leaflet-missing-tile.png",
                         zoomAnimationThreshold : 8
