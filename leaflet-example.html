@@ -200,12 +200,18 @@
                     
                     map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
                     
-                    L.tileLayer(`https://tiles.guildwars2.com/${continentId}/${floorId}/{z}/{x}/{y}.jpg`, {
+                    // NOTE: You can omit the {s} and subdomains option to use only
+                    // tiles.guildwars2.com -- having multiple subdomains increases the
+                    // number of images a browser will load concurrency and may yield
+                    // better performance (though there have been historic issues with
+                    // this when tiles are updated).
+                    L.tileLayer(`https://tiles{s}.guildwars2.com/${continentId}/${floorId}/{z}/{x}/{y}.jpg`, {
                         minZoom                : continent.min_zoom,
                         maxZoom                : continent.max_zoom,
                         continuousWorld        : true,
                         errorTileUrl           : "leaflet-missing-tile.png",
-                        zoomAnimationThreshold : 8
+                        zoomAnimationThreshold : 8,
+                        subdomains             : [ 1, 2, 3, 4 ]
                     }).addTo(map);
                     
                     
