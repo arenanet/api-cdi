@@ -12,6 +12,7 @@
 	"name"        : "Some Achievement",
 	"description" : "A short text string about this achievement",
 	"requirement" : "What's displayed in-game about the requirements for this",
+	"locked_text" : "A text string about how to unlock this",
 	"type"        : "Default",
 	"flags"       : [
 		"Pvp"
@@ -61,6 +62,7 @@
 	"name" : "Some Repeatable Achievement",
 	"description" : "Asdf.",
 	"requirement" : "You must asdf.",
+	"locked_text" : "",
 	"type"        : "Default",
 	"flags"       : [
 		"Pvp",
@@ -89,6 +91,7 @@
 	    "name"        : "Daily WvW Caravan Disruptor",
 	    "description" : "Cut off the enemy supply chain in the Mists.",
 	    "requirement" : "Destroy  enemy supply caravan in World versus World.",
+	    "locked_text" : "",
 	    "type"        : "Default",
 	    "flags"       : [
 		"Pvp"
@@ -112,6 +115,8 @@
 //  * "MoveToTop" -- affects in-game UI collation
 //  * "IgnoreNearlyComplete" -- doesn't appear in the "nearly complete" UI
 //  * "Repeatable" -- can be repeated multiple times.
+//  * "RequiresUnlock" -- requires an item to unlock.
+//  * "Hidden" -- is a hidden achievement.
 
 // "bits.n.type" can be:
 //  * "Text" -- Gives a short description of the bit in "text"
