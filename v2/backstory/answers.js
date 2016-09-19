@@ -6,8 +6,8 @@
 
 [ "1-1", "1-2", "1-3", /* ... */ ]
 
-// GET /v2/backstory/answers?id=181
-// GET /v2/backstory/answers/181
+// GET /v2/backstory/answers?id=183-181
+// GET /v2/backstory/answers/183-181
 
 {
 	"id": "183-181",
@@ -19,7 +19,7 @@
 	"races": ["Norn"]
 }
 
-// GET /v2/backstory/answers?ids=157,159
+// GET /v2/backstory/answers?ids=36-157,186-159
 // GET /v2/backstory/answers?page_size=2&page=0
 
 [{
