@@ -35,7 +35,8 @@
 		},
 		{
 			"type"   : "Mastery",
-			"region" : "Tyria"
+			"region" : "Tyria",
+			"id"     : 123
 		},
 		{
 			"type"   : "Title",
