@@ -18,7 +18,11 @@
 		count: 1,
 		skin: 89
 	},
-	null,
+	{
+		id: 23045,
+		slot: 3,
+		charges: 39
+	},
 	{
 		id: 46760,
 		slot: 4,
