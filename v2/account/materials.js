@@ -15,7 +15,8 @@
 	{
 		"id" : 234,
 		"category" : 4,
-		"count" : 3
+		"count" : 3,
+		"binding": "Account"
 	},
 	...
 ]
