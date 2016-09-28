@@ -3,6 +3,7 @@
     "texture_dims" : [ 32768, 32768 ],
     "regions" : {
         "1" : {
+	    "id": 1,
             "name" : "Shiverpeak Mountains",
             "label_coord" : [ 19840, 13568 ],
             "maps" : {
