@@ -12,6 +12,16 @@
         [ 19456, 14976 ],
         [ 21760, 18176 ]
     ],
+    "adventures": [ {
+        "coord": [
+            1234.1,
+            1348.3,
+            2948.9
+        ],
+        "id": "8D00FA87-28CD-4402-AAEF-501A610E0447",
+        "name": "Not a Real Adventure",
+        "description": "I just made this up"
+    } ],
     "points_of_interest" : {
         "1577" : {
             "name" : "Bear's Jaws Shrine",
