@@ -10,14 +10,45 @@
 // GET /v2/wvw/matches?world=1001
 
 {
-	"id"         : "1-1",
-	"start_time" : "2015-09-16T21:00:00Z",
-	"end_time"   : "2015-09-17T21:00:00Z",
-	"scores"     : {
+	"id"                : "1-1",
+	"start_time"        : "2015-09-16T21:00:00Z",
+	"end_time"          : "2015-09-17T21:00:00Z",
+	"skirmish_end_time" : "2015-09-17T03:00:00Z",
+	"scores"            : {
 		"red"   : 44820,
 		"blue"  : 44820,
 		"green" : 44820
 	},
+	"victory_points" : {
+		"red"   : 4,
+		"blue"  : 6,
+		"green" : 6
+	},
+	"skirmishes" : [
+		{
+			// NOTE: These are 1-indexed.
+			"id" : 1,
+			"scores" : {
+				"red"   : 1536,
+				"blue"  : 1536,
+				"green" : 1536
+			},
+			"map_scores" : [
+				{
+					"type" : "RedHome",
+					"scores" : {
+						"red"   : 576,
+						"blue"  : 576,
+						"green" : 576
+					}
+				},
+				// type=BlueHome
+				// type=GreenHome
+				// type=Center
+			]
+		},
+		// Rest of skirmishes in this matchup.
+	],
 	"ratings"    : {
 		"red"   : 1497.154175,
 		"blue"  : 1502.117432,
