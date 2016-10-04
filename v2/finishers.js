@@ -10,6 +10,7 @@
 {
 	"id": 42,
 	"unlock_details": "<c=@reminder>This finisher is only available from the Black Lion Trading Company during limited-time sales.</c>",
+	"unlock_items": [123],
 	"order": 66,
 	"icon": "https://render.guildwars2.com/...",
 	"name": "Llama Finisher"
@@ -22,8 +23,11 @@
 	{
 		"id": 42,
 		"unlock_details": "<c=@reminder>This finisher is only available from the Black Lion Trading Company during limited-time sales.</c>",
+		"unlock_items": [123],
 		"order": 66,
 		"icon": "https://render.guildwars2.com/...",
 		"name": "Llama Finisher"
 	}
 ]
+
+// NOTE: unlock_items refers to /v2/items.
