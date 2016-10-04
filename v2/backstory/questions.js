@@ -13,7 +13,7 @@
 	"id": 10,
 	"title": "My college",
 	"description": "I'm a member of the College of ______.",
-	"answers": [67, 68, 69],
+	"answers": ["10-67", "10-68", "10-69"],
 	"order": 2,
 	"races": ["Asura"]
 }
@@ -25,7 +25,7 @@
 	"id": 181,
 	"title": "My Most Useful Tool.",
 	"description": "My most useful tool is my ______.",
-	"answers": [178, 179, 180],
+	"answers": ["181-178", "181-179", "181-180"],
 	"order": 0,
 	"professions": ["Engineer"]
 }]
