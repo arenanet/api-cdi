@@ -24,8 +24,29 @@
     "restrictions": [ ],
     "id": 12138,
     "chat_link": "[&AgFqLwAA]",
-    "icon": "https://render.guildwars2.com/file/CA45CEE2BA3BA040E7C294965CA3756FC3F33FD1/63248.png"
-
+    "icon": "https://render.guildwars2.com/file/CA45CEE2BA3BA040E7C294965CA3756FC3F33FD1/63248.png",
+    "salvage_into": {}
+        "basic_material": {
+            "id": 19700,
+            "min": 1,
+            "max": 2
+        },
+        "fine_material": {
+            "id": 24290,
+            "min": 0,
+            "max": 1
+        },
+        "upgrade": {
+            "id": 24606,
+            "min": 0,
+            "max": 1
+        },
+        "luck": {
+            "id": 45177,
+            "min": 0,
+            "max": 2
+        }
+    }
 }
 
 // GET /v2/items?ids=6,7
