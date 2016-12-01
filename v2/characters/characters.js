@@ -88,7 +88,8 @@
 //  * bags: which inventory bags the character has equipped, and their contents.
 //  * recipes: the recipe ids for recipes unlocked by this character. Will be
 //    [] if the character has unlocked no recipes. Does not include recipes
-//    marked with the AutoLearned flag.
+//    marked with the AutoLearned flag. NOTE: recipe unlocks were made account-
+//    wide; consider using /v2/account/recipes instead of this.
 //
 {
 	name: "Hello",
