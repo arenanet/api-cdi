@@ -60,18 +60,23 @@
 			},
 			"objectives" : [
 				{
-					"id"           : "98-102",
-					"owner"        : "Red",
-					"last_flipped" : "2015-09-18T18:12:29Z",
-					"claimed_by"   : "5AE7196D-F62F-E511-B0A0-0862664D7672",
-					"claimed_at"   : "2015-09-18T18:12:44Z"
+					"id"             : "98-102",
+					"owner"          : "Red",
+					"last_flipped"   : "2015-09-18T18:12:29Z",
+					"claimed_by"     : "5AE7196D-F62F-E511-B0A0-0862664D7672",
+					"claimed_at"     : "2015-09-18T18:12:44Z"
+					"points_tick"    : 2,
+					"points_capture" : 2,
+					"upgrades"       : [123, 134]
 				},
 				{
 					"id"           : "98-103",
 					"owner"        : "Red",
 					"last_flipped" : "2015-09-18T18:12:29Z",
 					"claimed_by"   : null,
-					"claimed_at"   : null
+					"claimed_at"   : null,
+					"points_tick"    : 2,
+					"points_capture" : 2,
 				},
 				...
 			]
@@ -90,3 +95,4 @@
 //    (since they'll be time-based at some point in the future).
 //  * ?world=X will always return the correct match, but the requested
 //    world may not be in match.worlds due to merges.
+//  * maps.N.objectives.M.upgrades refers to /v2/guild/upgrades.
