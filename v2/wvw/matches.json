@@ -67,7 +67,8 @@
 					"claimed_at"     : "2015-09-18T18:12:44Z"
 					"points_tick"    : 2,
 					"points_capture" : 2,
-					"upgrades"       : [123, 134]
+					"upgrades"       : [123, 134],
+					"yaks_delivered" : 24
 				},
 				{
 					"id"           : "98-103",
@@ -96,3 +97,5 @@
 //  * ?world=X will always return the correct match, but the requested
 //    world may not be in match.worlds due to merges.
 //  * maps.N.objectives.M.upgrades refers to /v2/guild/upgrades.
+//  * maps.N.objectives.M.yaks_delivered is the total number of supply
+//    shipments (not just within the current upgrade tier).
