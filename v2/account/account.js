@@ -14,6 +14,12 @@
 	"access"  : "HeartOfThorns",
 	"created" : "2015-06-05T19:45:00Z",
 
+	// Included only if "guilds" scope is set. Is a list
+	// of all guild ids the user is a leader of.
+	"guild_leader" : [
+		"DA9137CD-3A86-E411-B57A-00224D566B58",
+	],
+
 	// Included only if "progression" scope is set.
 	"fractal_level" : 6,
 	"daily_ap"      : 40,
