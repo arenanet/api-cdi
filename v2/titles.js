@@ -7,23 +7,31 @@
 // GET /v2/titles?id=6
 
 {
-	"id": 6,
-	"name": "Closer to the Stars",
-	"achievement": 42 // references /v2/achievements
+	"id"           : 6,
+	"name"         : "Closer to the Stars",
+	"achievement"  : 42 // deprecated field
+	"achievements" : [42]
 }
 
-// GET /v2/titles?ids=6,7
-// GET /v2/titles?page_size=2&page=0
+// GET /v2/titles?ids=6,7,167
+// GET /v2/titles?page_size=3&page=0
 
 [
 	{
-		"id": 6,
-		"name": "Closer to the Stars",
-		"achievement" : 42
+		"id"           : 6,
+		"name"         : "Closer to the Stars",
+		"achievement"  : 42, // deprecated
+		"achievements" : [42]
 	},
 	{
-		"id": 7,
-		"name": "Ghostly Hero",
-		"achievement": 43
+		"id"           : 7,
+		"name"         : "Ghostly Hero",
+		"achievement"  : 43, // deprecated
+		"achievements" : [43]
+	},
+	{
+		"id"          : 167,
+		"name"        : "Wondrous Achiever",
+		"ap_required" : 30000
 	}
 ]
