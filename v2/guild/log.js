@@ -75,13 +75,36 @@
 // Example upgrade events.
 // NOTES:
 //   * action is one of "queued", "cancelled", "completed", "sped_up".
-//   * I'm not sure if these are emitted correctly in the new system.
+//   * the one that actually notes the creation of a thing is "completed".
+//   * "completed" events have a "count" field indicating how many of the
+//     upgrade were inserted.
+//   * "recipe_id" may be included if the upgrade was created by a scribe;
+//     scribe logs may have an additional "queued" event without a user,
+//     this is displayed in-game as well so it's left in the API.
 {
 	"id": 1286,
 	"time": "2015-12-23T00:48:20.539Z",
 	"type": "upgrade",
 	"upgrade_id": 364,
 	"action": "queued",
+},
+{
+	"id": 1470,
+	"time": "2016-12-19T20:36:03.000Z",
+	"type": "upgrade",
+	"recipe_id": 11856,
+	"upgrade_id": 776,
+	"count": 1,
+	"action": "completed",
+	"user": "Lawton Campbell.9413"
+},
+{
+	"id": 1522,
+	"time": "2016-12-19T20:48:11.000Z",
+	"type": "upgrade",
+	"upgrade_id": 78477,
+	"count": 1,
+	"action": "completed",
 	"user": "Lawton Campbell.9413"
 }]
 
