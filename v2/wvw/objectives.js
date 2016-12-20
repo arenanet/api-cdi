@@ -19,7 +19,8 @@
 	label_coord : [
 		6938.8,
 		14504.2
-	]
+	],
+	chat_link : "[&DD4AAABgAAAA]"
 }
 
 // GET /v2/wvw/objectives?page=0&page_size=3
@@ -39,7 +40,8 @@
 			7850.38,
 			9853.39
 		]
-		marker   : "https://render.guildwars2.com/..."
+		marker   : "https://render.guildwars2.com/...",
+		chat_link : "[&DD4AAABgAAAA]"
 	},
 	{
 		id        : "94-32",
@@ -50,14 +52,16 @@
 		coord     : [
 			11212.6,
 			10929.3
-		]
+		],
+		chat_link : "[&DD4AAABgAAAA]"
 	},
 	{
 		id        : "38-11",
 		type      : "Tower",
 		map_type  : "Center",
 		map_id    : 38,
-		name      : "Aldon's Ledge"
+		name      : "Aldon's Ledge",
+		chat_link : "[&DD4AAABgAAAA]"
 	}
 ]
 
@@ -89,7 +93,7 @@
 // coord may also be missing on some objects. coord contains the location
 // of the capture ring, which is where the marker is displayed in-game.
 //
-// marker may not be present on all objects.
+// marker may not be present on all objects (spawn and citadel).
 //
 // The objective ID is the concatenation of the map_id and the internal
 // objective ID -- there are some backend changes that make the borderlands
