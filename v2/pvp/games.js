@@ -31,6 +31,7 @@
 		"blue": 500
 	},
 	"rating_type" : "Ranked",
+	"rating_change" : 33,
 	"season" : "49CCE661-9DCC-473B-B106-666FE9942721"
 }
 
@@ -49,7 +50,8 @@
 			"red": 344,
 			"blue": 500
 		},
-		"rating_type" : "Ranked"
+		"rating_type" : "Ranked",
+		"rating_change" : 100
 	},
 	...
 ]
@@ -69,3 +71,5 @@
 //
 //  "season" may be omitted -- believe it's only present for games with
 //  rating_type="Ranked". Can be cross-referenced against /v2/pvp/seasons.
+//
+//  "rating_change" will be negative when a game resulted in rating loss.
