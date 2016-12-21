@@ -1,10 +1,13 @@
-// Bulk-expanded subset of /v2/matches.
+// Bulk-expanded subset of /v2/matches. Contains KDR and any other
+// statistics we add in. The ?world parameter may be used to select
+// a match by world id.
 
 // GET /v2/wvw/matches/stats
 
 [ "1-1", "1-2" ]
 
 // GET /v2/wvw/matches/stats/1-1
+// GET /v2/wvw/matches/stats?world=1008
 
 {
   "id": "1-1",

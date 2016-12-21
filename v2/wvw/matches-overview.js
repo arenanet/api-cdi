@@ -1,11 +1,13 @@
 // Bulk-expanded sub-endpoint which returns the mostly-static overview
-// data from /v2/wvw/matches.
+// data from /v2/wvw/matches. The ?world parameter may be used to select
+// the matchup for a given world.
 
 // GET /v2/wvw/matches/overview
 
 [ "1-1", "1-2" ]
 
 // GET /v2/wvw/matches/overview/1-1
+// GET /v2/wvw/matches/overview?world=1008
 
 {
   "id": "1-1",
