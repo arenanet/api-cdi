@@ -85,6 +85,20 @@
 	"user": "Lawton Campbell.9413"
 }]
 
+// There's an additional optional query parameter, ?since, that will
+// filter out all log entries not newer than the id passed. Any events
+// when an id equal to or less than ?since will be omitted, e.g.,
+
+// GET /v2/guild/:id/log?since=1285
+[{
+	"id": 1286,
+	"time": "2015-12-23T00:48:20.539Z",
+	"type": "upgrade",
+	"upgrade_id": 364,
+	"action": "queued",
+	"user": "Lawton Campbell.9413"
+}]
+
 // FURTHER NOTES:
 //  * There are also "influence" events which are still included
 //    due to the retention policy, but AFAIK they're not really
