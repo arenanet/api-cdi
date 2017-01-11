@@ -5,6 +5,7 @@
     "type" : "Public",
     "max_level" : 50,
     "default_floor" : 1,
+    "instance": false,
     "map_rect" : [
         [-27648, -36864 ],
         [ 27648, 39936 ]
