@@ -7,16 +7,17 @@
 // which have slightly different outputp formats (since one's for
 // individual users and the other is for guild teams).
 //
-// "na" or "eu" should be appended after the leaderboard to switch 
-// between regions; for backwards-compat the region can be omitted to
-// use the "local" region (e.g. "na" if you're talking to the NA
-// datacenter, "eu" for the EU datacenter -- this is switched via
-// geographic DNS resolution).
+// The region field of the URL cannot be omitted and must be either
+// "na" or "eu".
 //
 // Endpoints can be paginated with ?page_size and ?page query parameters.
 // They should additionally emit pagination-related headers.
 
-// GET /v2/pvp/seasons/:id/leaderboards/legendary/na
+// GET /v2/pvp/seasons/:id/leaderboards/legendary
+
+[ "na", "eu" ]
+
+// GET /v2/pvp/seasons/:id/leaderboards/legendary/:region
 
 [
 	{
@@ -32,7 +33,7 @@
 	}
 ]
 
-// GET /v2/pvp/seasons/:id/leaderboards/guild/eu
+// GET /v2/pvp/seasons/:id/leaderboards/guild/:region
 
 [
 	{
