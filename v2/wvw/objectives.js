@@ -20,7 +20,8 @@
 		6938.8,
 		14504.2
 	],
-	chat_link : "[&DD4AAABgAAAA]"
+	chat_link : "[&DD4AAABgAAAA]",
+	upgrade_id : 7
 }
 
 // GET /v2/wvw/objectives?page=0&page_size=3
@@ -41,7 +42,8 @@
 			9853.39
 		]
 		marker   : "https://render.guildwars2.com/...",
-		chat_link : "[&DD4AAABgAAAA]"
+		chat_link : "[&DD4AAABgAAAA]",
+		upgrade_id : 8
 	},
 	{
 		id        : "94-32",
@@ -61,7 +63,8 @@
 		map_type  : "Center",
 		map_id    : 38,
 		name      : "Aldon's Ledge",
-		chat_link : "[&DD4AAABgAAAA]"
+		chat_link : "[&DD4AAABgAAAA]",
+		upgrade_id : 9
 	}
 ]
 
@@ -94,6 +97,9 @@
 // of the capture ring, which is where the marker is displayed in-game.
 //
 // marker may not be present on all objects (spawn and citadel).
+//
+// upgrade_id references /v2/wvw/upgrades and may be omitted. Ruins and
+// shrines and such won't have corresponding upgrades.
 //
 // The objective ID is the concatenation of the map_id and the internal
 // objective ID -- there are some backend changes that make the borderlands
