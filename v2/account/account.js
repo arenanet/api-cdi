@@ -3,6 +3,7 @@
 // Requires "account" scope.
 {
 	"id"           : "account-guid",
+	"age"          : 1452360, // seconds.
 	"name"         : "Lawton.1234",
 	"world"        : 1007,
 	"commander"    : true,
@@ -35,3 +36,6 @@
 //
 // Access levels are hierarchical -- e.g. "HeartOfThorns" implies
 // all access levels beneath it.
+//
+// "age" is tracked with minute-granularity and totally unrelated
+// to the sum of character ages.
