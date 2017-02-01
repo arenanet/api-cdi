@@ -5,6 +5,7 @@
     "type" : "Public",
     "max_level" : 50,
     "default_floor" : 1,
+    "label_coord": [ 20000, 15000 ],
     "map_rect" : [
         [-27648, -36864 ],
         [ 27648, 39936 ]

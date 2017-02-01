@@ -12,6 +12,7 @@
             "name" : "Dredgehaunt Cliffs",
             "min_level" : 40,
             "max_level" : 50,
+            "label_coord": [ 20000, 15000 ],
             "default_floor" : 1,
             "map_rect" : [
                 [-27648, -36864 ],
