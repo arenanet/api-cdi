@@ -18,8 +18,6 @@
    "id": "75FD83CF-0C45-4834-BC4C-097F93A487AF",
    "name": "Veterans Of Lions Arch",
    "tag": "LA",
-   "member_count": 20,
-   "member_capacity": 50,
    "emblem": {
      "background": 27,
      "foreground": 114,
