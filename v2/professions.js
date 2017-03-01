@@ -108,8 +108,38 @@
 			"specialization" : 12,
 			"skills" : [ /* ... */ ]
 		}
-	}
+	},
+	// List of all non-weapon skills that can be equipped by this
+	// profession (doesn't include transform skills and such).
+	"skills" : [
+		{
+			"id"   : 34,
+			"slot" : "Profession_1",
+			"type" : "Profession"
+		},
+		{
+			"id"   : 45,
+			"slot" : "Utility",
+			"type" : "Utility"
+		},
+		{
+			"id"   : 98,
+			"slot" : "Heal",
+			"type" : "Heal"
+		},
+		{
+			"id"   : 102,
+			"slot" : "Elite",
+			"type" : "Elite"
+		}
+	],
+	"flags" : []
 }
+
+// NOTES:
+//  * flags may currently contain:
+//     - "NoRacialSkills": this profession cannot equip racial skills.
+//     - "NoWeaponSwap": this profession can only use one weapon set.
 
 // Can also fetch multiple professions via bulk-expanded options, e.g.
 //
