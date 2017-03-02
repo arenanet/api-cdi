@@ -50,10 +50,10 @@
 //   22 : "ghost_peppers",
 //   23 : "halloween",
 //   24 : "snow_leopard",
-//   25 : "frozen",
-//   26 : "ice",
-//   27 : "freezer",
-//   28 : "cold",
+//   25 : "frozen", (superheated poultry leek)
+//   26 : "ice", (superheated poultry winter veg)
+//   27 : "freezer", (superheated poultry lemongrass)
+//   28 : "cold", (superheated saffron poultry)
 //   29 : "cadeucus",
 //   30 : "bundle",
 //   // 31 appears unused.
