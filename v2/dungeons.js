@@ -10,9 +10,9 @@
 {
 	"id" : "twilight_arbor",
 	"paths" : [
-		"leurent",
-		"vevina",
-		"aetherpath"
+		{ "id" : "leurent" },
+		{ "id" : "vevina" },
+		{ "id" : "aetherpath" }
 	]
 }
 
@@ -23,9 +23,9 @@
 	{
 		"id" : "twilight_arbor",
 		"paths" : [
-			"leurent",
-			"vevina",
-			"aetherpath"
+			{ "id" : "leurent" },
+			{ "id" : "vevina" },
+			{ "id" : "aetherpath" }
 		]
 	}
 ]
