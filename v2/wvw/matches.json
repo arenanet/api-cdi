@@ -33,6 +33,11 @@
 		"blue"  : [ 1002 ],
 		"green" : [ 1003 ]
 	},
+	"victory_points" : {
+		"red"   : 12,
+		"blue"  : 14,
+		"green" : 16
+	},
 	"maps" : [
 		{
 			"id"         : 98,
