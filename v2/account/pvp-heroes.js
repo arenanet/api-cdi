@@ -1,7 +1,7 @@
 // Authenticated endpoint; provides unlocked PvP hero skins.
 // Requires the "account" and "unlocks" scopes.
 
-// GET /v2/account/pvp-heroes?access_token=foo
+// GET /v2/account/pvp/heroes?access_token=foo
 
 [ 1, 2, 3 ]
 
