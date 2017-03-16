@@ -8,6 +8,13 @@
 // from /v2/achievements -- the ones without the "Hidden"
 // flag are visible without progress.
 
+// This endpoint also supports bulk-expansion, which means that you can
+// limit the result set by using one of the following query parameters:
+//
+//   * ?id=1 -- returns only a specific achievement.
+//   * ?ids=1,2,3 -- returns the comma-delimited achievement list.
+//   * ?page=0&page_size=200 -- returns a paginated list.
+
 // GET /v2/account/achievements?access_token=:token
 
 [{
