@@ -46,6 +46,10 @@
             "count": 1000,
             "name": "Guild Favor",
             "item_id": 70701
+        },
+        {
+            "type": "Coins",
+            "count": 500000,
         }
     ]
 }

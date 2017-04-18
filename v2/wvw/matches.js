@@ -64,6 +64,11 @@
 		"blue"  : [ 1002 ],
 		"green" : [ 1003 ]
 	},
+	"victory_points" : {
+		"red"   : 12,
+		"blue"  : 14,
+		"green" : 16
+	},
 	"maps" : [
 		{
 			"id"         : 98,
@@ -91,18 +96,24 @@
 			},
 			"objectives" : [
 				{
-					"id"           : "98-102",
-					"owner"        : "Red",
-					"last_flipped" : "2015-09-18T18:12:29Z",
-					"claimed_by"   : "5AE7196D-F62F-E511-B0A0-0862664D7672",
-					"claimed_at"   : "2015-09-18T18:12:44Z"
+					"id"             : "98-102",
+					"owner"          : "Red",
+					"last_flipped"   : "2015-09-18T18:12:29Z",
+					"claimed_by"     : "5AE7196D-F62F-E511-B0A0-0862664D7672",
+					"claimed_at"     : "2015-09-18T18:12:44Z",
+					"points_tick"    : 2,
+					"points_capture" : 2,
+					"guild_upgrades" : [123, 134],
+					"yaks_delivered" : 24
 				},
 				{
 					"id"           : "98-103",
 					"owner"        : "Red",
 					"last_flipped" : "2015-09-18T18:12:29Z",
 					"claimed_by"   : null,
-					"claimed_at"   : null
+					"claimed_at"   : null,
+					"points_tick"    : 2,
+					"points_capture" : 2
 				},
 				...
 			]
@@ -117,7 +128,8 @@
 //  * maps.N.objectives.M.id references /v2/wvw/objectives.
 //  * maps.N.objectives.M.claimed_by is a guild GUID that can be resolved
 //    with /v1/guild_details.json.
-//  * Upgrades can be determined by checking last_flipped and claimed_at
-//    (since they'll be time-based at some point in the future).
 //  * ?world=X will always return the correct match, but the requested
 //    world may not be in match.worlds due to merges.
+//  * maps.N.objectives.M.guild_upgrades refers to /v2/guild/upgrades.
+//  * maps.N.objectives.M.yaks_delivered is the total number of supply
+//    shipments (not just within the current upgrade tier).

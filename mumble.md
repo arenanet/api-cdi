@@ -7,7 +7,8 @@
 	"map_id": 50,
 	"world_id": 1001,
 	"team_color_id": 0,
-	"commander": false
+	"commander": false,
+	"fov": 0.873 // vertical fov
 }
 // Where profession values have the following mapping:
 //

@@ -8,7 +8,9 @@
 			division     : 4,
 			tier         : 1,
 			points       : 1,
-			repeats      : 0
+			repeats      : 0,
+			rating       : 845,
+			decay        : 100
 		},
 		best : {
 			total_points : 200,
@@ -34,6 +36,9 @@
 //  * "repeats" refers to the number of times the account has maxed out
 //    the "Repeat" division (typically the last one in a season, e.g.
 //    Legendary in season 1).
+//  * "rating" and "decay" should be set for pvp season 5 and later.
+//    they contain your current skill rating and rating decay,
+//    respectively.
 //
 // In the event that the data looks wrong, "total_points" is the
 // authoriative field; the others are provided for convenience.

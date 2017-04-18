@@ -2,8 +2,10 @@
 {
     "name" : "Dredgehaunt Cliffs",
     "min_level" : 40,
+    "type" : "Public",
     "max_level" : 50,
     "default_floor" : 1,
+    "label_coord": [ 20000, 15000 ],
     "map_rect" : [
         [-27648, -36864 ],
         [ 27648, 39936 ]
@@ -69,3 +71,14 @@
     },
     "id" : 26
 }
+
+// NOTES:
+// 
+// map.type may be one of the following values:
+//  * "Pvp"
+//  * "Instance"
+//  * "Public"
+//  * "Center" (EB)
+//  * "BlueHome", "RedHome", "GreenHome" (Borderlands)
+//  * "JumpPuzzle" (Obsidian Sanctum)
+//  * "EdgeOfTheMists"

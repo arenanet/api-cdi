@@ -26,6 +26,23 @@
 		...
 	],
 	special : [
+	],
+	fractal : [
+		{
+			id : 24,
+			level : {
+				min: 80,
+				max: 80
+			}
+		},
+		{
+			id : 26,
+			level : {
+				min: 80,
+				max: 80
+			}
+		}
+		// etc.
 	]
 }
 
@@ -37,3 +54,7 @@
 
 // "special" is for temporary content, mostly festival dailies
 // and the like. If there's no temporary content, [] is returned.
+
+// "fractal" is kind of weird; it's not strictly a "daily" but 
+// instead is actually achievement category 88. It's duplicated
+// here for convenience.

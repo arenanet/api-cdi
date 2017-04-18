@@ -88,7 +88,8 @@
 //  * bags: which inventory bags the character has equipped, and their contents.
 //  * recipes: the recipe ids for recipes unlocked by this character. Will be
 //    [] if the character has unlocked no recipes. Does not include recipes
-//    marked with the AutoLearned flag.
+//    marked with the AutoLearned flag. NOTE: recipe unlocks were made account-
+//    wide; consider using /v2/account/recipes instead of this.
 //
 {
 	name: "Hello",
@@ -180,12 +181,30 @@
 
 // GET /v2/characters/Hello
 // Authorization: Bearer token123
+// Scopes: account, characters, progression
+//
+// With the progression permission, the following fields are added:
+//  * wvw_abilities. Note that ranks are 1-indexed, so rank=1 means
+//    that ability.ranks[0] is unlocked, but not ability.ranks[1].
+//
+{
+	name: "Hello",
+	// Other fields.
+	wvw_abilities: [
+		{ id: 2, rank: 5 },
+		{ id: 3, rank: 1 }
+	]
+}
+
+// GET /v2/characters/Hello
+// Authorization: Bearer token123
 // Scopes: account, characters, builds
 //
 // With the builds permission, the following fields are added:
 //  * equipment - will be included with either "inventories" or "builds".
 //  * specializations - the character's equipped specializations and traits.
 //  * skills - the character's equipped slot skills(heal, utility, elite), pets (for rangers), legends(for revenants).
+//  * training - current progress towards training
 //
 {
 	name: "Hello",
@@ -356,29 +375,44 @@
 		91,
 		93,
 		188
-	]
+	],
+	training : [
+		{
+			id: 60,
+			spent: 20,
+			done: true
+		},
+		{
+			id: 58,
+			spent: 26,
+			done: false
+		}
+	],
+	crafting : []
 }
 
-// Possible equipment slots:
-//  * HelmAquatic
-//  * Backpack
-//  * Coat
-//  * Boots
-//  * Gloves
-//  * Helm
-//  * Leggings
-//  * Shoulders
-//  * Accessory1
-//  * Accessory2
-//  * Ring1
-//  * Ring2
-//  * Amulet
-//  * WeaponAquaticA
-//  * WeaponAquaticB
-//  * WeaponA1 (primary mainhand)
-//  * WeaponA2 (primary offhand)
-//  * WeaponB1 (secondary mainhand)
-//  * WeaponB2 (secondary offhand)
-//  * Sickle
-//  * Axe
-//  * Pick
+// NOTES: 
+//  - training.id references the id values from /v2/professions.training.
+//  - Possible equipment slots:
+//    * HelmAquatic
+//    * Backpack
+//    * Coat
+//    * Boots
+//    * Gloves
+//    * Helm
+//    * Leggings
+//    * Shoulders
+//    * Accessory1
+//    * Accessory2
+//    * Ring1
+//    * Ring2
+//    * Amulet
+//    * WeaponAquaticA
+//    * WeaponAquaticB
+//    * WeaponA1 (primary mainhand)
+//    * WeaponA2 (primary offhand)
+//    * WeaponB1 (secondary mainhand)
+//    * WeaponB2 (secondary offhand)
+//    * Sickle
+//    * Axe
+//    * Pick
