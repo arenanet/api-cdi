@@ -27,7 +27,17 @@
 					Precision: 179,
 					CritDamage: 179
 				}
-			}
+			},
+			// dyes only present if equipment is dyed. Always
+			// has four entries; check the item's skin to see
+			// how many channels there actually are. Default
+			// dye is 'null'. Dyes refer to /v2/colors.
+			dyes : [
+				2,
+				4,
+				null,
+				null
+			]
 		},
 		{
 			id: 6549,
