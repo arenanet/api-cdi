@@ -131,6 +131,15 @@
 			"id"   : 102,
 			"slot" : "Elite",
 			"type" : "Elite"
+		},
+		// NOTE: Elementalist attunements will have an "attunemnt"
+		// field. This indicates what attunement the skill switches
+		// to, rather than what attunement is required.
+		{
+			"id"         : 1029,
+			"slot"       : "Profession_1",
+			"type"       : "Profession",
+			"attunement" : "Fire"
 		}
 	],
 	"flags" : []
