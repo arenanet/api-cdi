@@ -8,7 +8,7 @@
     "emblem": {
         "background": {
             "id": 27,
-                "colors": [11]
+            "colors": [11]
         },
         "foreground": {
             "id": 114,
