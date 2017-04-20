@@ -12,7 +12,7 @@
         },
         "foreground": {
             "id": 114,
-                "colors": [584, 64]
+            "colors": [584, 64]
         },
         "flags": []
     }
