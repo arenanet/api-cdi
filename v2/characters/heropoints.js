@@ -3,9 +3,9 @@
 // Requires "account", "characters", "progression" permissions.
 
 [
-	"0-0",
-	"0-35",
-	"0-41",
-	"0-64",
-	"0-121"
+    "0-0",
+    "0-35",
+    "0-41",
+    "0-64",
+    "0-121"
 ]
