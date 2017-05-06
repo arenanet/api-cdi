@@ -4,7 +4,7 @@
 // GET /v2/worlds
 [ 1001, 1002, 1003, ... ]
 
-// GET /v2/worlds/1
+// GET /v2/worlds/1001
 {
 	"id": 1001,
 	"name": "Anvil Rock"
