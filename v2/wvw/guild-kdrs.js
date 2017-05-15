@@ -58,7 +58,7 @@
   }
 ]
 
-// GET /v2/wvw/matches/1-1/guilds/2546752E-7C2E-E611-9106-0862664D7672
+// GET /v2/wvw/matches/stats/1-1/guilds/2546752E-7C2E-E611-9106-0862664D7672
 // Returns the stats for a given guild in a match.
 
 {
