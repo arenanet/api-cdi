@@ -15,7 +15,8 @@
 	"locked_text" : "A text string about how to unlock this",
 	"type"        : "Default",
 	"flags"       : [
-		"Pvp"
+		"Pvp",
+		"Daily"
 	],
 	"tiers"       : [
 		{
@@ -67,6 +68,7 @@
 	"type"        : "Default",
 	"flags"       : [
 		"Pvp",
+		"Permanent",
 		"Repeatable"
 	],
 	"tiers"       : [
@@ -95,7 +97,8 @@
 	    "locked_text" : "",
 	    "type"        : "Default",
 	    "flags"       : [
-		"Pvp"
+		"Pvp",
+		"Daily"
 	    ]
 
 	}
@@ -118,6 +121,10 @@
 //  * "Repeatable" -- can be repeated multiple times.
 //  * "RequiresUnlock" -- requires an item to unlock.
 //  * "Hidden" -- is a hidden achievement.
+//  * "Daily" -- progress resets with daily reset.
+//  * "Weekly" -- progress resets with weekly reset.
+//  * "Monthly" -- progress resets with monthly reset.
+//  * "Permanent" -- progress never resets.
 
 // "bits.n.type" can be:
 //  * "Text" -- Gives a short description of the bit in "text"
