@@ -40,8 +40,26 @@
 		"restrictions" : [],
 		"details"      : {
 			"type"         : "Leggings",
-			"weight_class" : "Heavy"
-		}
+			"weight_class" : "Heavy",
+			"dye_slots": {
+				"default": [
+					{
+						"color_id": 1,
+						"material": "cloth"
+					},
+					{
+						"color_id": 1,
+						"material": "metal"
+					},
+					{
+						"color_id": 1,
+						"material": "cloth"
+					},
+					null
+				],
+				"overrides": {}
+			}
+		},
 	},
 	{
 		"id"    : 2,
@@ -71,6 +89,119 @@
 		}
 	}
 ]
+
+// An example of a skin with dye slot overrides. The possible overrides
+// are:
+//   * AsuraMale
+//   * AsuraFemale
+//   * CharrMale
+//   * CharrFemale
+//   * HumanMale
+//   * HumanFemale
+//   * NornMale
+//   * NornFemale
+//   * SylvariMale
+//   * SylvariFemale
+
+  {
+    "name": "Archon Boots",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [
+      "Charr"
+    ],
+    "rarity": "Basic",
+    "id": 358,
+    "icon": "http://render.local.ncplatform.net:8888/file/0EEA53BF153A52B8CB0E1C0E59570C0E94EFC87E/230263.png",
+    "details": {
+      "type": "Boots",
+      "weight_class": "Light",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {
+          "CharrFemale": [
+            {
+              "color_id": 1,
+              "material": "cloth"
+            },
+            {
+              "color_id": 1,
+              "material": "cloth"
+            },
+            {
+              "color_id": 1,
+              "material": "leather"
+            },
+            {
+              "color_id": 1,
+              "material": "leather"
+            }
+          ],
+          "CharrMale": [
+            {
+              "color_id": 1,
+              "material": "cloth"
+            },
+            {
+              "color_id": 1,
+              "material": "cloth"
+            },
+            {
+              "color_id": 1,
+              "material": "leather"
+            },
+            {
+              "color_id": 1,
+              "material": "leather"
+            }
+          ],
+          "SylvariFemale": [
+            null,
+            {
+              "color_id": 1,
+              "material": "cloth"
+            },
+            null,
+            {
+              "color_id": 1,
+              "material": "cloth"
+            }
+          ],
+          "SylvariMale": [
+            null,
+            {
+              "color_id": 1,
+              "material": "cloth"
+            },
+            {
+              "color_id": 1,
+              "material": "leather"
+            },
+            {
+              "color_id": 1,
+              "material": "leather"
+            }
+          ]
+        }
+      }
+    }
+  }
 
 // NOTES:
 //
