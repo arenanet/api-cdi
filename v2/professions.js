@@ -131,6 +131,15 @@
 			"id"   : 102,
 			"slot" : "Elite",
 			"type" : "Elite"
+		},
+		// NOTE: Thief steal skills will have a 'source' field
+		// indicating the profession from which the skill can
+		// be stolen.
+		{
+			"id"     : 1033,
+			"slot"   : "Profession_2",
+			"type"   : "Profession",
+			"source" : "Guardian"
 		}
 	],
 	"flags" : []
