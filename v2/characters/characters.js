@@ -125,7 +125,13 @@
 		},
 		{
 			id: 6549,
-			slot: "Helm"
+			slot: "Helm",
+			dyes: [
+				3,
+				5,
+				null,
+				null
+			]
 		},
 		{
 			id: 6473,
