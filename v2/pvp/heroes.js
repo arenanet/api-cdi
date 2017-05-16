@@ -28,6 +28,7 @@
       "id": 1,
       "name": "Nika",
       "icon": "https://render.guildwars2.com/...",
+      "unlock_items" : [ 123 ],
       "default": true
     },
     // ...
