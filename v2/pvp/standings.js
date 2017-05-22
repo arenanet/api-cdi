@@ -38,7 +38,9 @@
 //    Legendary in season 1).
 //  * "rating" and "decay" should be set for pvp season 5 and later.
 //    they contain your current skill rating and rating decay,
-//    respectively.
+//    respectively. Earlier seasons may have a "rating" field -- this
+//    is an implementation artifact and was the internal MMR used for
+//    matchmaking during the season.
 //
 // In the event that the data looks wrong, "total_points" is the
 // authoriative field; the others are provided for convenience.
