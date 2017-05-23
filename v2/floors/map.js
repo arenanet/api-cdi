@@ -70,6 +70,25 @@
             "id" : 526
         }
     },
+    "events": {
+        "31CEBA08-E44D-472F-81B0-7143D73797F5": {
+            "name": "Defeat the shadow behemoth.",
+            "id": "31CEBA08-E44D-472F-81B0-7143D73797F5",
+            "level": 15,
+            "event_type": "boss",
+            "flags": [
+                "group_event"
+            ],
+            "location": {
+                "type": "circle",
+                    "center": [
+                    12058,
+                    13661
+                ],
+                "radius": 250
+            }
+        }
+    },
     "id" : 26
 }
 
