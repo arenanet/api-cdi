@@ -70,6 +70,18 @@
             "id" : 526
         }
     },
+    "god_shrines": [{
+        "id": 5,
+        "name": "Temple of Melandru <c=#a9a9a9>[Uncontested]</c><br>• All Melandru statues in Orr are disabled.</c>",
+        "name_contested": "Temple of Melandru <c=#ff8c00>[Contested]</c><br>• All Melandru statues in Orr are active.",
+        "coord": [
+            11288.1,
+            26728.1
+        ],
+        "poi_id": 795,
+        "icon": "http://render...",
+        "icon_contested": "http://render..."
+    }],
     "id" : 26
 }
 
