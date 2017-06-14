@@ -78,6 +78,7 @@
 	],
 	"weapons" : {
 		"Dagger" : {
+			"flags" : [ "Mainhand", "Offhand" ],
 			"skills" : [
 				// Most skills look like this.
 				{
@@ -103,6 +104,7 @@
 			]
 		},
 		"Staff" : {
+			"flags" : ["TwoHand"],
 			// Weapons that require a specialization to
 			// use have an extra "specialization" field.
 			"specialization" : 12,
@@ -158,6 +160,11 @@
 //  * flags may currently contain:
 //     - "NoRacialSkills": this profession cannot equip racial skills.
 //     - "NoWeaponSwap": this profession can only use one weapon set.
+//  * weapon.flags can contain:
+//     - "Mainhand": equippable into the mainhand slot.
+//     - "Offhand": equippable into the offhand slot.
+//     - "TwoHand": equippable into both slots.
+//     - "Aquatic": equippable into underwater slot.
 
 // Can also fetch multiple professions via bulk-expanded options, e.g.
 //
