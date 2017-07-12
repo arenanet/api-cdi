@@ -4,11 +4,13 @@
 
 [
 	"current",
-	"history"
+	"history",
+	"delivery"
 ]
 
 // GET /v2/commerce/transactions/current
 // GET /v2/commerce/transactions/history
+// GET /v2/commerce/transactions/delivery
 
 [
 	"buys",
@@ -40,6 +42,32 @@
 		created: "2014-12-15T14:43:35+00:00"
 	},
 	...
+]
+
+// GET /v2/commerce/transactions/delivery/buys
+
+[
+	{
+		id: 1997,
+		item_id: 19699,
+		quantity: 20,
+		purchased: "2014-12-15T14:43:36+00:00"
+	},
+	{
+		id: 1999,
+		item_id: 19699,
+		quantity: 20,
+		purchased: "2014-12-15T14:43:35+00:00"
+	},
+	...
+]
+
+// GET /v2/commerce/transactions/delivery/sells
+
+[
+	{
+		gold: 32144
+	}
 ]
 
 // GET /v2/commerce/transactions/history/buys
