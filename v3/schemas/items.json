@@ -1,0 +1,470 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "$ref": "#/definitions/Item"
+      }
+    ]
+  },
+  "definitions": {
+    "Item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Fallen Adventurer's Backpack"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Weapon",
+            "Armor",
+            "Consumable",
+            "Container",
+            "Trophy",
+            "Trinket",
+            "CraftingMaterial",
+            "UpgradeComponent",
+            "Gizmo",
+            "MiniPet",
+            "Back",
+            "Trait",
+            "Bag",
+            "Gathering",
+            "Key",
+            "Tool"
+          ]
+        },
+        "level": {
+          "type": "integer",
+          "example": 80
+        },
+        "rarity": {
+          "type": "string",
+          "enum": [
+            "Exotic",
+            "Rare",
+            "Masterwork",
+            "Fine",
+            "Basic",
+            "Ascended",
+            "Legendary",
+            "Junk"
+          ]
+        },
+        "vendor_value": {
+          "type": "integer",
+          "example": 264
+        },
+        "default_skin": {
+          "type": "integer",
+          "example": 5091
+        },
+        "game_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Pve",
+              "Dungeon",
+              "Wvw",
+              "Activity",
+              "PvpLobby",
+              "Pvp"
+            ]
+          }
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "NoSell",
+              "SoulBindOnUse",
+              "AccountBound",
+              "AccountBindOnUse",
+              "NoSalvage",
+              "HideSuffix",
+              "NoMysticForge",
+              "SoulbindOnAcquire",
+              "DeleteWarning",
+              "NotUpgradeable",
+              "Unique",
+              "Tonic",
+              "NoUnderwater",
+              "BulkConsume",
+              "Infused",
+              "Attuned",
+              "MonsterOnly"
+            ]
+          }
+        },
+        "restrictions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Asura",
+              "Charr",
+              "Human",
+              "Norn",
+              "Sylvari",
+              "Warrior",
+              "Necromancer",
+              "Elementalist",
+              "Guardian",
+              "Thief",
+              "Ranger",
+              "Mesmer",
+              "Engineer",
+              "Female"
+            ]
+          }
+        },
+        "id": {
+          "type": "integer",
+          "example": 1
+        },
+        "chat_link": {
+          "type": "string",
+          "example": "[&AgEBAAAA]"
+        },
+        "icon": {
+          "type": "string",
+          "example": "https://render.guildwars2.com/file/935CD7A5037BB9F3C46E0D770D2DD9730ED74A18/62495.png"
+        },
+        "details": {
+          "$ref": "#/definitions/Details"
+        },
+        "description": {
+          "type": "string",
+          "example": "A mysteriously light and well-balanced weapon that seems malleable to your wishes. Double-click to choose what form it should take."
+        },
+        "upgrades_into": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Upgrades"
+          }
+        },
+        "upgrades_from": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Upgrades"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "type",
+        "level",
+        "rarity",
+        "vendor_value",
+        "game_types",
+        "flags",
+        "restrictions",
+        "id",
+        "chat_link"
+      ]
+    },
+    "Details": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "Default"
+        },
+        "damage_type": {
+          "type": "string",
+          "enum": [
+            "Physical",
+            "Choking",
+            "Fire",
+            "Lightning",
+            "Ice"
+          ]
+        },
+        "min_power": {
+          "type": "integer",
+          "example": 905
+        },
+        "max_power": {
+          "type": "integer",
+          "example": 1000
+        },
+        "defense": {
+          "type": "integer",
+          "example": 73
+        },
+        "infusion_slots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "flags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Infusion",
+                    "Enrichment"
+                  ]
+                }
+              },
+              "item_id": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "flags"
+            ]
+          }
+        },
+        "infix_upgrade": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "example": 161
+            },
+            "attributes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "attribute": {
+                    "type": "string",
+                    "enum": [
+                      "Power",
+                      "Precision",
+                      "ConditionDamage",
+                      "Toughness",
+                      "Vitality",
+                      "Healing",
+                      "CritDamage",
+                      "BoonDuration",
+                      "ConditionDuration",
+                      "AgonyResistance"
+                    ]
+                  },
+                  "modifier": {
+                    "type": "integer",
+                    "example": 85
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "attribute",
+                  "modifier"
+                ]
+              }
+            },
+            "buff": {
+              "type": "object",
+              "properties": {
+                "skill_id": {
+                  "type": "integer",
+                  "example": 15752
+                },
+                "description": {
+                  "type": "string",
+                  "example": "+32 Condition Damage\n+18 Precision\n+18 Toughness\n+5 Agony Resistance"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "skill_id"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "attributes"
+          ]
+        },
+        "secondary_suffix_item_id": {
+          "type": "string"
+        },
+        "weight_class": {
+          "type": "string",
+          "enum": [
+            "Light",
+            "Heavy",
+            "Medium",
+            "Clothing"
+          ]
+        },
+        "suffix_item_id": {
+          "type": "integer",
+          "example": 24613
+        },
+        "stat_choices": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 161
+          }
+        },
+        "duration_ms": {
+          "type": "integer"
+        },
+        "apply_count": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "example": "Nourishment"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "example": "Gain Health Every Second\n+10% Experience from Kills"
+        },
+        "skins": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 820
+          }
+        },
+        "no_sell_or_sort": {
+          "type": "boolean"
+        },
+        "size": {
+          "type": "integer"
+        },
+        "unlock_type": {
+          "type": "string",
+          "enum": [
+            "CraftingRecipe",
+            "Dye",
+            "Content",
+            "Outfit",
+            "GliderSkin",
+            "Minipet",
+            "Ms",
+            "Champion",
+            "BagSlot",
+            "BankTab",
+            "CollectibleCapacity",
+            "SharedSlot"
+          ]
+        },
+        "recipe_id": {
+          "type": "integer",
+          "example": 6475
+        },
+        "charges": {
+          "type": "integer"
+        },
+        "minipet_id": {
+          "type": "integer",
+          "example": 265
+        },
+        "color_id": {
+          "type": "integer",
+          "example": 473
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HeavyArmor",
+              "LightArmor",
+              "MediumArmor",
+              "ShortBow",
+              "Dagger",
+              "Focus",
+              "Greatsword",
+              "Hammer",
+              "Harpoon",
+              "Mace",
+              "Pistol",
+              "Rifle",
+              "Scepter",
+              "Shield",
+              "Speargun",
+              "Axe",
+              "Staff",
+              "Sword",
+              "Torch",
+              "Trident",
+              "Warhorn",
+              "LongBow",
+              "Trinket"
+            ]
+          }
+        },
+        "infusion_upgrade_flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Infusion",
+              "Enrichment"
+            ]
+          }
+        },
+        "bonuses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "+25 Power"
+          }
+        },
+        "suffix": {
+          "type": "string",
+          "example": "of Strength"
+        },
+        "vendor_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "guild_upgrade_id": {
+          "type": "integer",
+          "example": 714
+        },
+        "extra_recipe_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 11987
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Upgrades": {
+      "type": "object",
+      "properties": {
+        "upgrade": {
+          "type": "string",
+          "enum": [
+            "Attunement",
+            "Infusion"
+          ]
+        },
+        "item_id": {
+          "type": "integer",
+          "example": 38024
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "upgrade",
+        "item_id"
+      ]
+    }
+  }
+}

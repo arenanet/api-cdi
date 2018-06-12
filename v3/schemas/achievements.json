@@ -1,0 +1,185 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "$ref": "#/definitions/Achievement"
+      }
+    ]
+  },
+  "definitions": {
+    "Achievement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "Daily Fractal Runner"
+        },
+        "description": {
+          "type": "string",
+          "example": "Scour the mountains."
+        },
+        "requirement": {
+          "type": "string",
+          "example": "Complete the jumping puzzle."
+        },
+        "locked_text": {
+          "type": "string",
+          "example": "Unlock the Mastery ability Revered Antiquarian in the Legendary Crafting Mastery line, and speak to Grandmaster Craftsman Hobbs in Lion's Arch."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Default",
+            "ItemSet"
+          ]
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Permanent",
+              "Pvp",
+              "Daily",
+              "RepairOnLogin",
+              "IgnoreNearlyComplete",
+              "Hidden",
+              "RequiresUnlock",
+              "CategoryDisplay",
+              "Repeatable",
+              "MoveToTop",
+              "Monthly"
+            ]
+          }
+        },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Tier"
+          }
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Reward"
+          }
+        },
+        "bits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Bit"
+          }
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 2248
+          }
+        },
+        "point_cap": {
+          "type": "integer"
+        },
+        "icon": {
+          "type": "string",
+          "example": "https://render.guildwars2.com/file/FE01AF14D91F52A1EF2B22FE0A552B9EE2E4C3F6/511340.png"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "requirement",
+        "locked_text",
+        "type",
+        "flags",
+        "tiers"
+      ]
+    },
+    "Bit": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Item",
+            "Text",
+            "Skin",
+            "Minipet"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "example": "Zone 01"
+        },
+        "id": {
+          "type": "integer",
+          "example": 83305
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ]
+    },
+    "Reward": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Item",
+            "Mastery",
+            "Title",
+            "Coins"
+          ]
+        },
+        "id": {
+          "type": "integer",
+          "example": 77666
+        },
+        "region": {
+          "type": "string",
+          "enum": [
+            "Maguuma",
+            "Tyria",
+            "Desert"
+          ]
+        },
+        "count": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ]
+    },
+    "Tier": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "example": 1
+        },
+        "points": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "count",
+        "points"
+      ]
+    }
+  }
+}

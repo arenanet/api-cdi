@@ -1,0 +1,73 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "$ref": "#/definitions/ItemStats"
+      }
+    ]
+  },
+  "definitions": {
+    "ItemStats": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 50
+        },
+        "name": {
+          "type": "string",
+          "example": "Giver's"
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Attribute"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "attributes"
+      ]
+    },
+    "Attribute": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "type": "string",
+          "enum": [
+            "Power",
+            "Precision",
+            "Toughness",
+            "Vitality",
+            "ConditionDamage",
+            "Healing",
+            "CritDamage",
+            "AgonyResistance",
+            "BoonDuration",
+            "ConditionDuration"
+          ]
+        },
+        "multiplier": {
+          "type": "number"
+        },
+        "value": {
+          "type": "integer",
+          "example": 18
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "attribute",
+        "multiplier",
+        "value"
+      ]
+    }
+  }
+}

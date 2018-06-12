@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "example": "Unknown error"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "Error"
+    }
+  }
+}
