@@ -37,90 +37,112 @@ paths:
         get:
             summary: account/achievements
             tags: ['todo']
+            responses: {}
     /account/bank:
         get:
             summary: account/bank
             tags: ['todo']
+            responses: {}
     /account/dungeons:
         get:
             summary: account/dungeons
             tags: ['todo']
+            responses: {}
     /account/dyes:
         get:
             summary: account/dyes
             tags: ['todo']
+            responses: {}
     /account/finishers:
         get:
             summary: account/finishers
             tags: ['todo']
+            responses: {}
     /account/gliders:
         get:
             summary: account/gliders
             tags: ['todo']
+            responses: {}
     /account/home/cats:
         get:
             summary: account/home/cats
             tags: ['todo']
+            responses: {}
     /account/home/nodes:
         get:
             summary: account/home/nodes
             tags: ['todo']
+            responses: {}
     /account/inventory:
         get:
             summary: account/inventory
             tags: ['todo']
+            responses: {}
     /account/mail:
         get:
             summary: account/mail
             tags: ['todo']
+            responses: {}
     /account/mailcarriers:
         get:
             summary: account/mailcarriers
             tags: ['todo']
+            responses: {}
     /account/masteries:
         get:
             summary: account/masteries
             tags: ['todo']
+            responses: {}
     /account/mastery/points:
         get:
             summary: account/mastery/points
             tags: ['todo']
+            responses: {}
     /account/materials:
         get:
             summary: account/materials
             tags: ['todo']
+            responses: {}
     /account/minis:
         get:
             summary: account/minis
             tags: ['todo']
+            responses: {}
     /account/outfits:
         get:
             summary: account/outfits
             tags: ['todo']
+            responses: {}
     /account/pvp/heroes:
         get:
             summary: account/pvp/heroes
             tags: ['todo']
+            responses: {}
     /account/raids:
         get:
             summary: account/raids
             tags: ['todo']
+            responses: {}
     /account/recipes:
         get:
             summary: account/recipes
             tags: ['todo']
+            responses: {}
     /account/skins:
         get:
             summary: account/skins
             tags: ['todo']
+            responses: {}
     /account/titles:
         get:
             summary: account/titles
             tags: ['todo']
+            responses: {}
     /account/wallet:
         get:
             summary: account/wallet
             tags: ['todo']
+            responses: {}
     /achievements:
         get:
           operationId: achievements
@@ -189,206 +211,257 @@ paths:
         get:
             summary: achievements/daily
             tags: ['todo']
+            responses: {}
     /achievements/daily/tomorrow:
         get:
             summary: achievements/daily/tomorrow
             tags: ['todo']
+            responses: {}
     /achievements/groups:
         get:
             summary: achievements/groups
             tags: ['todo']
+            responses: {}
     /adventures:
         get:
             summary: adventures
             tags: ['todo']
+            responses: {}
     /adventures/{id}/leaderboards:
         get:
             summary: adventures/{id}/leaderboards
             tags: ['todo']
+            responses: {}
     /adventures/{id}/leaderboards/{board}/{region}:
         get:
             summary: adventures/{id}/leaderboards/{board}/{regionadventures/{id}/leaderboards/{board}/{region}
             tags: ['todo']
+            responses: {}
     /backstory/answers:
         get:
             summary: backstory/backstory/answers
             tags: ['todo']
+            responses: {}
     /backstory/questions:
         get:
             summary: backstory/backstory/questions
             tags: ['todo']
+            responses: {}
     /build:
         get:
             summary: build
             tags: ['todo']
+            responses: {}
     /cats:
         get:
             summary: cats
             tags: ['todo']
+            responses: {}
     /characters:
         get:
             summary: characters
             tags: ['todo']
+            responses: {}
     /characters/{id}/backstory:
         get:
             summary: characters/{id}/backstory
             tags: ['todo']
+            responses: {}
     /characters/{id}/core:
         get:
             summary: characters/{id}/core
             tags: ['todo']
+            responses: {}
     /characters/{id}/crafting:
         get:
             summary: characters/{id}/crafting
             tags: ['todo']
+            responses: {}
     /characters/{id}/dungeons:
         get:
             summary: characters/{id}/dungeons
             tags: ['todo']
+            responses: {}
     /characters/{id}/equipment:
         get:
             summary: characters/{id}/equipment
             tags: ['todo']
+            responses: {}
     /characters/{id}/heropoints:
         get:
             summary: characters/{id}/heropoints
             tags: ['todo']
+            responses: {}
     /characters/{id}/inventory:
         get:
             summary: characters/{id}/inventory
             tags: ['todo']
+            responses: {}
     /characters/{id}/recipes:
         get:
             summary: characters/{id}/recipes
             tags: ['todo']
+            responses: {}
     /characters/{id}/sab:
         get:
             summary: characters/{id}/sab
             tags: ['todo']
+            responses: {}
     /characters/{id}/skills:
         get:
             summary: characters/{id}/skills
             tags: ['todo']
+            responses: {}
     /characters/{id}/specializations:
         get:
             summary: characters/{id}/specializations
             tags: ['todo']
+            responses: {}
     /characters/{id}/training:
         get:
             summary: characters/{id}/training
             tags: ['todo']
+            responses: {}
     /colors:
         get:
             summary: colors
             tags: ['todo']
+            responses: {}
     /commerce/delivery:
         get:
             summary: commerce/delivery
             tags: ['todo']
+            responses: {}
     /commerce/exchange:
         get:
             summary: commerce/exchange
             tags: ['todo']
+            responses: {}
     /commerce/listings:
         get:
             summary: commerce/listings
             tags: ['todo']
+            responses: {}
     /commerce/prices:
         get:
             summary: commerce/prices
             tags: ['todo']
+            responses: {}
     /commerce/transactions:
         get:
             summary: commerce/transactions
             tags: ['todo']
+            responses: {}
     /continents:
         get:
             summary: continents
             tags: ['todo']
+            responses: {}
     /currencies:
         get:
             summary: currencies
             tags: ['todo']
+            responses: {}
     /dungeons:
         get:
             summary: dungeons
             tags: ['todo']
+            responses: {}
     /emblem:
         get:
             summary: emblem
             tags: ['todo']
+            responses: {}
     /events:
         get:
             summary: events
             tags: ['todo']
+            responses: {}
     /events-state:
         get:
             summary: events-state
             tags: ['todo']
+            responses: {}
     /files:
         get:
             summary: files
             tags: ['todo']
+            responses: {}
     /finishers:
         get:
             summary: finishers
             tags: ['todo']
+            responses: {}
     /gemstore/catalog:
         get:
             tags: ['todo']
+            responses: {}
             summary: gemstore/catalog
     /gliders:
         get:
             tags: ['todo']
+            responses: {}
             summary: gliders
     /guild/{id}:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}
     /guild/{id}/log:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/log
     /guild/{id}/members:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/members
     /guild/{id}/ranks:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/ranks
     /guild/{id}/stash:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/stash
     /guild/{id}/storage:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/storage
     /guild/{id}/teams:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/teams
     /guild/{id}/treasury:
         get:
             tags: ['todo']
+            responses: {}
             summary: guild/{id}/treasury
     /guild/{id}/upgrades:
         get:
             summary: guild/{id}/upgrades
             tags: ['todo']
+            responses: {}
     /guild/permissions:
         get:
             summary: guild/permissions
             tags: ['todo']
+            responses: {}
     /guild/search:
         get:
             summary: guild/search
             tags: ['todo']
+            responses: {}
     /guild/upgrades:
         get:
             summary: guild/upgrades
             tags: ['todo']
+            responses: {}
     /items:
         get:
           operationId: items
@@ -458,202 +531,252 @@ paths:
         get:
             summary: legends
             tags: ['todo']
+            responses: {}
     /mailcarriers:
         get:
             summary: mailcarriers
             tags: ['todo']
+            responses: {}
     /maps:
         get:
             summary: maps
             tags: ['todo']
+            responses: {}
     /masteries:
         get:
             summary: masteries
             tags: ['todo']
+            responses: {}
     /materials:
         get:
             summary: materials
             tags: ['todo']
+            responses: {}
     /minis:
         get:
             summary: minis
             tags: ['todo']
+            responses: {}
     /nodes:
         get:
             summary: nodes
             tags: ['todo']
+            responses: {}
     /outfits:
         get:
             summary: outfits
             tags: ['todo']
+            responses: {}
     /pets:
         get:
             summary: pets
             tags: ['todo']
+            responses: {}
     /professions:
         get:
             summary: professions
             tags: ['todo']
+            responses: {}
     /pvp:
         get:
             summary: pvp
             tags: ['todo']
+            responses: {}
     /pvp/amulets:
         get:
             summary: pvp/amulets
             tags: ['todo']
+            responses: {}
     /pvp/games:
         get:
             summary: pvp/games
             tags: ['todo']
+            responses: {}
     /pvp/heroes:
         get:
             summary: pvp/heroes
             tags: ['todo']
+            responses: {}
     /pvp/ranks:
         get:
             summary: pvp/ranks
             tags: ['todo']
+            responses: {}
     /pvp/rewardtracks:
         get:
             summary: pvp/rewardtracks
             tags: ['todo']
+            responses: {}
     /pvp/runes:
         get:
             summary: pvp/runes
             tags: ['todo']
+            responses: {}
     /pvp/seasons:
         get:
             summary: pvp/seasons
             tags: ['todo']
+            responses: {}
     /pvp/seasons/{id}/leaderboards:
         get:
             summary: pvp/seasons/{id}/leaderboards
             tags: ['todo']
+            responses: {}
     /pvp/seasons/{id}/leaderboards/{board}/{region}:
         get:
             summary: pvp/seasons/{id}/leaderboards/{board}/{region}
             tags: ['todo']
+            responses: {}
     /pvp/sigils:
         get:
             summary: pvp/sigils
             tags: ['todo']
+            responses: {}
     /pvp/standings:
         get:
             summary: pvp/standings
             tags: ['todo']
+            responses: {}
     /pvp/stats:
         get:
             summary: pvp/stats
             tags: ['todo']
+            responses: {}
     /quaggans:
         get:
             summary: quaggans
             tags: ['todo']
+            responses: {}
     /races:
         get:
             summary: races
             tags: ['todo']
+            responses: {}
     /raids:
         get:
             summary: raids
             tags: ['todo']
+            responses: {}
     /recipes:
         get:
             summary: recipes
             tags: ['todo']
+            responses: {}
     /recipes/search:
         get:
             summary: recipes/search
             tags: ['todo']
+            responses: {}
     /skills:
         get:
             summary: skills
             tags: ['todo']
+            responses: {}
     /skins:
         get:
             summary: skins
             tags: ['todo']
+            responses: {}
     /specializations:
         get:
             summary: specializations
             tags: ['todo']
+            responses: {}
     /stories:
         get:
             summary: stories
             tags: ['todo']
+            responses: {}
     /stories/seasons:
         get:
             summary: stories/seasons
             tags: ['todo']
+            responses: {}
     /titles:
         get:
             summary: titles
             tags: ['todo']
+            responses: {}
     /tokeninfo:
         get:
             summary: tokeninfo
             tags: ['todo']
+            responses: {}
     /traits:
         get:
             summary: traits
             tags: ['todo']
+            responses: {}
     /vendors:
         get:
             summary: vendors
             tags: ['todo']
+            responses: {}
     /worlds:
         get:
             summary: worlds
             tags: ['todo']
+            responses: {}
     /wvw/abilities:
         get:
             summary: wvw/abilities
             tags: ['todo']
+            responses: {}
     /wvw/matches:
         get:
             summary: wvw/matches
             tags: ['todo']
+            responses: {}
     /wvw/matches/overview:
         get:
             summary: wvw/matches/overview
             tags: ['todo']
+            responses: {}
     /wvw/matches/scores:
         get:
             summary: wvw/matches/scores
             tags: ['todo']
+            responses: {}
     /wvw/matches/stats:
         get:
             summary: wvw/matches/stats
             tags: ['todo']
+            responses: {}
     /wvw/matches/stats/{id}/guilds/{guild_id}:
         get:
             summary: wvw/matches/stats/{id}/guilds/{guild_id}
             tags: ['todo']
+            responses: {}
     /wvw/matches/stats/{id}/teams/{team}/top/kdr:
         get:
             summary: wvw/matches/stats/{id}/teams/{team}/top/kdr
             tags: ['todo']
+            responses: {}
     /wvw/matches/stats/{id}/teams/{team}/top/kills:
         get:
             summary: wvw/matches/stats/{id}/teams/{team}/top/kills
             tags: ['todo']
+            responses: {}
     /wvw/objectives:
         get:
             summary: wvw/objectives
             tags: ['todo']
+            responses: {}
     /wvw/ranks:
         get:
             summary: wvw/ranks
             tags: ['todo']
+            responses: {}
     /wvw/rewardtracks:
         get:
             summary: wvw/rewardtracks
             tags: ['todo']
+            responses: {}
     /wvw/upgrades:
         get:
             summary: wvw/upgrades
             tags: ['todo']
+            responses: {}
 
 components:
     parameters:
