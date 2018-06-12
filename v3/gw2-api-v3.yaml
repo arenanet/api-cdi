@@ -22,8 +22,17 @@ tags:
 paths:
     /account:
         get:
-            summary: account
-            tags: ['todo']
+            operationId: account
+            summary: Account
+            responses:
+                '200':
+                    description: A user account
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "schemas/account.json"
+                '403':
+                    $ref: '#/components/responses/Forbidden'
     /account/achievements:
         get:
             summary: account/achievements
@@ -146,8 +155,36 @@ paths:
               $ref: "#/components/responses/BadRequest"
     /achievements/categories:
         get:
-            summary: achievements/categories
-            tags: ['todo']
+          operationId: achievementCategories
+          summary: Achievement categories
+          parameters:
+            - $ref: "#/components/parameters/IDs"
+            - $ref: "#/components/parameters/Page"
+            - $ref: "#/components/parameters/PageSize"
+          responses:
+            '200':
+              description: Array of achievement category IDs or achievement categories
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/achievements-categories.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /achievements/categories/{id}:
+        get:
+          operationId: achievementCategoriesById
+          summary: Achievement category by ID
+          parameters:
+            - $ref: "#/components/parameters/ID"
+          responses:
+            '200':
+              description: A single achievement category
+              content:
+                application/json:
+                    schema:
+                        $ref: 'schemas/achievements-categories.json#/definitions/Category'
+            '400':
+              $ref: "#/components/responses/BadRequest"
     /achievements/daily:
         get:
             summary: achievements/daily
@@ -653,6 +690,12 @@ components:
     responses:
         BadRequest:
             description: Bad request
+            content:
+                application/json:
+                    schema:
+                        $ref: 'schemas/error.json#/definitions/Error'
+        Forbidden:
+            description: Authentication Required
             content:
                 application/json:
                     schema:

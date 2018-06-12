@@ -1,0 +1,56 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "$ref": "#/definitions/Category"
+      }
+    ]
+  },
+  "definitions": {
+    "Category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "Shadow of the Mad King"
+        },
+        "description": {
+          "type": "string",
+          "example": "Explore the Heart of Maguuma to find these locations and earn Mastery points."
+        },
+        "order": {
+          "type": "integer",
+          "example": 1
+        },
+        "icon": {
+          "type": "string",
+          "example": "https://render.guildwars2.com/file/C5CE0723E54B4B2F78A2E6E5496A04B54E7A65E6/602777.png"
+        },
+        "achievements": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 1
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "order",
+        "icon",
+        "achievements"
+      ]
+    }
+  }
+}

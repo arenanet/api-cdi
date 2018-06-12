@@ -1,0 +1,79 @@
+{
+  "$ref": "#/definitions/Account",
+  "definitions": {
+    "Account": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "world": {
+          "type": "integer"
+        },
+        "guilds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "guild_leader": {
+          "type": "array",
+          "items": {}
+        },
+        "created": {
+          "type": "string",
+          "example": "2017-09-06T00:31:00Z"
+        },
+        "access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "GuildWars2",
+              "HeartOfThorns",
+              "PlayForFree",
+              "PathOfFire"
+            ]
+          }
+        },
+        "commander": {
+          "type": "boolean"
+        },
+        "fractal_level": {
+          "type": "integer"
+        },
+        "daily_ap": {
+          "type": "integer"
+        },
+        "monthly_ap": {
+          "type": "integer"
+        },
+        "wvw_rank": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "age",
+        "world",
+        "guilds",
+        "guild_leader",
+        "created",
+        "access",
+        "commander",
+        "fractal_level",
+        "daily_ap",
+        "monthly_ap",
+        "wvw_rank"
+      ]
+    }
+  }
+}
