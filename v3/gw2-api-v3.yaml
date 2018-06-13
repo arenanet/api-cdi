@@ -24,6 +24,8 @@ paths:
         get:
             operationId: account
             summary: Account
+            security:
+                - AccessToken: []
             responses:
                 '200':
                     description: A user account
@@ -824,3 +826,9 @@ components:
                 application/json:
                     schema:
                         $ref: 'schemas/error.json#/definitions/Error'
+
+    securitySchemes:
+        AccessToken:
+            type: apiKey
+            in: query
+            name: access_token
