@@ -785,13 +785,14 @@ components:
             in: path
             schema:
                 type: integer
+            required: false
         IDs:
             name: ids
             in: query
             schema:
                 type: array
-            items:
-                type: integer
+                items:
+                    type: integer
             style: form
             explode: false
             required: false
