@@ -28,7 +28,8 @@
         },
         "created": {
           "type": "string",
-          "example": "2017-09-06T00:31:00Z"
+          "example": "2017-09-06T00:31:00Z",
+          "format": "date-time"
         },
         "access": {
           "type": "array",
