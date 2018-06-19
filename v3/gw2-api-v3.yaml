@@ -874,6 +874,7 @@ components:
             in: path
             schema:
                 type: integer
+                example: 1234
             required: false
         IDs:
             name: ids
@@ -881,7 +882,7 @@ components:
             schema:
                 type: array
                 items:
-                    type: integer
+                    $ref: "#/components/parameters/ID/schema"
             style: form
             explode: false
             required: false
