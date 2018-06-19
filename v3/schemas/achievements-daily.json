@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "pve": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DailyAchievement"
+      }
+    },
+    "pvp": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DailyAchievement"
+      }
+    },
+    "wvw": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DailyAchievement"
+      }
+    },
+    "fractals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DailyAchievement"
+      }
+    },
+    "special": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DailyAchievement"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "pve",
+    "pvp",
+    "wvw",
+    "fractals",
+    "special"
+  ],
+  "definitions": {
+    "DailyAchievement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "level": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "min",
+            "max"
+          ]
+        },
+        "required_access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "GuildWars2",
+              "HeartOfThorns",
+              "PathOfFire"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "level",
+        "required_access"
+      ]
+    }
+  }
+}

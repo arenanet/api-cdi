@@ -202,7 +202,7 @@ paths:
             - $ref: "#/components/parameters/ID"
           responses:
             '200':
-              description: A single achievement category
+              description: A single item
               content:
                 application/json:
                     schema:
@@ -211,24 +211,94 @@ paths:
               $ref: "#/components/responses/BadRequest"
     /achievements/daily:
         get:
-            summary: achievements/daily
-            tags: ['todo']
-            responses: {}
+          operationId: achievementsDaily
+          summary: Daily achievements
+          responses:
+            '200':
+              description: A list of daily achievements
+              content:
+                application/json:
+                    schema:
+                        $ref: 'schemas/achievements-daily.json'
+            '400':
+              $ref: "#/components/responses/BadRequest"
     /achievements/daily/tomorrow:
         get:
-            summary: achievements/daily/tomorrow
-            tags: ['todo']
-            responses: {}
+          operationId: achievementsDailyTomorrow
+          summary: Daily achievements for tomorrow
+          responses:
+            '200':
+              description: A list of daily achievements
+              content:
+                application/json:
+                    schema:
+                        $ref: 'schemas/achievements-daily.json'
+            '400':
+              $ref: "#/components/responses/BadRequest"
     /achievements/groups:
         get:
-            summary: achievements/groups
-            tags: ['todo']
-            responses: {}
+          operationId: achievementGroups
+          summary: Achievement groups
+          parameters:
+            - $ref: "#/components/parameters/UUIDs"
+            - $ref: "#/components/parameters/Page"
+            - $ref: "#/components/parameters/PageSize"
+          responses:
+            '200':
+              description: Array of achievement group UUIDs or achievement groups
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/achievements-groups.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /achievements/groups/{id}:
+        get:
+          operationId: achievementGroupByID
+          summary: Achievement group by ID
+          parameters:
+            - $ref: "#/components/parameters/UUID"
+          responses:
+            '200':
+              description: A single achievement group
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/achievements-groups.json#/definitions/AchievementGroup"
+            '400':
+              $ref: "#/components/responses/BadRequest"
     /adventures:
         get:
-            summary: adventures
-            tags: ['todo']
-            responses: {}
+          operationId: adventures
+          summary: Adventures
+          parameters:
+            - $ref: "#/components/parameters/UUIDs"
+            - $ref: "#/components/parameters/Page"
+            - $ref: "#/components/parameters/PageSize"
+          responses:
+            '200':
+              description: Array of adventure UUIDs or adventures
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/adventures.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /adventures/{id}:
+        get:
+          operationId: adventuresByID
+          summary: Adventures by ID
+          parameters:
+            - $ref: "#/components/parameters/UUID"
+          responses:
+            '200':
+              description: A single adventure
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/adventures.json#/definitions/Adventure"
+            '400':
+              $ref: "#/components/responses/BadRequest"
     /adventures/{id}/leaderboards:
         get:
             summary: adventures/{id}/leaderboards
@@ -782,6 +852,23 @@ paths:
 
 components:
     parameters:
+        UUID:
+            name: id
+            in: path
+            schema:
+                type: string
+                example: "00000000-0000-0000-0000-000000000000"
+            required: false
+        UUIDs:
+            name: ids
+            in: query
+            schema:
+                type: array
+                items:
+                    $ref: "#/components/parameters/UUID/schema"
+            style: form
+            explode: false
+            required: false
         ID:
             name: id
             in: path
