@@ -1,12 +1,15 @@
 {
-  "anyOf": [
-    {
-      "type": "string"
-    },
-    {
-      "$ref": "#/definitions/Adventure"
-    }
-  ],
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "string"
+      },
+      {
+        "$ref": "#/definitions/Adventure"
+      }
+    ]
+  },
   "definitions": {
     "Adventure": {
       "type": "object",
@@ -40,130 +43,10 @@
           "type": "object",
           "properties": {
             "daily": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "enum": [
-                    "Daily"
-                  ]
-                },
-                "duration": {
-                  "type": "integer"
-                },
-                "scoring": {
-                  "type": "string",
-                  "example": "E95D806B-8953-436A-A2F1-44C7E0876697"
-                },
-                "tiers": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "color": {
-                        "type": "string",
-                        "enum": [
-                          "#D2691E",
-                          "#C0C0C0",
-                          "#EAC117"
-                        ]
-                      },
-                      "type": {
-                        "type": "string",
-                        "enum": [
-                          "Rank"
-                        ]
-                      },
-                      "name": {
-                        "type": "string",
-                        "enum": [
-                          "Bronze",
-                          "Silver",
-                          "Gold"
-                        ]
-                      },
-                      "range": {
-                        "type": "array",
-                        "items": {
-                          "type": "integer",
-                          "example": 150000
-                        }
-                      }
-                    },
-                    "additionalProperties": false,
-                    "required": [
-                      "color",
-                      "type",
-                      "name",
-                      "range"
-                    ]
-                  }
-                }
-              },
-              "additionalProperties": false
+              "$ref": "#/definitions/Setting"
             },
             "lifetime": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "enum": [
-                    "Lifetime"
-                  ]
-                },
-                "duration": {
-                  "type": "null"
-                },
-                "scoring": {
-                  "type": "string",
-                  "example": "E95D806B-8953-436A-A2F1-44C7E0876697"
-                },
-                "tiers": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "color": {
-                        "type": "string",
-                        "enum": [
-                          "#D2691E",
-                          "#C0C0C0",
-                          "#EAC117"
-                        ]
-                      },
-                      "type": {
-                        "type": "string",
-                        "enum": [
-                          "Rank"
-                        ]
-                      },
-                      "name": {
-                        "type": "string",
-                        "enum": [
-                          "Bronze",
-                          "Silver",
-                          "Gold"
-                        ]
-                      },
-                      "range": {
-                        "type": "array",
-                        "items": {
-                          "type": "integer",
-                          "example": 150000
-                        }
-                      }
-                    },
-                    "additionalProperties": false,
-                    "required": [
-                      "color",
-                      "type",
-                      "name",
-                      "range"
-                    ]
-                  }
-                }
-              },
-              "additionalProperties": false
+              "$ref": "#/definitions/Setting"
             }
           },
           "additionalProperties": false
@@ -188,43 +71,15 @@
         },
         "type": {
           "type": "string",
-          "enum": [
-            "Duration",
-            "Integer"
-          ]
+          "example": "Duration"
         },
         "description": {
           "type": "string",
-          "enum": [
-            "Timer:",
-            "Time Remaining",
-            "Amount of time taken.",
-            "Deliver collected shield anomalies by gliding near the collection device.",
-            "Kick rockvine fruit and retrieve as many spores as you can before time runs out!",
-            "Soothe the tormented spirits of fallen Exalted.",
-            "Yellow Mushrooms Eaten",
-            "Kill chak before the timer runs out!",
-            "((595737))",
-            "Smash some chak!",
-            "Gather supplies and avoid tendrils before time runs out!",
-            "Burn tendrils and avoid unexploded shot before time runs out!",
-            "Shoot as many target dummies as you can before time runs out!",
-            "Collect bugs by jumping or gliding through the branches."
-          ]
+          "example": "Timer:"
         },
         "name": {
           "type": "string",
-          "enum": [
-            "Time",
-            "Score",
-            "Targets",
-            "Masks",
-            "Chak",
-            "Chak Killed",
-            "Supplies",
-            "Tendrils",
-            "Bugs"
-          ]
+          "example": "Time"
         },
         "ordering": {
           "type": "string",
@@ -241,6 +96,68 @@
         "description",
         "name",
         "ordering"
+      ]
+    },
+    "Setting": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Daily"
+          ]
+        },
+        "duration": {
+          "type": "integer"
+        },
+        "scoring": {
+          "type": "string",
+          "example": "E95D806B-8953-436A-A2F1-44C7E0876697"
+        },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Tier"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Tier": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "example": "#D2691E"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Rank"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "Bronze",
+            "Silver",
+            "Gold"
+          ]
+        },
+        "range": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 150000
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "color",
+        "type",
+        "name",
+        "range"
       ]
     }
   }
