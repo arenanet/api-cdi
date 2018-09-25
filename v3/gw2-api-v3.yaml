@@ -267,53 +267,53 @@ paths:
                         $ref: "schemas/achievements-groups.json#/definitions/AchievementGroup"
             '400':
               $ref: "#/components/responses/BadRequest"
-    /adventures:
-        get:
-          operationId: adventures
-          summary: Adventures
-          parameters:
-            - $ref: "#/components/parameters/UUIDs"
-            - $ref: "#/components/parameters/Page"
-            - $ref: "#/components/parameters/PageSize"
-          responses:
-            '200':
-              description: Array of adventure UUIDs or adventures
-              content:
-                application/json:
-                    schema:
-                        $ref: "schemas/adventures.json"
-            '400':
-              $ref: "#/components/responses/BadRequest"
-    /adventures/{id}:
-        get:
-          operationId: adventuresByID
-          summary: Adventures by ID
-          parameters:
-            - $ref: "#/components/parameters/UUID"
-          responses:
-            '200':
-              description: A single adventure
-              content:
-                application/json:
-                    schema:
-                        $ref: "schemas/adventures.json#/definitions/Adventure"
-            '400':
-              $ref: "#/components/responses/BadRequest"
-    /adventures/{id}/leaderboards:
-        get:
-          operationId: adventureLeaderboards
-          summary: Adventure leaderboards
-          parameters:
-            - $ref: "#/components/parameters/UUID"
-          responses:
-            '200':
-              description: All leaderboard types for the requested adventure
-              content:
-                application/json:
-                    schema:
-                        $ref: "schemas/adventures-leaderboards.json"
-            '400':
-              $ref: "#/components/responses/BadRequest"
+    #/adventures:
+        #get:
+          #operationId: adventures
+          #summary: Adventures
+          #parameters:
+            #- $ref: "#/components/parameters/UUIDs"
+            #- $ref: "#/components/parameters/Page"
+            #- $ref: "#/components/parameters/PageSize"
+          #responses:
+            #'200':
+              #description: Array of adventure UUIDs or adventures
+              #content:
+                #application/json:
+                    #schema:
+                        #$ref: "schemas/adventures.json"
+            #'400':
+              #$ref: "#/components/responses/BadRequest"
+    #/adventures/{id}:
+        #get:
+          #operationId: adventuresByID
+          #summary: Adventures by ID
+          #parameters:
+            #- $ref: "#/components/parameters/UUID"
+          #responses:
+            #'200':
+              #description: A single adventure
+              #content:
+                #application/json:
+                    #schema:
+                        #$ref: "schemas/adventures.json#/definitions/Adventure"
+            #'400':
+              #$ref: "#/components/responses/BadRequest"
+    #/adventures/{id}/leaderboards:
+        #get:
+          #operationId: adventureLeaderboards
+          #summary: Adventure leaderboards
+          #parameters:
+            #- $ref: "#/components/parameters/UUID"
+          #responses:
+            #'200':
+              #description: All leaderboard types for the requested adventure
+              #content:
+                #application/json:
+                    #schema:
+                        #$ref: "schemas/adventures-leaderboards.json"
+            #'400':
+              #$ref: "#/components/responses/BadRequest"
     #/adventures/{id}/leaderboards/{board}/{region}:
         #get:
             #summary: adventures/{id}/leaderboards/{board}/{regionadventures/{id}/leaderboards/{board}/{region}
