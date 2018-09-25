@@ -1,0 +1,71 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "string"
+      },
+      {
+        "$ref": "#/definitions/MountType"
+      }
+    ]
+  },
+  "definitions": {
+    "MountType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "griffon"
+        },
+        "name": {
+          "type": "string",
+          "example": "Griffon"
+        },
+        "default_skin": {
+          "type": "integer",
+          "example": 4
+        },
+        "skins": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 77
+          }
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MountSkill"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "default_skin",
+        "skins",
+        "skills"
+      ]
+    },
+    "MountSkill": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 40576
+        },
+        "slot": {
+          "type": "string",
+          "example": "Weapon_1"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "slot"
+      ]
+    }
+  }
+}

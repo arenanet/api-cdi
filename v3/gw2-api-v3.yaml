@@ -299,11 +299,21 @@ paths:
                         $ref: "schemas/adventures.json#/definitions/Adventure"
             '400':
               $ref: "#/components/responses/BadRequest"
-    #/adventures/{id}/leaderboards:
-        #get:
-            #summary: adventures/{id}/leaderboards
-            #tags: ['todo']
-            #responses: {}
+    /adventures/{id}/leaderboards:
+        get:
+          operationId: adventureLeaderboards
+          summary: Adventure leaderboards
+          parameters:
+            - $ref: "#/components/parameters/UUID"
+          responses:
+            '200':
+              description: All leaderboard types for the requested adventure
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/adventures-leaderboards.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
     #/adventures/{id}/leaderboards/{board}/{region}:
         #get:
             #summary: adventures/{id}/leaderboards/{board}/{regionadventures/{id}/leaderboards/{board}/{region}
@@ -624,6 +634,78 @@ paths:
             #summary: materials
             #tags: ['todo']
             #responses: {}
+    /mounts:
+        get:
+            summary: Mounts index page
+            responses:
+                '200':
+                    description: A list of possible sub directories for the mounts endpoint.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "schemas/mounts.json"
+                    '400':
+                        $ref: "#/components/responses/BadRequest"
+    /mounts/skins:
+        get:
+          operationId: mountSkins
+          summary: Mount skins
+          parameters:
+            - $ref: "#/components/parameters/IDs"
+          responses:
+            '200':
+              description: Array of mount skin IDs or mount skins
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/mounts-skins.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /mounts/skins/{id}:
+        get:
+          operationId: mountSkinByID
+          summary: Mount skin by ID
+          parameters:
+            - $ref: "#/components/parameters/ID"
+          responses:
+            '200':
+              description: A single mount skin
+              content:
+                application/json:
+                    schema:
+                        $ref: 'schemas/mounts-skins.json#/definitions/MountSkin'
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /mounts/types:
+        get:
+          operationId: mountTypes
+          summary: Mount types
+          parameters:
+            - $ref: "#/components/parameters/Slugs"
+          responses:
+            '200':
+              description: Array of mount type IDs or mount types
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/mounts-types.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /mounts/types/{id}:
+        get:
+          operationId: 
+          summary: Mount type by ID
+          parameters:
+            - $ref: "#/components/parameters/Slug"
+          responses:
+            '200':
+              description: A single mount type
+              content:
+                application/json:
+                    schema:
+                        $ref: 'schemas/mounts-types.json#/definitions/MountType'
+            '400':
+              $ref: "#/components/responses/BadRequest"
     #/minis:
         #get:
             #summary: minis
@@ -869,6 +951,19 @@ components:
             style: form
             explode: false
             required: false
+        Slug:
+            name: id
+            in: path
+            schema:
+                type: string
+                example: "some_object"
+        Slugs:
+            name: id
+            in: query
+            schema:
+                type: array
+                items:
+                    $ref: "#/components/parameters/Slug/schema"
         ID:
             name: id
             in: path

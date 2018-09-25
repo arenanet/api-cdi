@@ -1,0 +1,73 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "$ref": "#/definitions/MountSkin"
+      }
+    ]
+  },
+  "definitions": {
+    "MountSkin": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "Primeval"
+        },
+        "icon": {
+          "type": "string",
+          "example": "https://render.guildwars2.com/file/2F4AAA52F573C5425BFCD7525FB70C9E6DCAD791/1766903.png"
+        },
+        "mount": {
+          "type": "string",
+          "example": "springer"
+        },
+        "dye_slots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DyeSlot"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "icon",
+        "mount",
+        "dye_slots"
+      ]
+    },
+    "DyeSlot": {
+      "type": "object",
+      "properties": {
+        "color_id": {
+          "type": "integer",
+          "example": 69
+        },
+        "material": {
+          "type": "string",
+          "enum": [
+            "leather",
+            "fur",
+            "cloth",
+            "metal"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "color_id",
+        "material"
+      ]
+    }
+  }
+}
