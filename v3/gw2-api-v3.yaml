@@ -110,6 +110,50 @@ paths:
             #summary: account/minis
             #tags: ['todo']
             #responses: {}
+    /account/mounts:
+        get:
+            summary: Mount unlocks index page
+            security:
+                - AccessToken: []
+            responses:
+                '200':
+                    description: A list of possible sub directories for the mount unlocks endpoint.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "schemas/mounts.json"
+                    '400':
+                        $ref: "#/components/responses/BadRequest"
+    /account/mounts/skins:
+        get:
+          operationId: accountMountSkins
+          summary: Mount skin unlocks
+          security:
+            - AccessToken: []
+          responses:
+            '200':
+              description: Array of unlocked mount skin IDs
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/account-mounts-skins.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
+    /account/mounts/types:
+        get:
+          operationId: accountMountTypes
+          summary: Mount type unlocks
+          security:
+            - AccessToken: []
+          responses:
+            '200':
+              description: Array of unlocked mount type IDs
+              content:
+                application/json:
+                    schema:
+                        $ref: "schemas/account-mounts-types.json"
+            '400':
+              $ref: "#/components/responses/BadRequest"
     #/account/outfits:
         #get:
             #summary: account/outfits
