@@ -10,6 +10,7 @@
 
 {
 	"id" : "Human",
+	"name": "Human",
 	"skills" : [ 1, 2, 3, ... ]
 }
 
@@ -19,6 +20,7 @@
 [
 	{
 		"id" : "Human",
+		"name": "Human",
 		"skills" : [ 1, 2, 3, ... ]
 	},
 	...
