@@ -59,9 +59,28 @@
             ]
         }
     ],
+    // Ranks only applies for season 5+ (I think?). The earlier 
+    // seasons don't have this data.
+    "ranks" : [
+        {
+	    "name" : "Bronze",
+	    "description" : "This PvP league badge ...",
+	    // icon is the badge icon that's on the nameplate
+	    "icon" : "https://render.guildwars2.com/...",
+	    "overlay" : "https://render.guildwars2.com/...",
+	    "overlay_small" : "https://render.guildwars2.com/...",
+	    "tiers" : [
+	    	// rating is the _maximum_ rating to be in the tier,
+		// so if you exceed that you're in the next tier, e.g.
+	        { "rating" : 849 }, // ratings 0-849
+		{ "rating" : 949 }, // ratings 850-949
+		{ "rating" : 1049 } // ratings 950-1049
+	    ]
+	}
+    ],
     "leaderboards": {
-		// leaderboards keys correspond to leaderboards available
-		// at /v2/pvp/seasons/:id/leaderboards/:key.
+	// leaderboards keys correspond to leaderboards available
+	// at /v2/pvp/seasons/:id/leaderboards/:key.
         "guild": {
             "settings": {
 				// "name" and "duration", I believe, are always null for
