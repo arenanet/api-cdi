@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "array",
+    "title": "Dyes (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/account/dyes node. This endpoint is authenticated.",
+    "items": { "type": "integer" },
+    "additionalItems": false
+}

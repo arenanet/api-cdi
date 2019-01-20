@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "array",
+    "title": "Transactions (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/commerce/transactions node. This endpoint is authenticated.",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": { "type": "integer" },
+            "item_id": { "type": "integer" },
+            "price": { "type": "integer" },
+            "quantity": { "type": "integer" },
+            "created": { "type": "string" },
+            "purchased": { "type": "string" },
+        },
+        "additionalProperties": false,
+        "required": [
+            "id",
+            "item_id",
+            "price",
+            "quantity",
+            "created",
+            "purchased"
+        ]
+    },
+    "additionalItems": false
+}

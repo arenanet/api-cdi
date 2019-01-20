@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "array",
+    "title": "Bank (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/account/bank node. This endpoint is authenticated.",
+    "items": {
+        "anyOf": [
+            { "type": "null" },
+            {
+                "type": "object",
+                "properties": {
+                    "id": { "type": "integer" },
+                    "count": { "type": "integer" },
+                    "skin": { "type": "integer" },
+                    "upgrades": {
+                        "type": "array",
+                        "items": { "type": "integer" }
+                    },
+                    "infusions": {
+                        "type": "array",
+                        "items": { "type": "integer" }
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "id",
+                    "count"
+                ]
+            }
+        ]
+    },
+    "additionalItems": false
+}

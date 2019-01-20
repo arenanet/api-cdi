@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/schemas",
+    "type": "array",
+    "title": "Schemas (V2) Schema",
+    "description": "This schema validates the results returned by the v2/schemas node and all sub nodes.
+        For now this schema will only validate against the v2/schemas root node",
+    "items": { "type": "string" }
+}

@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "object",
+    "title": "PvP Stats (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/pvp/stats node. This endpoint is authenticated.",
+    "definitions": {
+        "winLoss": {
+            "type": "object",
+            "properties":{
+                "wins": { "type": "integer" },
+                "losses": { "type": "integer" },
+                "desertions": { "type": "integer" },
+                "byes": { "type": "integer" },
+                "forfeits": { "type": "integer" }
+            },
+            "additionalProperties": false,
+            "required":[
+                "wins",
+                "losses",
+                "desertions",
+                "byes",
+                "forfeits"
+            ]
+        }
+    },
+    "properties": {
+        "pvp_rank": { "type": "integer" },
+        "aggregate": { "$ref": "#/definitions/winLoss" },
+        "professions": {
+            "type": "object",
+            "properties": {
+                "elementalist": { "$ref": "#/definitions/winLoss" },
+                "engineer": { "$ref": "#/definitions/winLoss" },
+                "guardian": { "$ref": "#/definitions/winLoss" },
+                "mesmer": { "$ref": "#/definitions/winLoss" },
+                "necromancer": { "$ref": "#/definitions/winLoss" },
+                "ranger": { "$ref": "#/definitions/winLoss" },
+                "revenant": { "$ref": "#/definitions/winLoss" },
+                "thief": { "$ref": "#/definitions/winLoss" },
+                "warrior": { "$ref": "#/definitions/winLoss" }
+            }
+
+        },
+        "ladders": {
+            "type": "object",
+            "properties": {
+                "ranked": { "$ref": "#/definitions/winLoss" },
+                "unranked": { "$ref": "#/definitions/winLoss" }
+            },
+            "additionalProperties": false,
+            "required": [
+                "ranked",
+                "unranked"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "pvp_rank",
+        "aggregate",
+        "professions",
+        "ladders"
+    ]
+}

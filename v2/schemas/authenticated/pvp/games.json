@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/bank",
+    "type": "array",
+    "title": "PvP Games (V2) Schema (Authenticated)",
+    "description": "This schema validates the results returned by the v2/pvp/games node. This endpoint is authenticated.",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": { "type": "string" },
+            "map_id": { "type": "integer" },
+            "started": { "type": "string" },
+            "ended": { "type": "string" },
+            "result": { "type": "string" },
+            "team": { "type": "string" },
+            "profession": {
+                "type": "string",
+                "enum": [
+                    "elementalist",
+                    "engineer",
+                    "guardian",
+                    "mesmer",
+                    "necromancer",
+                    "ranger",
+                    "revenant",
+                    "thief",
+                    "warrior"
+                ]
+             },
+            "scores": {
+                "type": "object",
+                "properties":{
+                    "red": { "type": "integer" },
+                    "blue": { "type": "integer" }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "red",
+                    "blue"
+                ]
+            }
+        },
+        "additionalProperties": false,
+        "required": [
+            "id",
+            "map_id",
+            "started",
+            "ended",
+            "result",
+            "team",
+            "profession",
+            "scores"
+        ]
+    },
+    "additionalItems": false
+}

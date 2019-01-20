@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://api.guildwars2.com/v2/colors",
+    "title": "Colors Schema (v2)",
+    "description": "This schema validates the results returned by the v2/colors node and all sub nodes.
+        Thus it's going to validate calls to v2/colors?ids=all, v2/colors?ids={id(s)} and v2/colors/{id}, too.",
+    "definitions": {
+        "color": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer" },
+                "name": { "type": "string" },
+                "base_rgb": { "$ref": "#/definitions/rgbValues" },
+                "cloth": { "$ref": "#/definitions/materialProperties" },
+                "leather": { "$ref": "#/definitions/materialProperties" },
+                "metal": { "$ref": "#/definitions/materialProperties" }
+            },
+            "additionalProperties": false,
+              "required": [
+                "id",
+                "name",
+                "base_rgb",
+                "cloth",
+                "leather",
+                "metal"
+            ]
+        },
+        "materialProperties": {
+            "type": "object",
+            "properties": {
+                "brightness": { "type": "number"},
+                "contrast": { "type": "number" },
+                "hue": { "type": "number" },
+                "saturation": { "type": "number" },
+                "lightness": { "type": "number" },
+                "rgb": { "$ref": "#/definitions/rgbValues" }
+            },
+            "additionalProperties": false
+        },
+        "rgbValues": {
+            "type": "array",
+            "items": [{
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+                }
+            ],
+            "minItems": 3,
+            "maxItems": 3
+        }
+    },
+    "anyOf": [
+        {
+            "type": "array",
+            "items": { "type": "integer" }
+        },
+        {
+            "type": "array",
+            "items": {"$ref": "#/definitions/color" }
+        },
+        {
+            "$ref": "#/definitions/color"
+        }
+    ]
+}
