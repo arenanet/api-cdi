@@ -28,7 +28,11 @@
 // Just raw bytes.
 struct MumbleContext {
     byte serverAddress[28]; // contains sockaddr_in or sockaddr_in6
-    unsigned mapId;
+	unsigned continentId;
+	unsigned regionId;
+	unsigned mapId;
+	unsigned floorId;
+	unsigned sectorId;
     unsigned mapType;
     unsigned shardId;
     unsigned instance;
