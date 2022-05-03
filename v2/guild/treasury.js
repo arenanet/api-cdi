@@ -6,7 +6,7 @@
 
 [
 	{
-		id        : 12138,
+		item_id   : 12138,
 		count     : 200,
 		needed_by : [
 			{
@@ -16,7 +16,7 @@
 		]
 	},
 	{
-		id        : 19684,
+		item_id   : 19684,
 		count     : 3493,
 		needed_by : [
 			{
