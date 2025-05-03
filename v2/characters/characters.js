@@ -190,12 +190,21 @@
 // Scopes: account, characters, progression
 //
 // With the progression permission, the following fields are added:
+//  * experience: current absolute amount of experience as well as the numbers
+//    required to reach the current and the next level. Once the character
+//    reached level 80, current and this_level will stay at the maximum
+//    (currently 4860359), while next_level will change to false.
 //  * wvw_abilities. Note that ranks are 1-indexed, so rank=1 means
 //    that ability.ranks[0] is unlocked, but not ability.ranks[1].
 //
 {
 	name: "Hello",
 	// Other fields.
+	experience: {
+		current: 123456,
+		this_level: 1168459,
+		next_level: 1236659
+	},
 	wvw_abilities: [
 		{ id: 2, rank: 5 },
 		{ id: 3, rank: 1 }
