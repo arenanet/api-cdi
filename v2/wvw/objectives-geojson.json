@@ -1,0 +1,100 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10766, 13656]
+			},
+			"properties": {
+				"id": 1,
+				"map": "Center",
+				"type": "keep",
+				"score": 25,
+				// may also be a string based on the ?lang parameter
+				"name": {
+					"de": "Aussichtspunkt",
+					"en": "Overlook",
+					"es": "Mirador",
+					"fr": "Belv\u00c3\u00a9d\u00c3\u00a8re"
+				}
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [11571, 14468]
+			},
+			"properties": {
+				"id": 8,
+				"map": "Center",
+				"type": "camp",
+				"score": 5,
+				"name": {
+					"de": "Umberlichtung-Forst",
+					"en": "Umberglade Woods",
+					"es": "Bosques Clarosombra",
+					"fr": "Bois d'Ombreclair"
+				}
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10608, 14583]
+			},
+			"properties": {
+				"map": "Center",
+				"type": "castle",
+				"score": 35,
+				"name": {
+					"de": "Schloss Steinnebel",
+					"en": "Stonemist Castle",
+					"es": "Castillo Piedraniebla",
+					"fr": "Ch\u00c3\u00a2teau Brumepierre"
+				}
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [9416, 14793]
+			},
+			"properties": {
+				"id": 11,
+				"map": "Center",
+				"type": "tower",
+				"score": 10,
+				"name": {
+					"de": "Aldons Vorsprung",
+					"en": "Aldon's Ledge",
+					"es": "Cornisa de Aldon",
+					"fr": "Corniche d'Aldon"
+				}
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10484, 11421]
+			},
+			"properties": {
+				"id": 62,
+				"map": "RedHome",
+				"type": "ruin",
+				"score": 0,
+				"name": {
+					"de": "Tempel der Verlorenen Gebete",
+					"en": "Temple of Lost Prayers",
+					"es": "Templo de las Pelgarias",
+					"fr": "Temple des pri\u00c3\u00a8res perdues"
+				}
+			}
+		}
+	]
+}
